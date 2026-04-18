@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <title> Web Development</title>
+        <link rel="stylesheet" href="../CK_stylesheet.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body class="web-development-page">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="site-nav-brand" href="../index.html">Shauna Gurhy</a>
+            <div class="site-nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#education">Education</a>
+                <a href="../index.html#work-experience">Work Experience</a>
+                <a href="../education/webdevelopment.html">Web Development</a>
+            </div>
+        </nav>
+
+        <h1 id="title"><hr>Web Development <hr></h1>
+
+        <section class="page-lead">
+            <p class="page-lead-kicker">Learning Journal</p>
+            <h2>HTML, CSS, design, and JavaScript notes in one place.</h2>
+            <p class="page-lead-copy">This page now works more like a curated study guide, with quick links, resource cards, and styled topic sections that make the material easier to scan.</p>
+            <div class="quick-nav">
+                <a href="#front-end-web-dev">Front End</a>
+                <a href="#intro-css">CSS</a>
+                <a href="#web-design-school">Design</a>
+                <a href="#javascript-es6">JavaScript</a>
+            </div>
+        </section>
+
+        <section class="hero-carousel" aria-label="Web development highlights">
+            <div class="carousel-viewport">
+                <article class="carousel-slide is-active" data-slide="0">
+                    <p class="carousel-kicker">Learning Path</p>
+                    <h2>Build strong front-end foundations</h2>
+                    <p>Move from HTML structure into styling, layout, and design decisions with one quick overview at the top of the page.</p>
+                    <a class="carousel-link" href="#front-end-web-dev">Jump to front-end topics</a>
+                </article>
+
+                <article class="carousel-slide" data-slide="1">
+                    <p class="carousel-kicker">Styling Toolkit</p>
+                    <h2>Work through CSS, Flexbox, and Grid</h2>
+                    <p>Keep the core layout tools close by, from the cascade and selectors to responsive design patterns that make pages feel intentional.</p>
+                    <a class="carousel-link" href="#intro-css">Explore CSS notes</a>
+                </article>
+
+                <article class="carousel-slide" data-slide="2">
+                    <p class="carousel-kicker">Design Thinking</p>
+                    <h2>Connect visual design with user experience</h2>
+                    <p>Review color, typography, interface hierarchy, and UX ideas so the technical build stays aligned with how people use the site.</p>
+                    <a class="carousel-link" href="#web-design-school">See design school notes</a>
+                </article>
+
+                <article class="carousel-slide" data-slide="3">
+                    <p class="carousel-kicker">JavaScript Basics</p>
+                    <h2>Bring the page to life with interactivity</h2>
+                    <p>Use the JavaScript section as a bridge from static pages into variables, conditionals, functions, and browser behavior.</p>
+                    <a class="carousel-link" href="#javascript-es6">Go to JavaScript</a>
+                </article>
+            </div>
+
+            <div class="carousel-controls">
+                <button type="button" class="carousel-button" data-direction="prev" aria-label="Show previous slide">Prev</button>
+                <div class="carousel-dots" aria-label="Carousel pagination">
+                    <button type="button" class="carousel-dot is-active" data-slide-to="0" aria-label="Show slide 1" aria-pressed="true"></button>
+                    <button type="button" class="carousel-dot" data-slide-to="1" aria-label="Show slide 2" aria-pressed="false"></button>
+                    <button type="button" class="carousel-dot" data-slide-to="2" aria-label="Show slide 3" aria-pressed="false"></button>
+                    <button type="button" class="carousel-dot" data-slide-to="3" aria-label="Show slide 4" aria-pressed="false"></button>
+                </div>
+                <button type="button" class="carousel-button" data-direction="next" aria-label="Show next slide">Next</button>
+            </div>
+        </section>
+
+        <div class="web_dev">
+            <div class="background1 resource-panel" id="website-i-like">
+                <p class="section-label">Inspiration</p>
+                <h2>Cool websites I like for inspo</h2>
+                <p>Examples of layout, interaction, and visual personality that are useful when thinking about how a site should feel.</p>
+                <ul>
+                    <li><a href="https://tastybasics.nl/">TastyBasics</a></li>
+                    <li><a href="https://saijogeorge.com/css-puns/">Puns</a></li>
+                    <li><a href="https://app.triathlonireland.com/race-calendar/">Website Inspo</a> - Triathlon Ireland Calendar</li>
+                    <li><a href="https://chelsea-kauai.com/">Website Inspo</a> - Chelsea Kauai</li>
+                    <li><a href="https://www.learnenough.com/command-line-tutorial">Learn Enough Command Line to Be Dangerous</a></li>
+                </ul>
+            </div>
+
+            <div class="background2 resource-panel" id="web-links">
+                <p class="section-label">Toolkit</p>
+                <h2>Useful links for creating and designing websites</h2>
+                <p>A small set of references for color, layout, inspection, typography, and core CSS concepts.</p>
+                <ul>
+                    <li><a href="https://colorhunt.co/palettes/popular">Color Hunt</a></li>
+                    <li><a href="https://appbrewery.github.io/just-add-css/">CSS Example Site</a></li>
+                    <li><a href="https://appbrewery.github.io/css-inspection/">CSS Inspection</a></li>
+                    <li><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/37350424#overview">Udemy Course</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">Colours</a></li>
+                    <li><a href="https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/">RGB Colours</a></li>
+                    <li><a href="https://fonts.google.com/">Fonts</a></li>
+                    <li><a href="https://appbrewery.github.io/box-model/">CSS Box Model</a></li>
+                    <li><a href="https://chromewebstore.google.com/detail/pesticide-for-chrome/bakpbgckdnepkmkeaiomhmfcnejndkbi?pli=1">Pesticides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors">Universal Selectors</a></li>
+                </ul>
+            </div>
+
+            <div class="background2 resource-panel" id="front-end-web-dev">
+                <p class="section-label">Front End</p>
+                <h2>Front End Web Development</h2>
+                <p>Start with structure and then layer on styling, layout, responsiveness, and behavior.</p>
+            </div>
+
+            <div class="background1 resource-panel" id="intro-html">
+                <p class="section-label">HTML</p>
+                <h2>Introduction to HTML</h2>
+                <p>Learn headings, paragraphs, links, images, and the page structure that gives content meaning.</p>
+            </div>
+            
+            <div class="background1 resource-panel" id="intermidiate-html">
+                <p class="section-label">HTML</p>
+                <h2>Intermediate HTML</h2>
+                <p>Move into forms, nesting, layout decisions, and the habits needed to build larger pages cleanly.</p>
+            </div>
+
+            <div class="background2 resource-panel" id="multipage-websites">
+                <p class="section-label">Projects</p>
+                <h2>Multi-page Websites</h2>
+                <p>Bring sections together into linked pages so navigation, hierarchy, and consistency all start to matter more.</p>
+            </div>
+
+
+        </div>
+        
+
+        
+
+        
+
+        <div id="web-dev-concepts">
+
+
+            <div class="background1 topic-section" id="intro-css">
+                <p class="section-label">CSS Foundations</p>
+                <h2>Introduction to CSS</h2>
+                <p>CSS turns structure into experience by controlling color, type, spacing, and visual rhythm.</p>
+            </div>
+
+            <div class="background2 topic-section" id="intermediate-css">
+                <div>
+                    <p class="section-label">Selectors and Layout</p>
+                    <h2>Intermediate CSS</h2>
+                    <p>Work with the cascade, selector combinations, and positioning rules to understand why the browser chooses one style over another.</p>
+                </div>
+                
+                <div class="casscade">
+                    <div>
+                        <h3>The Cascade - Specificity and Inheritance</h3>
+                        <p>When styles clash, CSS resolves them by source order, specificity, and importance.</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>Position <ul><li><p class="code-sample">li{<br>color: blue; <br>color: green; }</p></li></ul></li>
+                            <li>Specificity <ul><li><p class="code-sample">li { color: blue; }<br>.first-class { color: red; }<br>li[draggable] { color: purple; }<br>#first-id { color: orange; }</p></li></ul></li>
+                            <li>Type <ul><li><p class="code-sample">link rel="stylesheet" href="./style.css"<br>style<br>h1 style=""</p></li></ul></li>
+                            <li>Importance <ul><li><p class="code-sample">color: red;<br>color: green !important;</p></li></ul></li>
+                        </ul>
+                    </div>
+                    <img id="cascade-waterfall" src="./images/tropical-waterfall-cascade-illustration-vector-600nw-2438011433.webp" alt="cascading waterfall">
+                    
+                </div>
+
+                <div>
+                    <h3>Combining CSS Selectors</h3>
+                <ul>
+                    <li>Group Selector ,</li>
+                    <li>Child selector ></li>
+                    <li>Descendent Selector</li>
+                    <li>Chaining</li>
+                </ul>
+                </div>
+
+                <div>
+                     <h3>CSS Positioning</h3>
+                     <a href="https://appbrewery.github.io/css-positioning/"> Demo Of CSS Positioning</a>
+                     <ol>
+                        <li>Static Positioning<p>Default</p></li>
+                        <li>Relative Positioning</li>
+                        <li>Absolutue Positioning</li>
+                        <li>Fixed Positioning</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="background1 topic-section">
+                <div>
+                    <p class="section-label">Responsive Styling</p>
+                    <h2>Advanced CSS</h2>
+                    <p>Once the basics are working, CSS becomes about layout systems, adaptability, and visual control across devices.</p>
+                    <div>
+                        <h3>CSS Display</h3>
+                        <a href="https://appbrewery.github.io/css-display/">CSS Display Property Example</a>
+                    </div>
+
+                    <div>
+                        <h3>CSS Float</h3>
+        
+                    </div>
+
+                    <div>
+                        <h3>How to Create a Responsive Website</h3>
+        
+                    </div>
+
+                    <div>
+                        <h3>Media Queries</h3>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Using Media Queries - Properties etc...</a>
+        
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="background2 topic-section">
+                <div>
+                    <p class="section-label">Layout Systems</p>
+                    <h2>Flexbox</h2>
+                    <p>Flexbox is ideal for arranging components in one dimension and keeping spacing behavior predictable.</p>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Flexbox Layout Guide</a>
+                
+                </div>
+
+                <div>
+                    <h3>Display: Flex</h3>
+                </div>
+
+                <div>
+                    <h3>Flex Direction</h3>
+                </div>
+
+                
+                <div>
+                    <h3>Flex Layout</h3>
+                    <a href="https://appbrewery.github.io/flex-layout/">Flex Layout</a>
+                    <br><a href="https://appbrewery.github.io/flexboxfroggy/">Flexbox Froggy</a>
+                </div>
+
+                
+                <div>
+                    <h3>Flex Sizing</h3>
+                    <a href="https://appbrewery.github.io/flexbox-sizing-exercise/"> Flexbox Sizing Exercise</a>
+                </div>
+
+            </div>
+
+
+            <div class="background1 topic-section">
+                <div>
+                    <p class="section-label">Two-Dimensional Layout</p>
+                    <h2>Grid</h2>
+                    <p>Grid makes larger page structures easier to control by defining rows, columns, and placement areas explicitly.</p>
+                    <a href="https://appbrewery.github.io/grid-vs-flexbox/">Grid Vs Flexbox</a>
+                </div>
+
+                <div>
+                    <h3>Display:Grid</h3>
+                </div>
+
+                <div>
+                    <h3>Grid Sizing</h3>
+                    <a href="https://appbrewery.github.io/grid-sizing/">different types of sizing</a>
+                </div>
+
+                <div>
+                    <h3>Grid Placement</h3>
+                    <a href="https://appbrewery.github.io/gridgarden/">Grid Garden</a>
+                </div>
+            </div>
+
+
+            <div class="background2 topic-section">
+                <div><h2>Bootstrap</h2></div>
+                <div>
+                    <h3>What is Bootstrap?</h3>
+                    <a href="https://getbootstrap.com/">bootstrap</a>
+                </div>
+
+                <div>
+                    <h3>Bootstrap Layout</h3>
+                    <a href="https://appbrewery.github.io/bootstrap-layout/">Bootstrap Layout Exercises</a>
+                    <br><a href="https://www.w3schools.com/bootstrap/">W3Schhools and Bootstrap</a>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="background1 curriculum-section" id="web-design-school">
+            <div>
+                <p class="section-label">Design Principles</p>
+                <h2>Web Design School</h2>
+                <p>Design choices shape how content feels before anyone reads a word, so color, typography, hierarchy, and UX patterns all matter.</p>
+            </div>
+
+            <div>
+                <h3>Introduction to Web Design</h3>
+                <p>"You only have 3 seconds to make a good impression"</p>
+                <p>Example <a href="https://www.pennyjuice.com/"> Original Penny Juice Website</a> VS <a href="https://www.behance.net/gallery/40393701/Penny-Juice-Rebrand">Redesigned Penny Juice Website</a></p>
+            </div>
+
+            <div>
+                <h3>Undertsanding Colour Theory</h3>
+                <ul>
+                    <li style="background-color: red; color: black;">Red - Love, Energy, Intensity</li>
+                    <li style="background-color: yellow; color: black;">Yellow - Joy, Intellect, Attention!!!</li>
+                    <li style="background-color: green; color: black;">Green - Freshness, Safety, Growth</li>
+                    <li style="background-color: blue; color: white">Blue - Stability, Trust, Serenity</li>
+                    <li style="background-color: purple; color: white">Purple - Royalty, Wealth, Feminity</li>
+                </ul>
+                <p> What Message am I trying to convey.</p>
+                <p>Combining Colours</p>
+                <ul>
+                    <li>Analogues Colours - Harmony</li>
+                    <li>Complementary Colours - Stand out</li>
+                    <li><a href="https://colorhunt.co/">Color Hunt</a></li>
+                    <li><a href="https://color.adobe.com/create/color-wheel">Adobe Colour Wheel</a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3>Typography</h3>
+                <p>Fonts Matter!!!</p>
+                <ul>
+                    <li style="font-family: serif;">Serif Family - Traditional, Stable, Authoritive
+                        <ul>
+                            <li>Old-Style</li>
+                            <li>Transitional</li>
+                            <li>Modern</li>
+                        </ul>
+                    </li>
+                    <li style="font-family: sans-serif;">Sans-Serif Family - Sensible, Simple, Straightforward
+                        <ul>
+                            <li>Humanist</li>
+                            <li>Grotesque</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p> Use 2 Fonts in 1 Design - <br>Fonts with Similar Moods and Similar Time Era <br>Contrast Serif-ness and Contrast Weights</p>
+            </div>
+
+            <div>
+                <h3>User Interface Design</h3>
+                <ol>
+                    <li>Hierarchy
+                        <ul>
+                            <li>Colour</li>
+                            <li>Size</li>
+                        </ul>
+                    </li>
+                    <li>Layout - optimal line length for text is 40-60 Characters</li>
+                    <li>Alignment</li>
+                    <li>Whitespace - Focus on Minimilism</li>
+                    <li>Audience</li>
+                </ol>
+            </div>
+
+            <div>
+                <h3>User Experience Design</h3>
+                <p>How the user uses the design</p>
+                <ol>
+                    <li>Simplicity</li>
+                    <li>Consistency</li>
+                    <li>Reading Patterns
+                        <ul>
+                            <li>F Pattern</li>
+                            <li>Z Pattern</li>
+                        </ul>
+                    </li>
+                    <li>All Platform Design - Web, Tablet, Mobile - Responsive Website</li>
+                    <li>Don't use your powers for Evil</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="background2 curriculum-section" id="javascript-es6">
+            <div>
+                <p class="section-label">Programming Basics</p>
+                <h2>Introduction to Javascript ES6</h2>
+                <p>JavaScript adds behavior and logic, turning static pages into interactive experiences that respond to users.</p>
+            </div>
+
+            <div>
+                <h3>Intro to Javascript</h3>
+                <p> Web is Dominated by Java Script - ECMA Script</p>
+                <p> Scripting Language tells website what to do - instructions</p>
+                <img src="./images/ie6-comic-strip.jpg">
+                <p>Java(Compiled) Vs JavaScript(Interpreted) - as much in common as Car and Carpet lol!</p>
+                <a href="https://www.youtube.com/watch?v=_C5AHaS1mOA">Interpreted Vs Compiled</a>
+                <p>JavaScript is Supported by every Browser - the language that powers the web. JavaScript is the best coding language for websites and web development.</p>
+            
+            </div>
+
+            <div>
+                <h3>Javascript alerts</h3>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> MDN Webdocs Javascript</a> for JS Functions and documentation </p>
+                <p><a href="https://github.com/rwaldron/idiomatic.js">Writing Good JavaScript Guide</a> All code in any code-base should look like a single person typed it, no matter how many people contributed.</p>
+                <a href="https://en.wikipedia.org/wiki/The_Elements_of_Style">The Elements of Style</a>
+            </div>
+
+            <div>
+                <h3>Data Types</h3>
+                <ul>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Boolean</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>JavaScript Variables</h3>
+                <p>Commit pieces of information to computer memory</p>
+                <p>Keywords - create containers 
+                    <ul>
+                        <li>var - keyword used to construct a container</li>
+                    </ul>
+                </p>
+
+            </div>
+            
+            <div>
+                <h3>Naming and Naming Conventions in JavaScript</h3>
+                <ul>
+                    <li>Give your variables meaningful names</li>
+                    <li>Can't name variable var</li>
+                    <li>Variable name can't start with number but can contain a number</li>
+                    <li>No spaces in variables</li>
+                    <li>Only able to use letters abc numbers 123 a dollar sign $ and an underscore _ in naming variables - no other symbols are valid</li>
+                    <li>Name variables using CAMEL CASING - e.g., userScoreFinal </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>String Concatenation</h3>
+                <p>Examples
+                    <ul>
+                        <li>"Hello" + " " + "World" = "Hello World"</li>
+                        <li>"Hello" + "World" = "HelloWorld"</li>
+                        <li>"Hello " + "World" = "Hello World"</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div>
+                <h3>String Lengths and Retrieving Number Characters</h3>
+                <p>var name="Shauna";<br> name.length; <br>6; </p>
+                <p style="text-align: left;">Example Twitter Characters Length 140 Characters</p>
+                <p class="code-sample">var numCharacters = prompt("Enter your text here: "); 
+                    <br>alert("You have written " + numCharacters.length + " characters, you have " + (140-numCharacters.length) + " characters left!");</p>
+            </div>
+
+            
+            <div>
+                <h3>Slicing and Extracting part of a String</h3>
+                <p>variable.slice(x,y)</p>
+                <p class="code-sample">var name = prompt("What is your name?");<br>
+                    var firstLetter = name.slice(0,1).toUpperCase();<br>
+                    var remainingLetters = name.slice(1,name.length).toLowerCase();<br>
+                    alert("Hello " + firstLetter + remainingLetters + "!");<br>
+                </p>
+            </div>
+
+            <div>
+                <h3>Arithmetic</h3>
+                <ul>
+                    <li>Addition (var c = a+b;)</li>
+                    <li>Subtraction (var c = a-b;)</li>
+                    <li>Multiplication (var c = a*b;)</li>
+                    <li>Division (var c = a/b;)</li>
+                    <li>Modulo (var c = a%b;) - gives remainder of division - if modulo = 0 then it's an even number</li>
+                </ul>
+                <p class="code-sample">var dogAge = prompt("How old is your dog?");
+                    <br>var humanAge= ((dogAge-2)*4)+21;
+                    <br>alert("Your dog is " + humanAge + " human years old!");</p>
+            </div>
+
+            <div>
+                <h3>Increment and Decrement Expressions</h3>
+                <ul>
+                    <li>Increment - var x = x+1; | x++;</li>
+                    <li>Increment - var x = x+2; | x+=2;</li>
+                    <li>Decrement - var x= x-1; | x--; )</li>
+                    <li>Decrement - var x= x-4; | x-=4; )</li>
+                </ul>
+
+                <ul>
+                    <li>x=x*3; | x*=3;</li>
+                    <li>x=x/6; | x/=6;</li>
+                </ul>
+               
+            </div>
+
+            <div>
+                <h3>Functions</h3>
+                <p>function nameOfFunction(){ }</p>
+                <a href="https://stanford.edu/~cpiech/karel/ide.html">The Karel Robot</a>
+                <p class="code-sample">Chess Board code!<br>
+                   <br>function main(){
+                    <br>chessboard();}
+                    <br>
+                    <br>function acrossRight() {
+                        <br>     while(frontIsClear()){
+                            <br>putBeeper();
+                            <br> move();
+                            <br>move();}}
+                            <br>
+                    <br> function acrossLeft() {
+                        <br>while(frontIsClear()){
+                            <br>move();
+                            <br>putBeeper();
+                            <br>move();}}
+                <br>
+                <br>function upRight(){
+                    <br>putBeeper();
+                    <br>turnLeft();
+                    <br>move();
+                    <br>turnLeft();}
+                    <br>
+              
+                <br>function upLeft(){
+                    <br>turnRight();
+                    <br>move();
+                    <br>turnRight();}
+                    <br>
+                <br>function chessboard(){
+                    <br>while(frontIsClear()){
+                        <br>acrossRight();
+                        <br>upRight();
+                        <br>acrossLeft();
+                        <br>upLeft();}  
+                   }</p>
+               
+
+            <a href="https://www.w3schools.com/jsref/jsref_floor.asp">JavaScript Floor Method</a>
+            </div>
+
+            <div>
+                <h3>Random Number </h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=GtOt7EBNEwQ">Pseudorandom number generators | Computer Science | Khan Academy</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.Random();</a></li>
+                    <li><a href="https://www.lovecalculator.com/">Love Calculator X</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Conditional Statements if/else </h3>
+                <ul>
+                    <li>Known as control flow</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Comparators </h3>
+                <ul>
+                    <li>&& AND </li>
+                    <li>|| OR</li>
+                    <li>! NOT</li>
+                </ul>
+            </div>
+
+
+
+        </section>
+
+        <script>
+            const carousel = document.querySelector(".hero-carousel");
+
+            if (carousel) {
+                const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+                const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
+                const prevButton = carousel.querySelector('[data-direction="prev"]');
+                const nextButton = carousel.querySelector('[data-direction="next"]');
+                let currentSlide = 0;
+                let autoRotate;
+
+                function showSlide(index) {
+                    currentSlide = (index + slides.length) % slides.length;
+
+                    slides.forEach((slide, slideIndex) => {
+                        const isActive = slideIndex === currentSlide;
+                        slide.classList.toggle("is-active", isActive);
+                    });
+
+                    dots.forEach((dot, dotIndex) => {
+                        const isActive = dotIndex === currentSlide;
+                        dot.classList.toggle("is-active", isActive);
+                        dot.setAttribute("aria-pressed", isActive.toString());
+                    });
+                }
+
+                function startAutoRotate() {
+                    window.clearInterval(autoRotate);
+                    autoRotate = window.setInterval(() => {
+                        showSlide(currentSlide + 1);
+                    }, 6000);
+                }
+
+                function resetAutoRotate() {
+                    startAutoRotate();
+                }
+
+                prevButton.addEventListener("click", () => {
+                    showSlide(currentSlide - 1);
+                    resetAutoRotate();
+                });
+
+                nextButton.addEventListener("click", () => {
+                    showSlide(currentSlide + 1);
+                    resetAutoRotate();
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener("click", () => {
+                        showSlide(index);
+                        resetAutoRotate();
+                    });
+                });
+
+                carousel.addEventListener("mouseenter", () => window.clearInterval(autoRotate));
+                carousel.addEventListener("mouseleave", startAutoRotate);
+
+                showSlide(0);
+                startAutoRotate();
+            }
+        </script>
+    </body>
+
+
+</html>
