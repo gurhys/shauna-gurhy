@@ -7,16 +7,30 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     </head>
 
     <body class="resume-home">
         <header class="home-hero">
-            <div class="hero-image-placeholder" role="img" aria-label="Image placeholder">
+            <div class="hero-image-placeholder">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                    <source src="./IMG_8962.mp4" type="video/mp4">
+                </video>
                 <nav class="site-nav" aria-label="Main navigation">
-                    <a class="site-nav-brand" href="./index.html">Shauna</a>
-                    <div class="site-nav-links">
+                    <a class="site-nav-brand" href="./index.html">Shauna Gurhy</a>
+                    <button
+                        class="site-nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="site-nav-links"
+                        aria-label="Open navigation"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-nav-links" id="site-nav-links">
                         <a href="./index.html">Home</a>
                         <a href="./education.html">Education</a>
                         <a href="./workexperience.html">Work Experience</a>
@@ -26,24 +40,66 @@
                 </nav>
 
                 <div id="title">
-                    <p class="hero-placeholder-label">Image Placeholder</p>
                     <h1>Shauna Gurhy</h1>
+                </div>
+
+                <div id="info">
+                    <p>
+                        <span class="info-location">Dublin, Ireland</span>
+                        <span class="info-separator" aria-hidden="true"> | </span>
+                        <span class="info-phone">+353 872075305</span>
+                        <span class="info-separator" aria-hidden="true"> | </span>
+                        <span class="info-email">shaunagurhy@gmail.com</span>
+                        <span class="info-separator" aria-hidden="true"> | </span>
+                        <span class="info-linkedin">LinkedIn: <a href="https://www.linkedin.com/in/shauna-gurhy-0735a4173/">shaunagurhy</a></span>
+                    </p>
                 </div>
             </div>
         </header>
 
-        <div id="info"> <p>Dublin, Ireland | +353 872075305 | shaunagurhy@gmail.com | LinkedIn: <a href="https://www.linkedin.com/in/shauna-gurhy-0735a4173/">shaunagurhy</a></p></div>
-
         <div class="background1" id="personal-statement">
+            <div class="personal-statement-layout">
+                <div class="portrait-placeholder">
+                    <img src="./portrait.jpg.JPG" alt="Portrait of Shauna Gurhy">
+                </div>
 
-            <h2>Personal Statement</h2>
-            <hr>
-            <p>Electronic and Computer Engineering final year MAI student at Trinity College Dublin, with a strong work ethic and a
-            passion for learning and problem-solving. Passionate about technology and sustainability with a particular interest in solar
-            electric. I have a broad range of extra-curricular interests which have helped me to develop qualities such as commitment,
-            determination and most importantly being a team-player. I have demonstrated initiative and leadership in both my work
-            and personal life.
-            </p>
+                <div class="personal-statement-copy">
+                    <h2>Welcome,</h2>
+                    <hr>
+                    <p>Hi, I'm Shauna, I'm currently in the process of creating my 
+                        own website to share a bit about my story, my life and the work 
+                        I do and want to do in the future. This is a work in progress, so it's not perfect (yet)
+                        and hopefully the next time you check back, there will be more to see 
+                        and explore. I hope this site grows with me on my journey so thanks 
+                        for stopping by...
+                    </p>
+                </div>
+            </div>
+
+            <section class="journey-timeline" aria-label="Timeline from 2018 to 2026">
+                <div class="timeline-heading">
+                    <h3>2018 to 2026</h3>
+                    <p>A winding route through study, work, sport, travel, and everything in between.</p>
+                </div>
+
+                <div class="timeline-shell">
+                    <svg class="timeline-squiggle" viewBox="0 0 120 920" aria-hidden="true" preserveAspectRatio="none">
+                        <path d="M60 18 C22 70, 98 122, 60 174 S22 278, 60 330 S98 434, 60 486 S22 590, 60 642 S98 746, 60 798 S22 876, 60 902"></path>
+                    </svg>
+
+                    <ol class="timeline-years">
+                        <li><span class="timeline-year">2018</span></li>
+                        <li><span class="timeline-year">2019</span></li>
+                        <li><span class="timeline-year">2020</span></li>
+                        <li><span class="timeline-year">2021</span></li>
+                        <li><span class="timeline-year">2022</span></li>
+                        <li><span class="timeline-year">2023</span></li>
+                        <li><span class="timeline-year">2024</span></li>
+                        <li><span class="timeline-year">2025</span></li>
+                        <li><span class="timeline-year">2026</span></li>
+                    </ol>
+                </div>
+            </section>
 
             <section class="link-carousel" aria-label="Featured pages">
                 <div class="carousel-track">
@@ -160,7 +216,37 @@
     </div>
 
         <script>
+            const siteNav = document.querySelector(".site-nav");
+            const navToggle = document.querySelector(".site-nav-toggle");
+            const navLinks = document.querySelector(".site-nav-links");
             const carousel = document.querySelector(".link-carousel");
+
+            if (siteNav && navToggle && navLinks) {
+                function setNavState(isOpen) {
+                    siteNav.classList.toggle("is-open", isOpen);
+                    navToggle.setAttribute("aria-expanded", isOpen.toString());
+                    navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+                }
+
+                navToggle.addEventListener("click", () => {
+                    const isOpen = navToggle.getAttribute("aria-expanded") !== "true";
+                    setNavState(isOpen);
+                });
+
+                navLinks.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        if (window.innerWidth <= 900) {
+                            setNavState(false);
+                        }
+                    });
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth > 900) {
+                        setNavState(false);
+                    }
+                });
+            }
 
             if (carousel) {
                 const slides = Array.from(carousel.querySelectorAll(".carousel-card"));

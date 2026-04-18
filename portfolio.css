@@ -112,6 +112,29 @@ a {
   color: var(--muted);
 }
 
+.site-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+}
+
+.site-nav-toggle span {
+  display: block;
+  width: 1.1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
 .hero {
   padding: 4.5rem 0 3rem;
 }
@@ -133,8 +156,7 @@ a {
   text-transform: uppercase;
 }
 
-.hero h1,
-
+.hero h1{
   margin: 0 0 1rem;
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 6.3rem);
@@ -450,29 +472,33 @@ a {
   min-height: 40rem;
   border-radius: 0;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, rgba(35, 47, 45, 0.08), rgba(35, 47, 45, 0.38)),
-    linear-gradient(135deg, #8d9a8a 0%, #718073 34%, #566661 68%, #41524f 100%);
+  background: linear-gradient(135deg, #8d9a8a 0%, #718073 34%, #566661 68%, #41524f 100%);
   box-shadow: 0 30px 80px rgba(49, 69, 67, 0.14);
+}
+
+.resume-home .hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .resume-home .hero-image-placeholder::before {
   content: "";
   position: absolute;
-  inset: 1.2rem;
-  border-radius: 30px;
-  border: 1px solid rgba(248, 252, 244, 0.18);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 30, 29, 0.18), rgba(20, 30, 29, 0.42));
+  z-index: 1;
 }
 
 .resume-home .hero-image-placeholder::after {
   content: "";
   position: absolute;
-  width: 32rem;
-  height: 32rem;
-  right: -6rem;
-  top: 3rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(233, 239, 226, 0.18), transparent 68%);
+  inset: 1.2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(248, 252, 244, 0.18);
+  z-index: 1;
 }
 
 .resume-home .site-nav {
@@ -516,28 +542,35 @@ a {
   text-transform: uppercase;
 }
 
+.resume-home .site-nav-toggle {
+  color: rgba(240, 246, 235, 0.92);
+  border: 1px solid rgba(240, 246, 235, 0.2);
+  background: rgba(20, 30, 29, 0.16);
+  backdrop-filter: blur(10px);
+}
+
 .resume-home #title {
   position: absolute;
-  right: 2.4rem;
-  bottom: 2.5rem;
-  left: 2.4rem;
-  width: auto;
+  inset: 0;
   margin: 0;
-  padding: 0;
-  text-align: left;
+  padding: 6rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
   border-bottom: none;
   z-index: 2;
 }
 
 .resume-home #title h1 {
   margin: 0;
-  font-family: var(--font-body);
-  font-size: clamp(5.5rem, 15vw, 10.5rem);
-  font-weight: 600;
-  line-height: 0.82;
-  letter-spacing: 0.14em;
+  font-family: "Cinzel", serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 1;
   color: #c8d1bc;
-  text-transform: uppercase;
   text-shadow: 0 12px 30px rgba(20, 28, 27, 0.18);
 }
 
@@ -556,18 +589,26 @@ a {
 }
 
 .resume-home #info {
-  margin-bottom: 1.5rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
+  left: 2rem;
+  width: auto;
+  margin: 0;
   padding: 1rem 1.5rem;
-  border: 1px solid rgba(49, 69, 67, 0.12);
-  border-radius: 999px;
-  background: rgba(241, 245, 236, 0.32);
-  box-shadow: 0 12px 32px rgba(49, 69, 67, 0.08);
-  text-align: center;
+  backdrop-filter: blur(3px);
+  text-align: right;
+  z-index: 2;
 }
 
 .resume-home #info p {
   margin: 0;
-  color: #314543;
+  color: rgba(240, 246, 235, 0.94);
+}
+
+.resume-home #info a {
+  color: rgba(240, 246, 235, 0.94);
+  text-decoration-color: rgba(240, 246, 235, 0.42);
 }
 
 .resume-home .background1,
@@ -615,6 +656,144 @@ a {
 
 .resume-home #personal-statement p {
   max-width: 72ch;
+}
+
+.resume-home .personal-statement-layout {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.resume-home .personal-statement-copy h2 {
+  margin-top: 0;
+}
+
+.resume-home .portrait-placeholder {
+  display: flex;
+  min-height: 25rem;
+  margin-top: -10rem;
+  border: 1px solid rgba(49, 69, 67, 0.14);
+  border-radius: 0;
+  overflow: hidden;
+  background: rgba(244, 248, 240, 0.3);
+  box-shadow: 0 18px 36px rgba(49, 69, 67, 0.12);
+  aspect-ratio: 4 / 5.8;
+  position: relative;
+  z-index: 5;
+}
+
+.resume-home .portrait-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+  border-radius: 0;
+}
+
+.resume-home .journey-timeline {
+  margin-top: 2.5rem;
+  padding: 2rem 1.5rem 1.5rem;
+  border: 1px solid rgba(49, 69, 67, 0.1);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(248, 250, 245, 0.82), rgba(237, 243, 231, 0.62));
+}
+
+.resume-home .timeline-heading {
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.resume-home .timeline-heading h3 {
+  margin-bottom: 0.35rem;
+}
+
+.resume-home .timeline-heading p {
+  margin: 0;
+  text-align: center;
+  color: rgba(49, 69, 67, 0.76);
+}
+
+.resume-home .timeline-shell {
+  position: relative;
+  width: min(100%, 44rem);
+  margin: 0 auto;
+  padding: 0.25rem 0;
+}
+
+.resume-home .timeline-squiggle {
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  left: 50%;
+  width: 4.5rem;
+  height: calc(100% - 1.5rem);
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.resume-home .timeline-squiggle path {
+  fill: none;
+  stroke: rgba(73, 105, 89, 0.92);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.resume-home .timeline-years {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-home .timeline-years li {
+  position: relative;
+  min-height: 5.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.resume-home .timeline-years li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(73, 105, 89, 0.78);
+  border-radius: 50%;
+  background: rgba(248, 250, 245, 0.95);
+  box-shadow: 0 0 0 6px rgba(227, 238, 220, 0.72);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.resume-home .timeline-years li:nth-child(odd) {
+  justify-content: flex-start;
+  padding-right: calc(50% + 2.5rem);
+}
+
+.resume-home .timeline-years li:nth-child(even) {
+  justify-content: flex-end;
+  padding-left: calc(50% + 2.5rem);
+}
+
+.resume-home .timeline-year {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.2rem;
+  min-height: 3rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(49, 69, 67, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 12px 30px rgba(49, 69, 67, 0.08);
+  font-family: "Cinzel", serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
 }
 
 .resume-home .link-carousel {
@@ -787,7 +966,22 @@ a {
   }
 
   .resume-home #info {
+    right: 0.9rem;
+    bottom: 0.9rem;
+    left: 0.9rem;
     border-radius: var(--radius-lg);
+    padding: 0.8rem 1rem;
+  }
+
+  .resume-home #info p {
+    font-size: 0.9rem;
+  }
+
+  .resume-home .info-location,
+  .resume-home .info-phone,
+  .resume-home .info-linkedin,
+  .resume-home .info-separator {
+    display: none;
   }
 
   .resume-home .hero-image-placeholder {
@@ -798,32 +992,123 @@ a {
     top: 0.7rem;
     right: 0.7rem;
     left: 0.7rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0;
+  }
+
+  .resume-home .site-nav-brand {
+    max-width: calc(100% - 4.5rem);
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+  }
+
+  .resume-home .site-nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .resume-home .site-nav-links {
+    position: absolute;
+    top: calc(100% + 0.7rem);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    width: min(18rem, calc(100vw - 1.4rem));
+    padding: 0.6rem;
+    border: 1px solid rgba(240, 246, 235, 0.18);
+    border-radius: 1.2rem;
+    background: rgba(20, 30, 29, 0.92);
+    box-shadow: 0 18px 40px rgba(20, 28, 27, 0.28);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-0.5rem);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .resume-home .site-nav-links a {
+    padding: 0.7rem 0.85rem;
+    border-radius: 0.85rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .resume-home .site-nav.is-open .site-nav-links {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .resume-home .site-nav.is-open .site-nav-toggle span:nth-child(1) {
+    transform: translateY(0.4rem) rotate(45deg);
+  }
+
+  .resume-home .site-nav.is-open .site-nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .resume-home .site-nav.is-open .site-nav-toggle span:nth-child(3) {
+    transform: translateY(-0.4rem) rotate(-45deg);
+  }
+
+  .resume-home #title {
+    inset: auto 1rem 5.25rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  .resume-home #title h1 {
+    font-size: clamp(2.6rem, 10vw, 4.2rem);
+    line-height: 0.95;
+    letter-spacing: 0.05em;
+  }
+
+  .resume-home .personal-statement-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-home .portrait-placeholder {
+    display: none;
+  }
+
+  .resume-home .journey-timeline {
+    padding-inline: 1rem;
+  }
+
+  .resume-home .timeline-shell {
+    width: 100%;
+  }
+
+  .resume-home .timeline-squiggle {
+    left: 1.4rem;
+    transform: none;
+  }
+
+  .resume-home .timeline-years li,
+  .resume-home .timeline-years li:nth-child(odd),
+  .resume-home .timeline-years li:nth-child(even) {
+    justify-content: flex-start;
+    min-height: 4.8rem;
+    padding-left: 4.2rem;
+    padding-right: 0;
+  }
+
+  .resume-home .timeline-years li::before {
+    left: 1.4rem;
   }
 
   .resume-home .education_container,
   .resume-home .work_container,
   .resume-home .skills_awards_container {
     grid-template-columns: 1fr;
-  }
-
-  .resume-home #title {
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: 0 2rem;
-    text-align: center;
-    border-bottom: none;
-    z-index: 2;
-  }
-
-  .resume-home #title h1 {
-    font-size: clamp(3.5rem, 16vw, 5.8rem);
-    letter-spacing: 0.08em;
   }
 
   .resume-home .carousel-track {
