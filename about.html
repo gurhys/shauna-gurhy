@@ -11,39 +11,53 @@
     </head>
 
     <body class="resume-page timeline-page">
-        <nav class="site-nav" aria-label="Main navigation">
-            <a class="site-nav-brand" href="./index.html">Shauna Gurhy</a>
-            <div class="site-nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./education.html">Education</a>
-                <a href="./workexperience.html">Work Experience</a>
-                <a href="./adventure.html">Adventure</a>
-                <a href="./education/webdevelopment.html">Web Development</a>
+        <header class="timeline-page-hero">
+            <div class="timeline-hero-image-placeholder">
+                <img
+                    class="timeline-hero-image"
+                    src="./baileys_ocean.jpeg?v=20260420b"
+                    alt="Baileys Lighthouse"
+                >
+                <nav class="site-nav" aria-label="Main navigation">
+                    <a class="site-nav-brand" href="./index.html">Shauna Gurhy</a>
+                    <button
+                        class="site-nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="site-nav-links"
+                        aria-label="Open navigation"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-nav-links" id="site-nav-links">
+                        <a href="./index.html">Home</a>
+                        <a href="./about.html">About</a>
+                        <a href="./contact.html">Contact</a>
+                        <a href="./education.html">Education</a>
+                        <a href="./workexperience.html">Work Experience</a>
+                        <a href="./adventure.html">Adventure</a>
+                        <a href="./skills_abilities.html">Skills</a>
+                        <a href="./creativity.html">Creativity</a>
+                        <a href="#">Portfolio</a>
+                        <a href="./blog.html">Blog</a>
+                    </div>
+                </nav>
+                <div class="timeline-hero-copy">
+                    <p>
+                        <span class="hero-greeting">Dia Dhuit</span>
+                        <span class="hero-name">I'm Shauna</span>
+                    </p>
+                </div>
             </div>
-        </nav>
+        </header>
 
         <main class="page-shell">
-            <section class="hero page-hero">
-                <div class="hero-grid">
-                    <div>
-                        <p class="eyebrow">My Story</p>
-                        <h1>The moments, moves, and milestones that shaped my path.</h1>
-                        <p class="hero-copy">This page brings together the timeline from 2018 to 2026 in one place, with the major turning points across study, work, travel, and sport.</p>
-                        <div class="hero-actions">
-                            <a class="button button-primary" href="./index.html">Back Home</a>
-                            <a class="button button-secondary" href="./workexperience.html">See Work Experience</a>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="hero-note">A dedicated story page for the fuller version of the timeline.</div>
-                    </div>
-                </div>
-            </section>
 
             <section class="journey-timeline" aria-label="Timeline from 2018 to 2026">
                 <div class="timeline-heading">
-                    <h2>2018 to 2026</h2>
-                    <p>A bit of my journey so far...</p>
+                    <h2>A look back at my journey so far...</hF2>
                 </div>
 
                 <div class="timeline-shell">
@@ -161,5 +175,37 @@
                 </div>
             </section>
         </main>
+        <script>
+            const siteNav = document.querySelector(".site-nav");
+            const navToggle = document.querySelector(".site-nav-toggle");
+            const navLinks = document.querySelector(".site-nav-links");
+
+            if (siteNav && navToggle && navLinks) {
+                function setNavState(isOpen) {
+                    siteNav.classList.toggle("is-open", isOpen);
+                    navToggle.setAttribute("aria-expanded", isOpen.toString());
+                    navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+                }
+
+                navToggle.addEventListener("click", () => {
+                    const isOpen = navToggle.getAttribute("aria-expanded") !== "true";
+                    setNavState(isOpen);
+                });
+
+                navLinks.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        if (window.innerWidth <= 900) {
+                            setNavState(false);
+                        }
+                    });
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth > 900) {
+                        setNavState(false);
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
