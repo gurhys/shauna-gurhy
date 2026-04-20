@@ -2091,7 +2091,7 @@ a {
   }
 
   .timeline-page .site-nav-toggle {
-    display: inline-flex;
+    display: inline-flex !important;
     flex-direction: column;
     flex-shrink: 0;
   }
@@ -2123,6 +2123,11 @@ a {
     border-radius: 0.85rem;
     font-size: 0.7rem;
     letter-spacing: 0.14em;
+    color: rgba(49, 69, 67, 0.92);
+  }
+
+  .timeline-page .site-nav .site-nav-links {
+    display: flex;
   }
 
   .timeline-page .site-nav.is-open .site-nav-links {
