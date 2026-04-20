@@ -1008,6 +1008,10 @@ a {
   text-align: center;
 }
 
+.resume-home .feature-mobile-arrow {
+  display: none;
+}
+
 .resume-home .feature-kicker {
   display: inline-flex;
   align-items: center;
@@ -1712,6 +1716,70 @@ a {
     min-height: 13rem;
   }
 
+  .resume-home .feature-education-card {
+    order: -2;
+    min-height: 15rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .resume-home .feature-work-image,
+  .resume-home .feature-adventure-image {
+    min-height: 15rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .resume-home .feature-work-image {
+    order: 1;
+  }
+
+  .resume-home .feature-adventure-image {
+    order: 3;
+  }
+
+  .resume-home .feature-education-link,
+  .resume-home .feature-work-link,
+  .resume-home .feature-adventure-link {
+    order: -1;
+    position: relative;
+    z-index: 2;
+    width: min(calc(100% - 3rem), 18rem);
+    margin: -5rem auto 0;
+    min-height: 10.25rem;
+  }
+
+  .resume-home .feature-work-link {
+    order: 2;
+  }
+
+  .resume-home .feature-adventure-link {
+    order: 4;
+  }
+
+  .resume-home .feature-education-link p,
+  .resume-home .feature-work-link p,
+  .resume-home .feature-adventure-link p {
+    display: none;
+  }
+
+  .resume-home .feature-education-link .feature-mobile-arrow,
+  .resume-home .feature-work-link .feature-mobile-arrow,
+  .resume-home .feature-adventure-link .feature-mobile-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(49, 69, 67, 0.16);
+    border-radius: 999px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
   .resume-home .feature-image-card-story,
   .resume-home .story-feature-grid .feature-image-card-story:first-child,
   .resume-home .story-feature-grid .feature-image-card-story:last-child {
@@ -1719,6 +1787,13 @@ a {
     min-height: 9.5rem;
     margin-top: 0;
     justify-self: stretch;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .resume-home .story-feature-grid .feature-image-card-story:last-child {
+    display: none;
   }
 
   .resume-home .feature-education-card {
@@ -1730,9 +1805,7 @@ a {
   }
 
   .resume-home .story-video-band {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    display: none;
   }
 
   .resume-home .story-preview-video {
@@ -1853,6 +1926,23 @@ a {
     min-height: 11.5rem;
   }
 
+  .resume-home .feature-education-card {
+    min-height: 13.5rem;
+  }
+
+  .resume-home .feature-work-image,
+  .resume-home .feature-adventure-image {
+    min-height: 13.5rem;
+  }
+
+  .resume-home .feature-education-link,
+  .resume-home .feature-work-link,
+  .resume-home .feature-adventure-link {
+    width: min(calc(100% - 2.4rem), 16.5rem);
+    margin-top: -4.1rem;
+    min-height: 9.75rem;
+  }
+
   .resume-home .story-preview-video {
     height: 12rem;
   }
@@ -1902,6 +1992,23 @@ a {
   .resume-home .feature-story-card,
   .resume-home .feature-image-card {
     min-height: 10.5rem;
+  }
+
+  .resume-home .feature-education-card {
+    min-height: 12.5rem;
+  }
+
+  .resume-home .feature-work-image,
+  .resume-home .feature-adventure-image {
+    min-height: 12.5rem;
+  }
+
+  .resume-home .feature-education-link,
+  .resume-home .feature-work-link,
+  .resume-home .feature-adventure-link {
+    width: min(calc(100% - 1.8rem), 15rem);
+    margin-top: -3.7rem;
+    min-height: 9.25rem;
   }
 
   .resume-home .story-preview-video {
