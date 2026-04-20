@@ -38,8 +38,16 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(166, 119, 87, 0.16), transparent 22%),
-    radial-gradient(circle at bottom right, rgba(143, 152, 128, 0.14), transparent 24%),
+    radial-gradient(
+      circle at top left,
+      rgba(166, 119, 87, 0.16),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(143, 152, 128, 0.14),
+      transparent 24%
+    ),
     linear-gradient(180deg, #fcf8f4 0%, #f4ede5 100%);
   font-family: var(--font-body);
   line-height: 1.7;
@@ -132,7 +140,9 @@ a {
   height: 2px;
   border-radius: 999px;
   background: currentColor;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .hero {
@@ -156,7 +166,7 @@ a {
   text-transform: uppercase;
 }
 
-.hero h1{
+.hero h1 {
   margin: 0 0 1rem;
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 6.3rem);
@@ -186,7 +196,10 @@ a {
   padding: 0.85rem 1.25rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .button-primary {
@@ -285,7 +298,8 @@ a {
   margin: 0 0 0.55rem;
   font-family: var(--font-display);
   font-size: 1.9rem;
-  line-height: 1.02;
+  line-height: 0.95;
+  font-weight: 400;
 }
 
 .offer-grid {
@@ -385,14 +399,19 @@ a {
   margin: 0 0 0.5rem;
   font-family: var(--font-display);
   font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 400;
 }
 
 .cta-section {
   padding: 2.25rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
-  background:
-    linear-gradient(145deg, rgba(239, 231, 222, 0.95), rgba(255, 255, 255, 0.68));
+  background: linear-gradient(
+    145deg,
+    rgba(239, 231, 222, 0.95),
+    rgba(255, 255, 255, 0.68)
+  );
   box-shadow: var(--shadow);
 }
 
@@ -451,6 +470,7 @@ a {
 .resume-home #info,
 .resume-home .background1,
 .resume-home .background2,
+.resume-home .website-overview-nav,
 .resume-home .skills_awards_container,
 .resume-home footer {
   width: min(calc(100% - 2rem), var(--max-width));
@@ -458,7 +478,7 @@ a {
 }
 
 .resume-home {
-  background: #c8d1bc;
+  background: #c5d5e5;
   color: #314543;
 }
 
@@ -472,7 +492,13 @@ a {
   min-height: 40rem;
   border-radius: 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #8d9a8a 0%, #718073 34%, #566661 68%, #41524f 100%);
+  background: linear-gradient(
+    135deg,
+    #8d9a8a 0%,
+    #718073 34%,
+    #566661 68%,
+    #41524f 100%
+  );
   box-shadow: 0 30px 80px rgba(49, 69, 67, 0.14);
 }
 
@@ -488,7 +514,11 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20, 30, 29, 0.18), rgba(20, 30, 29, 0.42));
+  background: linear-gradient(
+    180deg,
+    rgba(20, 30, 29, 0.18),
+    rgba(20, 30, 29, 0.42)
+  );
   z-index: 1;
 }
 
@@ -616,17 +646,17 @@ a {
 .resume-home .background2 {
   margin-bottom: 1.5rem;
   padding: 2rem;
-  border: 1px solid rgba(49, 69, 67, 0.12);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 16px 40px rgba(49, 69, 67, 0.06);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .resume-home .background1 {
-  background: rgba(244, 248, 240, 0.34);
+  background: transparent;
 }
 
 .resume-home .background2 {
-  background: rgba(236, 242, 230, 0.46);
+  background: transparent;
 }
 
 .resume-home h2 {
@@ -641,7 +671,8 @@ a {
   margin: 0 0 0.55rem;
   font-family: var(--font-display);
   font-size: 1.75rem;
-  line-height: 1.06;
+  line-height: 0.95;
+  font-weight: 400;
   color: #314543;
 }
 
@@ -674,7 +705,7 @@ a {
   display: flex;
   height: 25rem;
   min-height: 25rem;
-  margin-top: -10rem;
+  margin-top: -8rem;
   width: 100%;
   border: 1px solid rgba(49, 69, 67, 0.14);
   border-radius: 0;
@@ -697,8 +728,11 @@ a {
   margin-top: 2.5rem;
   padding: 2rem 1.5rem 1.5rem;
   border-radius: var(--radius-xl);
-  background:
-    linear-gradient(180deg, rgba(248, 250, 245, 0.82), rgba(237, 243, 231, 0.62));
+  background: linear-gradient(
+    180deg,
+    rgba(248, 250, 245, 0.82),
+    rgba(237, 243, 231, 0.62)
+  );
 }
 
 .resume-home .timeline-heading {
@@ -824,8 +858,11 @@ a {
   min-height: 10rem;
   border: 1px dashed rgba(73, 105, 89, 0.35);
   border-radius: 1.25rem 0 0 1.25rem;
-  background:
-    linear-gradient(135deg, rgba(230, 237, 223, 0.92), rgba(247, 250, 243, 0.74));
+  background: linear-gradient(
+    135deg,
+    rgba(230, 237, 223, 0.92),
+    rgba(247, 250, 243, 0.74)
+  );
   color: rgba(73, 105, 89, 0.82);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
@@ -894,21 +931,27 @@ a {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 18rem;
   gap: 1.2rem;
 }
 
 .resume-home .story-feature-grid {
-  margin-top: 1.2rem;
+  margin-top: -4.5rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: max-content minmax(24rem, 1fr) max-content;
   gap: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 .resume-home .feature-card {
-  min-height: 15rem;
+  min-height: 0;
+  height: 100%;
   padding: 1.6rem;
   border: 1px solid rgba(49, 69, 67, 0.1);
-  
+
   box-shadow: 0 16px 40px rgba(49, 69, 67, 0.08);
 }
 
@@ -920,15 +963,35 @@ a {
   text-align: center;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent),
-    linear-gradient(145deg, rgba(232, 239, 226, 0.94), rgba(248, 250, 245, 0.82));
+    linear-gradient(
+      145deg,
+      rgba(232, 239, 226, 0.94),
+      rgba(248, 250, 245, 0.82)
+    );
 }
 
 .resume-home .feature-story-card {
-  min-height: 13rem;
+  min-height: 19rem;
+  max-width: none;
+  height: 100%;
+  align-self: stretch;
+  justify-self: stretch;
+  padding: 1.75rem;
 }
 
 .resume-home .feature-image-card-story {
-  min-height: 13rem;
+  min-height: 10.5rem;
+  width: 15rem;
+  max-width: 100%;
+  margin-top: 3rem;
+}
+
+.resume-home .story-feature-grid .feature-image-card-story:first-child {
+  justify-self: start;
+}
+
+.resume-home .story-feature-grid .feature-image-card-story:last-child {
+  justify-self: end;
 }
 
 .resume-home .feature-link-card h3 {
@@ -961,32 +1024,33 @@ a {
 
 .resume-home .feature-image-card {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 0;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent),
     linear-gradient(145deg, rgba(168, 184, 162, 0.86), rgba(222, 230, 214, 0.7));
 }
 
 .resume-home .feature-education-card {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0.35rem;
-  padding: 1rem;
-  align-items: stretch;
+  display: flex;
 }
 
+.resume-home .feature-image-card img,
 .resume-home .feature-education-card img {
   width: 100%;
   height: 100%;
+  flex: 1 1 auto;
   object-fit: cover;
-  border-radius: 0rem;
-  box-shadow: 0 10px 24px rgba(49, 69, 67, 0.12);
+  object-position: center;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.resume-home .feature-education-card img:first-child {
-  grid-row: 1 / span 2;
+.resume-home .feature-education-card img {
+  object-position: center 90%;
 }
 
 .resume-home .feature-image-card span {
@@ -1021,12 +1085,122 @@ a {
   object-fit: cover;
 }
 
+.resume-home .website-overview-nav {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 0 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 1.1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  background: #2e3b4f;
+  border-top: 1px solid rgba(244, 248, 240, 0.28);
+}
+
+.resume-home .website-overview-column h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+.resume-home .website-overview-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+  justify-items: center;
+}
+
+.resume-home .website-overview-links {
+  text-align: center;
+}
+
+.resume-home .website-overview-links a {
+  color: rgba(244, 248, 240, 0.92);
+  font-size: 0.96rem;
+  letter-spacing: 0.04em;
+}
+
+.resume-home .website-overview-links .is-coming-soon {
+  opacity: 0.7;
+}
+
+.resume-home .website-overview-brand {
+  text-align: center;
+  justify-items: center;
+}
+
+.resume-home .logo-placeholder {
+  width: 6.5rem;
+  height: 6.5rem;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(244, 248, 240, 0.35);
+  border-radius: 50%;
+  color: rgba(244, 248, 240, 0.7);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.resume-home .website-overview-brand h2 {
+  margin-bottom: 0.9rem;
+}
+
+.resume-home .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.resume-home .social-link {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(244, 248, 240, 0.28);
+  border-radius: 999px;
+  color: rgba(244, 248, 240, 0.92);
+}
+
+.resume-home .social-link svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.resume-home .social-link-linkedin svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.resume-home .website-overview-news {
+  min-height: 100%;
+  justify-items: center;
+}
+
+.resume-home .website-overview-news h2,
+.resume-home .website-overview-brand h2,
+.resume-home .website-overview-links h2 {
+  color: rgba(244, 248, 240, 0.95);
+}
+
 .timeline-page .journey-timeline {
   margin-top: 2rem;
   padding: 2rem 1.5rem 1.5rem;
   border-radius: var(--radius-xl);
-  background:
-    linear-gradient(180deg, rgba(248, 250, 245, 0.82), rgba(237, 243, 231, 0.62));
+  background: linear-gradient(
+    180deg,
+    rgba(248, 250, 245, 0.82),
+    rgba(237, 243, 231, 0.62)
+  );
 }
 
 .timeline-page .timeline-heading {
@@ -1153,8 +1327,11 @@ a {
   min-height: 10rem;
   border: 1px dashed rgba(73, 105, 89, 0.35);
   border-radius: 1.25rem 0 0 1.25rem;
-  background:
-    linear-gradient(135deg, rgba(230, 237, 223, 0.92), rgba(247, 250, 243, 0.74));
+  background: linear-gradient(
+    135deg,
+    rgba(230, 237, 223, 0.92),
+    rgba(247, 250, 243, 0.74)
+  );
   color: rgba(73, 105, 89, 0.82);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
@@ -1227,7 +1404,6 @@ a {
 
 .resume-home .education_container img {
   width: 100%;
-  aspect-ratio: 4 / 5;
   object-fit: cover;
   box-shadow: var(--shadow);
 }
@@ -1365,7 +1541,9 @@ a {
     opacity: 0;
     pointer-events: none;
     transform: translateY(-0.5rem);
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
   }
 
   .resume-home .site-nav-links a {
@@ -1464,15 +1642,34 @@ a {
 
   .resume-home .home-feature-grid {
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
 
   .resume-home .story-feature-grid {
     grid-template-columns: 1fr;
+    margin-top: 1.2rem;
+  }
+
+  .resume-home .website-overview-nav {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    text-align: center;
+  }
+
+  .resume-home .website-overview-links ul {
+    justify-items: center;
+  }
+
+  .resume-home .feature-image-card-story,
+  .resume-home .story-feature-grid .feature-image-card-story:first-child,
+  .resume-home .story-feature-grid .feature-image-card-story:last-child {
+    width: 100%;
+    margin-top: -2;
+    justify-self: stretch;
   }
 
   .resume-home .feature-education-card {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
   .resume-home .feature-education-card img:first-child {
@@ -1540,5 +1737,4 @@ a {
   .resume-home .skills_awards_container {
     grid-template-columns: 1fr;
   }
-
 }
