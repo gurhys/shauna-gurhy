@@ -31,10 +31,12 @@
 
 html {
   scroll-behavior: smooth;
+  min-width: 320px;
 }
 
 body {
   margin: 0;
+  min-width: 320px;
   min-height: 100vh;
   color: var(--text);
   background:
@@ -1487,7 +1489,7 @@ a {
   }
 
   .resume-home #info p {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 
   .resume-home .info-location,
@@ -1498,7 +1500,7 @@ a {
   }
 
   .resume-home .hero-image-placeholder {
-    min-height: 30rem;
+    min-height: 27rem;
   }
 
   .resume-home .site-nav {
@@ -1572,7 +1574,7 @@ a {
   }
 
   .resume-home #title {
-    inset: auto 1rem 5.25rem;
+    inset: auto 1rem 4.7rem;
     padding: 0;
     display: flex;
     align-items: center;
@@ -1581,17 +1583,32 @@ a {
   }
 
   .resume-home #title h1 {
-    font-size: clamp(2.6rem, 10vw, 4.2rem);
+    font-size: clamp(2.35rem, 10vw, 3.8rem);
     line-height: 0.95;
     letter-spacing: 0.05em;
   }
 
+  .resume-home .background1,
+  .resume-home .background2 {
+    padding: 1.4rem 0;
+    margin-bottom: 1rem;
+  }
+
   .resume-home .personal-statement-layout {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .resume-home .portrait-placeholder {
     display: none;
+  }
+
+  .resume-home .personal-statement-copy {
+    text-align: left;
+  }
+
+  .resume-home .personal-statement-copy p {
+    font-size: 0.98rem;
   }
 
   .resume-home .journey-timeline {
@@ -1643,28 +1660,64 @@ a {
   .resume-home .home-feature-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    gap: 0.9rem;
   }
 
   .resume-home .story-feature-grid {
     grid-template-columns: 1fr;
-    margin-top: 1.2rem;
+    margin-top: 0.9rem;
+    gap: 0.9rem;
   }
 
   .resume-home .website-overview-nav {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+    padding: 2rem 1.25rem 1.6rem;
     grid-template-columns: 1fr;
     gap: 1.75rem;
     text-align: center;
+  }
+
+  .resume-home .website-overview-brand {
+    order: 1;
+  }
+
+  .resume-home .website-overview-links {
+    order: 2;
+  }
+
+  .resume-home .website-overview-news {
+    order: 3;
   }
 
   .resume-home .website-overview-links ul {
     justify-items: center;
   }
 
+  .resume-home .website-overview-column h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .resume-home .feature-card {
+    padding: 1.2rem;
+  }
+
+  .resume-home .feature-link-card,
+  .resume-home .feature-story-card {
+    min-height: 12.5rem;
+  }
+
+  .resume-home .feature-image-card {
+    min-height: 13rem;
+  }
+
   .resume-home .feature-image-card-story,
   .resume-home .story-feature-grid .feature-image-card-story:first-child,
   .resume-home .story-feature-grid .feature-image-card-story:last-child {
     width: 100%;
-    margin-top: -2;
+    min-height: 9.5rem;
+    margin-top: 0;
     justify-self: stretch;
   }
 
@@ -1683,7 +1736,7 @@ a {
   }
 
   .resume-home .story-preview-video {
-    height: 15rem;
+    height: 13.5rem;
   }
 
   .timeline-page .journey-timeline {
@@ -1736,5 +1789,126 @@ a {
   .resume-home .work_container,
   .resume-home .skills_awards_container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 390px) {
+  .resume-home .hero-image-placeholder {
+    min-height: 25rem;
+  }
+
+  .resume-home .site-nav {
+    top: 0.6rem;
+    right: 0.6rem;
+    left: 0.6rem;
+  }
+
+  .resume-home .site-nav-brand {
+    max-width: calc(100% - 4rem);
+    font-size: 0.74rem;
+    letter-spacing: 0.13em;
+  }
+
+  .resume-home .site-nav-links {
+    width: min(16.5rem, calc(100vw - 1.2rem));
+  }
+
+  .resume-home #title {
+    inset: auto 0.85rem 4.35rem;
+  }
+
+  .resume-home #title h1 {
+    font-size: clamp(2.05rem, 9.4vw, 3.2rem);
+    letter-spacing: 0.04em;
+  }
+
+  .resume-home #info {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    padding: 0.7rem 0.85rem;
+  }
+
+  .resume-home #info p {
+    font-size: 0.78rem;
+  }
+
+  .resume-home .background1,
+  .resume-home .background2,
+  .resume-home .website-overview-nav,
+  .resume-home footer {
+    width: min(calc(100% - 1.25rem), var(--max-width));
+  }
+
+  .resume-home .feature-card {
+    padding: 1rem;
+  }
+
+  .resume-home .feature-link-card,
+  .resume-home .feature-story-card {
+    min-height: 11.5rem;
+  }
+
+  .resume-home .feature-image-card {
+    min-height: 11.5rem;
+  }
+
+  .resume-home .story-preview-video {
+    height: 12rem;
+  }
+
+  .resume-home .website-overview-nav {
+    padding: 1.75rem 1rem 1.4rem;
+    gap: 1.35rem;
+  }
+
+  .resume-home .logo-placeholder {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-bottom: 0.85rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .resume-home .hero-image-placeholder {
+    min-height: 23rem;
+  }
+
+  .resume-home .site-nav-brand {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+  }
+
+  .resume-home #title {
+    inset: auto 0.75rem 4.1rem;
+  }
+
+  .resume-home #title h1 {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .resume-home #info {
+    right: 0.65rem;
+    bottom: 0.65rem;
+    left: 0.65rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .resume-home #info p {
+    font-size: 0.74rem;
+  }
+
+  .resume-home .feature-link-card,
+  .resume-home .feature-story-card,
+  .resume-home .feature-image-card {
+    min-height: 10.5rem;
+  }
+
+  .resume-home .story-preview-video {
+    height: 10.5rem;
+  }
+
+  .resume-home .website-overview-nav {
+    padding-inline: 0.85rem;
   }
 }
