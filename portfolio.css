@@ -59,6 +59,46 @@ body {
     linear-gradient(180deg, #fcf8f4 0%, #f4ede5 100%);
   font-family: var(--font-body);
   line-height: 1.7;
+  animation: page-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.is-page-leaving {
+  animation: page-leave 0.28s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes page-leave {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    filter: blur(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body.is-page-leaving {
+    animation: none !important;
+  }
 }
 
 img {
@@ -853,6 +893,11 @@ a {
 
 .resume-home .feature-education-card {
   display: flex;
+  grid-row: span 2;
+}
+
+.resume-home .feature-education-link {
+  grid-row: span 2;
 }
 
 .resume-home .feature-image-card img,
@@ -1406,11 +1451,16 @@ a {
   }
 
   .resume-home .feature-education-card {
+    grid-row: auto;
     order: -2;
     min-height: 15rem;
     border: none;
     box-shadow: none;
     background: transparent;
+  }
+
+  .resume-home .feature-education-link {
+    grid-row: auto;
   }
 
   .resume-home .feature-work-image,
@@ -1988,7 +2038,12 @@ a {
   }
 
   .resume-home .feature-education-card {
+    grid-row: auto;
     min-height: 12.5rem;
+  }
+
+  .resume-home .feature-education-link {
+    grid-row: auto;
   }
 
   .resume-home .feature-work-image,

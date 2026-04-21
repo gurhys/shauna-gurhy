@@ -43,6 +43,50 @@ body {
     linear-gradient(180deg, #fbf8f4 0%, #f4ede6 100%);
   font-family: var(--font-body);
   line-height: 1.7;
+  animation: page-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.is-page-leaving {
+  animation: page-leave 0.28s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes page-leave {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    filter: blur(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body.is-page-leaving {
+    animation: none !important;
+  }
+}
+
+.education-page {
+  background: #e7c3b6;
 }
 
 img {
@@ -296,6 +340,387 @@ a {
   font-family: var(--font-display);
   font-size: 1.9rem;
   line-height: 1.02;
+}
+
+.education-page .education-overlap-section {
+  position: relative;
+  z-index: 3;
+  margin-top: -8.5rem;
+  padding-top: 0;
+}
+
+.education-page .education-overlap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  isolation: isolate;
+}
+
+.education-page .education-overlap-card {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(72, 58, 47, 0.1);
+  border-radius: 0;
+  background: #d6c9cf;
+  box-shadow: 0 24px 48px rgba(47, 40, 35, 0.14);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.education-page .education-overlap-card:hover,
+.education-page .education-overlap-card:focus-within {
+  z-index: 2;
+  transform: translateY(-0.9rem);
+  box-shadow: 0 34px 56px rgba(47, 40, 35, 0.22);
+}
+
+.education-page .education-overlap-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 6px);
+}
+
+.education-page .education-overlap-card h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+}
+
+.education-page .education-overlap-media {
+  position: relative;
+}
+
+.education-page .education-overlap-media-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.education-page .education-overlap-media-link:focus-visible {
+  outline: 2px solid rgba(47, 40, 35, 0.7);
+  outline-offset: 4px;
+}
+
+.education-page .education-overlap-card-featured {
+  align-content: start;
+}
+
+.education-page .education-overlap-card-featured .education-overlap-media img {
+  aspect-ratio: 4 / 5;
+  border-radius: 0;
+}
+
+.education-page .education-overlap-card-featured .education-overlap-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(24, 20, 18, 0.05), rgba(24, 20, 18, 0.58));
+  pointer-events: none;
+}
+
+.education-page .education-overlap-card-featured h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: calc(100% - 2rem);
+  color: #fdf8f2;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 0 10px 24px rgba(24, 20, 18, 0.45);
+  transform: translate(-50%, -50%);
+}
+
+.education-page .education-overlap-card p {
+  margin: 0;
+}
+
+.education-page .education-overlap-label {
+  color: rgba(47, 40, 35, 0.72);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.education-page .education-overlap-date {
+  font-weight: 600;
+  color: rgba(47, 40, 35, 0.8);
+}
+
+.education-page .education-overlap-card a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.education-page .education-detail-section {
+  scroll-margin-top: 2rem;
+}
+
+.education-page .education-detail-section-featured {
+  padding: 2rem;
+  background:
+    linear-gradient(180deg, rgba(25, 28, 30, 0.3), rgba(25, 28, 30, 0.5)),
+    url("./trinity_rainbow.JPG") center / cover no-repeat;
+  border-radius: var(--radius-xl);
+}
+
+.education-page .education-detail-section-scenic {
+  padding: 2rem;
+  background:
+    linear-gradient(180deg, rgba(23, 28, 34, 0.28), rgba(23, 28, 34, 0.48)),
+    url("./zermat_autumn.JPG") center / cover no-repeat;
+  border-radius: var(--radius-xl);
+}
+
+.education-page .education-detail-section-featured .section-header {
+  margin-bottom: 2rem;
+}
+
+.education-page .education-detail-section-scenic .section-header {
+  margin-bottom: 2rem;
+}
+
+.education-page .trinity-feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.education-page .eth-feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.education-page .education-detail-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.education-page .education-detail-section-featured .eyebrow,
+.education-page .education-detail-section-featured .section-title,
+.education-page .education-detail-section-featured .section-copy {
+  color: #fdf8f2;
+  text-shadow: 0 10px 28px rgba(25, 28, 30, 0.35);
+}
+
+.education-page .education-detail-section-scenic .eyebrow,
+.education-page .education-detail-section-scenic .section-title,
+.education-page .education-detail-section-scenic .section-copy {
+  color: #fdf8f2;
+  text-shadow: 0 10px 28px rgba(25, 28, 30, 0.35);
+}
+
+.work-page .work-overlap-section {
+  position: relative;
+  z-index: 3;
+  margin-top: -36rem;
+  padding-top: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.work-page .timeline-page-hero {
+  width: min(calc(100% - 3rem), 72rem);
+  margin: 1.5rem auto 2rem 1.5rem;
+}
+
+.work-page .timeline-hero-image-placeholder {
+  border-radius: 28px;
+}
+
+.work-page .timeline-hero-image {
+  object-position: center 40%;
+}
+
+.work-page .work-overlap-grid {
+  width: min(100%, 23rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.work-page .work-overlap-card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(72, 58, 47, 0.1);
+  background: rgba(255, 252, 247, 0.92);
+  box-shadow: 0 24px 48px rgba(47, 40, 35, 0.14);
+}
+
+.work-page .work-overlap-card h3,
+.work-page .work-overlap-card p {
+  margin: 0;
+}
+
+.work-page .work-overlap-card h3 {
+  font-size: clamp(1.55rem, 2vw, 2rem);
+}
+
+.work-page .work-overlap-label {
+  color: rgba(47, 40, 35, 0.72);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.work-page .work-overlap-date {
+  font-weight: 600;
+  color: rgba(47, 40, 35, 0.8);
+}
+
+.work-page .work-detail-section {
+  scroll-margin-top: 2rem;
+}
+
+.work-page .work-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.work-page .work-detail-intro {
+  display: grid;
+  gap: 1rem;
+}
+
+.work-page .work-detail-intro p {
+  margin: 0;
+}
+
+.work-page .work-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.work-page .work-topic-card {
+  min-height: 100%;
+}
+
+.education-page .education-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.education-page .education-detail-intro {
+  display: grid;
+  gap: 1rem;
+}
+
+.education-page .education-detail-intro p {
+  margin: 0;
+}
+
+.education-page .education-detail-photo {
+  width: min(100%, 32rem);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.education-page .education-detail-photo-eth-roof {
+  width: min(100%, 22rem);
+  aspect-ratio: 4 / 3;
+}
+
+.education-page .trinity-subject-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.education-page #trinity .education-subject-card {
+  background: rgba(143, 170, 200, 0.82);
+}
+
+.education-page .education-subject-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.education-page .education-milestone-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.education-page #unitech .education-detail-layout {
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.35fr) minmax(0, 0.75fr);
+  align-items: start;
+}
+
+.education-page #unitech .education-detail-photo-wrap-left {
+  justify-content: flex-start;
+  margin-top: 2.5rem;
+}
+
+.education-page #unitech .education-detail-photo-wrap-right {
+  justify-content: flex-end;
+  margin-top: 4.5rem;
+}
+
+.education-page .education-detail-photo-unitech {
+  width: min(100%, 23rem);
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: none;
+}
+
+.education-page #unitech .education-detail-intro {
+  width: min(100%, 42rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.education-page #unitech .education-milestone-grid {
+  width: min(100%, 30rem);
+  margin-inline: auto;
+  grid-template-columns: 1fr;
+}
+
+.education-page #unitech .education-subject-card {
+  border-radius: 0;
+}
+
+.education-page #unitech .education-subject-link-card {
+  transition:
+    transform 0.24s ease,
+    padding 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.education-page #unitech .education-subject-link-card:hover,
+.education-page #unitech .education-subject-link-card:focus-within {
+  transform: scale(1.04);
+  padding: 1.6rem;
+  box-shadow: 0 28px 52px rgba(47, 40, 35, 0.18);
+}
+
+.education-page #unitech .education-subject-link-card {
+  display: block;
+}
+
+.education-page .education-subject-card {
+  min-height: 100%;
+}
+
+.education-page .education-topic-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.education-page .education-topic-list li {
+  margin-bottom: 0.45rem;
 }
 
 .ritual-band {
@@ -831,6 +1256,40 @@ a {
   .resume-home .education_container,
   .resume-home .work_container,
   .resume-home .skills_awards_container {
+    grid-template-columns: 1fr;
+  }
+
+  .work-page .work-overlap-section {
+    margin-top: -6rem;
+    justify-content: stretch;
+  }
+
+  .work-page .timeline-page-hero {
+    width: min(calc(100% - 2rem), 72rem);
+    margin: 1rem auto 2rem;
+  }
+
+  .work-page .work-overlap-grid {
+    width: 100%;
+  }
+
+  .work-page .work-detail-layout,
+  .work-page .work-topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-page .education-overlap-section {
+    margin-top: -4.5rem;
+  }
+
+  .education-page .education-overlap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-page .trinity-feature-row,
+  .education-page .eth-feature-row,
+  .education-page .education-detail-layout,
+  .education-page .education-subject-grid {
     grid-template-columns: 1fr;
   }
 

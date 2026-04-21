@@ -6,18 +6,19 @@
         <title>Education | Shauna Gurhy</title>
         <link rel="stylesheet" href="./IB_stylesheet.css" />
         <link rel="stylesheet" href="./timeline.css?v=20260420b" />
+        <script src="./site-transitions.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
 
-    <body class="resume-page timeline-page">
+    <body class="resume-page timeline-page education-page">
         <header class="timeline-page-hero">
             <div class="timeline-hero-image-placeholder">
                 <img
                     class="timeline-hero-image"
-                    src="./coffee_kingston.jpeg"
-                    alt="Coffee at Kingston Reserve New Zealand"
+                    src="./trinity_sunset.jpg"
+                    alt="Sunset over Trinity College Dublin, Ireland"
                 >
                 <nav class="site-nav" aria-label="Main navigation">
                     <a class="site-nav-brand" href="./index.html">Shauna Gurhy</a>
@@ -54,65 +55,153 @@
         </header>
 
         <main class="page-shell">
-            <section>
-                <div class="background2" id="education">
-                    <div><h2>Education</h2><hr></div>
-                    <div class="education_container">
-                    <div style="gap: 0;"><h3>App Brewery</h3></div>
-                    <div><h3>Management and Leadership Program</h3></div>
-                    <div><h3>Electrical Engineering and Information Technology</h3></div>
-                    <div><h3>Electronic and Computer Engineering Master</h3></div>
-
-                    <div><h3 style="color: black;">Web Development  </h3></div>
-                    <div><h3 style="color: black;">Unitech International</h3></div>
-                    <div><h3 style="color: black;">ETH Zurich</h3></div>
-                    <div><h3 style="color: black;"> Trinity College Dublin </h3></div>
-                
-                    <div><img src="./education/./images/app_brewery.jpg"></div>
-                    <div><img src="./education/images/unitech.png" ></div>
-                    <div><img src="./education/images/eth_default_og.jpg" alt="ETH" ></div>
-                    <div><img src="./education/images/trinity.jpg" alt="Trinity"></div>
-
-                    <div><a href="./education/webdevelopment.html">see more...</a><h3>June-December 2024</h3></div>
-                    <div><a href="./education/unitech.html">see more</a><h3>September 2021-2023 </h3></div>
-                    <div><a href="./education/eth.html">see more</a><h3>September 2021-2022 </h3></div>
-                    <div><a href="./education/trinity.html">see more</a><h3>September 2018-2023 </h3></div>
-
+            <section class="section education-overlap-section" aria-labelledby="education-overlap-heading">
+                <div class="education-overlap-grid">
+                    <article class="education-overlap-card education-overlap-card-featured">
+                        <a class="education-overlap-media education-overlap-media-link" href="#trinity" aria-label="Jump to Trinity College Dublin section">
+                            <img src="./education/images/trinity.jpg" alt="Trinity College Dublin">
+                            <h3>Trinity College Dublin</h3>
+                        </a>
+                        <p class="education-overlap-label">BAI Electronic and Computer Engineering</p>
+                        <p class="education-overlap-date">September 2018-2023</p>
+                    </article>
+                    <article class="education-overlap-card education-overlap-card-featured">
+                        <a class="education-overlap-media education-overlap-media-link" href="#unitech" aria-label="Jump to Unitech International section">
+                            <img src="./education/images/unitech.png" alt="Unitech International program">
+                            <h3>Unitech International</h3>
+                        </a>
+                        <p class="education-overlap-label">Management and Leadership Program</p>
+                        <p class="education-overlap-date">September 2021-2023</p>
+                    </article>
+                    <article class="education-overlap-card education-overlap-card-featured">
+                        <a class="education-overlap-media education-overlap-media-link" href="#eth" aria-label="Jump to ETH Zurich section">
+                            <img src="./education/images/eth_default_og.jpg" alt="ETH Zurich campus">
+                            <h3>ETH Zurich</h3>
+                        </a>
+                        <p class="education-overlap-label">Electrical Engineering and Information Technology</p>
+                        <p class="education-overlap-date">September 2021-2022</p>
+                    </article>
+                    <article class="education-overlap-card education-overlap-card-featured">
+                        <a class="education-overlap-media education-overlap-media-link" href="./education/webdevelopment.html" aria-label="Open App Brewery Web Development page">
+                            <img src="./web_dev.jpg" alt="App Brewery web development course">
+                            <h3>The App Brewery</h3>
+                        </a>
+                        <p class="education-overlap-label">Web Development</p>
+                        <p class="education-overlap-date">June 2024-2026</p>
+                    </article>
                 </div>
             </section>
 
-            <section class="section">
+
+            <section class="section education-detail-section education-detail-section-featured" id="trinity">
                 <div class="section-header">
-                    <p class="eyebrow">Study Highlights</p>
-                    <h2 class="section-title">Main education pages</h2>
-                </div>
-                <div class="card-grid">
-                    <article class="card">
-                        <h3>Web Development</h3>
-                        <p>HTML, CSS, Flexbox, Grid, Bootstrap, JavaScript, and front-end design thinking.</p>
-                        <a class="button button-secondary" href="./education/webdevelopment.html">Open page</a>
-                    </article>
-                    <article class="card">
-                        <h3>Unitech International</h3>
-                        <p>International leadership and sustainable technology experience with a strong collaborative focus.</p>
-                        <a class="button button-secondary" href="./education/unitech.html">Open page</a>
-                    </article>
-                    <article class="card">
-                        <h3>ETH Zurich</h3>
-                        <p>Engineering and scientific learning experience within a globally recognised research environment.</p>
-                        <a class="button button-secondary" href="./education/eth.html">Open page</a>
-                    </article>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="panel">
                     <p class="eyebrow">University</p>
                     <h2 class="section-title">Trinity College Dublin</h2>
-                    <p class="section-copy">Electronic and Computer Engineering appears as the central academic path on the resume, supported by technical, design, and international learning experiences.</p>
-                    <a class="button button-secondary" href="./education/trinity.html">View Trinity page</a>
+                    <p>BAI Electronic and Computer Engineering | First Class Honours</p>
+                </div>
+                <div class="trinity-feature-row">
+                    <article class="card education-subject-card">
+                        <h3>Computer Engineering</h3>
+                        <p>C, C++, Python, Java, React, ARM assembly language, MatLab, Verilog, object-orientated programming, data structures and algorithms, machine learning, and Linux.</p>
+                    </article>
+                    <div class="education-detail-photo-wrap">
+                        <img
+                            class="education-detail-photo"
+                            src="./education/images/trinity.jpg"
+                            alt="Front Square at Trinity College Dublin"
+                        >
+                    </div>
+                    <article class="card education-subject-card">
+                        <h3>Electronic Engineering</h3>
+                        <p>Circuit theory and digital logic, dynamic circuits, transient analysis, phasor analysis, power, signals and systems, digital systems design, semiconductor physics, digital signal processing, and cyber physical systems.</p>
+                    </article>
                 </div>
             </section>
+
+            <section class="section education-detail-section" id="unitech">
+                <div class="section-header">
+                    <p class="eyebrow">Leadership Program</p>
+                    <h2 class="section-title">Unitech International</h2>
+                    <p><a href="https://www.unitech-international.org/">Unitech International</a> brings together engineering students and industry partners through exchange, internships, and shared leadership experiences.</p>
+                </div>
+                <div class="education-detail-layout">
+                    <div class="education-detail-photo-wrap education-detail-photo-wrap-left">
+                        <img
+                            class="education-detail-photo education-detail-photo-unitech"
+                            src="./unitech_group_nov.jpg"
+                            alt="Unitech International group photo in November"
+                        >
+                    </div>
+                    <div class="education-subject-grid education-milestone-grid">
+                        <article class="card education-subject-card">
+                            <h3>Start Up Week</h3>
+                            <p>Barcelona | August 2021</p>
+                        </article>
+                        <a class="card education-subject-card education-subject-link-card" href="#eth">
+                            <h3>Academic Exchange</h3>
+                            <p>ETH Zurich | September 2021 - February 2022</p>
+                        </a>
+                        <article class="card education-subject-card">
+                            <h3>Mid-Year Week</h3>
+                            <p>Loughborough | January 2022</p>
+                        </article>
+                        <a class="card education-subject-card education-subject-link-card" href="./workexperience.html#truma">
+                            <h3>Internship</h3>
+                            <p>Truma Geraetetechnik GmbH &amp; Co. KG | March 2022 - August 2022</p>
+                        </a>
+                        <article class="card education-subject-card">
+                            <h3>End of Year Week</h3>
+                            <p>Aachen | August 2022</p>
+                        </article>
+                        <article class="card education-subject-card">
+                            <h3>Graduation</h3>
+                            <p>August 2025</p>
+                        </article>
+                    </div>
+                    <div class="education-detail-photo-wrap education-detail-photo-wrap-right">
+                        <img
+                            class="education-detail-photo education-detail-photo-eth-roof"
+                            src="./eth_roof.jpg"
+                            alt="Roof view at ETH Zurich"
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section class="section education-detail-section education-detail-section-scenic" id="eth">
+                <div class="section-header">
+                    <p class="eyebrow">Academic Exchange</p>
+                    <h2 class="section-title">ETH Zurich</h2>
+                </div>
+                <div class="eth-feature-row">
+                    <article class="card education-subject-card">
+                        <h3>Electrical Engineering and Information Technology</h3>
+                        <ul class="education-topic-list">
+                            <li>Solar Cells</li>
+                            <li>Simulation of Photovoltaic Devices</li>
+                            <li>Charge Transport in Energy Conversion and Storage Devices</li>
+                        </ul>
+                    </article>
+                    <div class="education-detail-photo-wrap">
+                        <img
+                            class="education-detail-photo"
+                            src="./education/images/eth_default_og.jpg"
+                            alt="ETH Zurich campus"
+                        >
+                    </div>
+                    <article class="card education-subject-card">
+                        <h3>Business and Management for Engineering</h3>
+                        <ul class="education-topic-list">
+                            <li>International Business Management for Engineers</li>
+                            <li>Corporate Sustainability</li>
+                            <li>Alliance Advantage</li>
+                            <li>Work Design and Organisational Change</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            
         </main>
         <section class="website-overview-nav" aria-label="Website overview navigation">
             <div class="website-overview-column website-overview-links">

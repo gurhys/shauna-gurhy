@@ -400,6 +400,24 @@
   text-align: left;
 }
 
+.timeline-page .timeline-copy-link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transform-origin: left center;
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease,
+    text-shadow 0.22s ease;
+}
+
+.timeline-page .timeline-copy-link:hover,
+.timeline-page .timeline-copy-link:focus-visible {
+  transform: scale(1.03);
+  color: #496959;
+  text-shadow: 0 8px 18px rgba(73, 105, 89, 0.12);
+}
+
 .timeline-page .timeline-page-hero {
   width: 100%;
   margin: 0 0 2rem;
@@ -418,6 +436,15 @@
     #41524f 100%
   );
   box-shadow: 0 30px 80px rgba(49, 69, 67, 0.14);
+}
+
+.education-page .timeline-hero-image-placeholder {
+  min-height: 52rem;
+}
+
+.education-page .timeline-hero-copy p,
+.education-page .timeline-hero-copy .hero-greeting {
+  font-family: var(--font-display);
 }
 
 .timeline-page .timeline-hero-image {
@@ -679,6 +706,10 @@
 
   .timeline-page .timeline-hero-image-placeholder {
     min-height: 24rem;
+  }
+
+  .education-page .timeline-hero-image-placeholder {
+    min-height: 30rem;
   }
 
   .timeline-page .timeline-hero-copy {

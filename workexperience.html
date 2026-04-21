@@ -6,6 +6,7 @@
     <title>Work Experience | Shauna Gurhy</title>
     <link rel="stylesheet" href="./IB_stylesheet.css" />
     <link rel="stylesheet" href="./timeline.css?v=20260420b" />
+    <script src="./site-transitions.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +15,7 @@
     />
   </head>
 
-  <body class="resume-page timeline-page">
+  <body class="resume-page timeline-page work-page">
     <header class="timeline-page-hero">
       <div class="timeline-hero-image-placeholder">
         <img
@@ -58,73 +59,121 @@
     </header>
 
     <main class="page-shell">
-      <section class="section">
-        <div class="card-grid">
-          <article class="card">
-            <h3>Anti-Doping Executive</h3>
-            <p>Sport Ireland</p>
-            <p>October 2023-2024</p>
+      <section class="section work-overlap-section" aria-labelledby="work-overlap-heading">
+        <div class="work-overlap-grid">
+          <article class="work-overlap-card">
+            <p class="work-overlap-label">Work Abroad</p>
+            <h3>Rentals Assistant</h3>
+            <p>NZSKI</p>
+            <p class="work-overlap-date">June - November2025</p>
           </article>
-          <article class="card">
+          <article class="work-overlap-card">
+            <p class="work-overlap-label">Current Career Snapshot</p>
+            <h3 id="work-overlap-heading">Anti-Doping Executive</h3>
+            <p>Sport Ireland</p>
+            <p class="work-overlap-date">October 2023-2024</p>
+          </article>
+          <article class="work-overlap-card">
+            <p class="work-overlap-label">Engineering Internship</p>
             <h3>Hardware Electrical Intern</h3>
             <p>Truma Geraetetechnik GmbH &amp; Co. KG</p>
-            <p>March-August 2022</p>
+            <p class="work-overlap-date">March-August 2022</p>
           </article>
-          <article class="card">
-            <h3>Manufacturing Process Engineering Intern</h3>
+          <article class="work-overlap-card">
+            <p class="work-overlap-label">Manufacturing Experience</p>
+            <h3>Process Engineering Intern</h3>
             <p>Intel Ireland</p>
-            <p>June-September 2019, 2020</p>
+            <p class="work-overlap-date">June-September 2019, 2020</p>
           </article>
-          <article class="card">
+          <article class="work-overlap-card">
+            <p class="work-overlap-label">Early Leadership Role</p>
             <h3>Sports Camp Leader</h3>
             <p>Coolmine Sports</p>
-            <p>Summer and Easter 2014-2018</p>
+            <p class="work-overlap-date">Summer and Easter 2014-2018</p>
           </article>
         </div>
       </section>
 
-      <section class="section">
-        <div class="card-grid">
-          <article class="card">
-            <h3>Sport Ireland</h3>
+
+      <section class="section work-detail-section" id="sport-ireland">
+        <div class="section-header">
+          <p class="eyebrow">Professional Role</p>
+          <h2 class="section-title">Sport Ireland</h2>
+          <p class="section-copy">
+            Anti-Doping Executive work spanning programme operations,
+            competition support, and internal systems.
+          </p>
+        </div>
+        <div class="work-detail-layout">
+          <div class="panel work-detail-intro">
             <p>
-              Anti-Doping Executive experience with an existing detail page
-              already in the site.
+              This role brought together operational coordination, programme
+              delivery, and systems-based work within the Anti-Doping Unit.
             </p>
-            <a
-              class="button button-secondary"
-              href="./workexperience/sportireland.html"
-              >Open page</a
-            >
-          </article>
-          <article class="card">
-            <h3>Truma</h3>
-            <p>
-              Hardware and engineering-related work experience with room to
-              expand into project details.
-            </p>
-            <a
-              class="button button-secondary"
-              href="./workexperience/truma.html"
-              >Open page</a
-            >
-          </article>
-          <article class="card">
-            <h3>Intel Ireland</h3>
-            <p>
-              Manufacturing process engineering experience that can be expanded
-              with responsibilities and outcomes.
-            </p>
-            <a
-              class="button button-secondary"
-              href="./workexperience/intel.html"
-              >Open page</a
-            >
-          </article>
+          </div>
+          <div class="work-topic-grid">
+            <article class="card work-topic-card">
+              <h3>Anti-Doping Unit</h3>
+            </article>
+            <article class="card work-topic-card">
+              <h3>In Competition - Anti-Doping Executive</h3>
+            </article>
+            <article class="card work-topic-card">
+              <h3>Invoice Management System</h3>
+            </article>
+            <article class="card work-topic-card">
+              <h3>Mobile Testing Unit</h3>
+            </article>
+            <article class="card work-topic-card">
+              <h3>SCP Work Management System</h3>
+            </article>
+            <article class="card work-topic-card">
+              <h3>Whereabouts Management System</h3>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section work-detail-section" id="truma">
+        <div class="section-header">
+          <p class="eyebrow">Engineering Internship</p>
+          <h2 class="section-title">Truma</h2>
+          <p class="section-copy">
+            Hardware electrical internship experience in a practical engineering
+            setting.
+          </p>
+        </div>
+        <div class="work-detail-layout">
+          <div class="panel work-detail-intro">
+            <p>
+              Work experience notes for Truma can be added here and expanded
+              later with projects, tools, design responsibilities, and outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work-detail-section" id="intel">
+        <div class="section-header">
+          <p class="eyebrow">Manufacturing Internship</p>
+          <h2 class="section-title">Intel Ireland</h2>
+          <p class="section-copy">
+            Manufacturing process engineering experience built across summer
+            placements.
+          </p>
+        </div>
+        <div class="work-detail-layout">
+          <div class="panel work-detail-intro">
+            <p>
+              Work experience notes for Intel Ireland can be added here and
+              expanded later with process work, plant systems, responsibilities,
+              and measurable outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="volunteer-work">
         <div class="section-header">
           <p class="eyebrow">Volunteer Work</p>
           <h2 class="section-title">Leadership beyond formal roles</h2>
@@ -152,7 +201,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="nzski">
         <div class="card-grid">
           <article class="card">
             <h3>Coolmine Sports</h3>
