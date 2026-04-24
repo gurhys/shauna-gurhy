@@ -1123,6 +1123,13 @@ a {
 
 .contact-page {
   background: #2e3b4f;
+  min-height: 100vh;
+}
+
+.contact-page .page-shell {
+  min-height: calc(100vh - 4.5rem);
+  display: grid;
+  place-items: center;
 }
 
 .contact-page .site-nav-brand,
@@ -1158,7 +1165,8 @@ a {
 }
 
 .contact-page-section {
-  padding-top: 3rem;
+  width: 100%;
+  padding: 3rem 0;
 }
 
 .contact-simple {

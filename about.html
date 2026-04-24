@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Story | Shauna Gurhy</title>
         <link rel="stylesheet" href="./portfolio.css?v=20260420f" />
-        <link rel="stylesheet" href="./timeline.css?v=20260420b" />
+        <link rel="stylesheet" href="./timeline.css?v=20260420ao" />
         <script src="./site-transitions.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,9 +49,11 @@
                 <div class="timeline-hero-copy">
                     <p>
                         <span class="hero-greeting">Dia Dhuit</span>
-                        <span class="hero-name">I'm Shauna</span>
+                        <span class="hero-name">I'm Shauna,</span>
+                        <span class="hero-intro">paragraph placeholder</span>
                     </p>
                 </div>
+                
             </div>
         </header>
 
@@ -59,7 +61,7 @@
 
             <section class="journey-timeline" aria-label="Timeline from 2018 to 2026">
                 <div class="timeline-heading">
-                    <h2>A look back at my journey so far...</hF2>
+                    <h2>The story so far...</h2>
                 </div>
 
                 <div class="timeline-shell">
@@ -182,6 +184,27 @@
                     </ol>
                 </div>
             </section>
+
+            <section class="about-me-section" aria-labelledby="about-me-title">
+                <div class="about-me-copy">
+                    <p class="about-me-kicker">About Me</p>
+                    <h2 id="about-me-title">About me heading placeholder</h2>
+                    <p>
+                        About me paragraph placeholder.
+                    </p>
+                    <p>
+                        Additional about me paragraph placeholder.
+                    </p>
+                </div>
+            </section>
+
+            <section class="about-education-section" aria-labelledby="about-education-title">
+                <a class="about-education-card" href="./education.html">
+                    <span class="about-education-kicker">Education</span>
+                    <h2 id="about-education-title">Education</h2>
+                    <span class="about-education-link">View education page</span>
+                </a>
+            </section>
         </main>
         <section class="website-overview-nav" aria-label="Website overview navigation">
             <div class="website-overview-column website-overview-links">
@@ -224,6 +247,106 @@
             </div>
         </section>
         <script>
+            const aboutTimelineShell = document.querySelector(".about-page .timeline-shell");
+
+            if (aboutTimelineShell && window.matchMedia("(pointer: fine)").matches) {
+                let pointerX = 0;
+                let isPointerInside = false;
+                let animationFrame = null;
+                let centerTimeout = null;
+                let hoveredTimelineTarget = null;
+                let edgeScrollPausedUntil = 0;
+                const edgeSize = 140;
+                const maxSpeed = 18;
+                const centerDelay = 500;
+                const timelineEntries = aboutTimelineShell.querySelectorAll(".timeline-entry");
+
+                function scrollTimeline() {
+                    if (!isPointerInside) {
+                        animationFrame = null;
+                        return;
+                    }
+
+                    const viewportWidth = window.innerWidth;
+                    let velocity = 0;
+
+                    if (Date.now() < edgeScrollPausedUntil) {
+                        velocity = 0;
+                    } else if (pointerX < edgeSize) {
+                        velocity = -((edgeSize - pointerX) / edgeSize) * maxSpeed;
+                    } else if (pointerX > viewportWidth - edgeSize) {
+                        velocity = ((pointerX - (viewportWidth - edgeSize)) / edgeSize) * maxSpeed;
+                    }
+
+                    if (Math.abs(velocity) > 0.2) {
+                        aboutTimelineShell.scrollLeft += velocity;
+                    }
+
+                    animationFrame = requestAnimationFrame(scrollTimeline);
+                }
+
+                function scheduleTimelineEntryCenter(entry, target) {
+                    clearTimeout(centerTimeout);
+                    hoveredTimelineTarget = target;
+                    centerTimeout = setTimeout(() => {
+                        if (hoveredTimelineTarget !== target || !target.matches(":hover")) {
+                            return;
+                        }
+
+                        edgeScrollPausedUntil = Date.now() + 700;
+                        const shellRect = aboutTimelineShell.getBoundingClientRect();
+                        const entryRect = entry.getBoundingClientRect();
+                        const entryCenter = entryRect.left + entryRect.width / 2;
+                        const shellCenter = shellRect.left + shellRect.width / 2;
+
+                        aboutTimelineShell.scrollBy({
+                            left: entryCenter - shellCenter,
+                            behavior: "smooth"
+                        });
+                    }, centerDelay);
+                }
+
+                function cancelTimelineEntryCenter(target) {
+                    if (hoveredTimelineTarget === target) {
+                        hoveredTimelineTarget = null;
+                        clearTimeout(centerTimeout);
+                    }
+                }
+
+                function startTimelineScroll() {
+                    if (!animationFrame) {
+                        animationFrame = requestAnimationFrame(scrollTimeline);
+                    }
+                }
+
+                aboutTimelineShell.addEventListener("pointerenter", (event) => {
+                    isPointerInside = true;
+                    pointerX = event.clientX;
+                    startTimelineScroll();
+                });
+
+                aboutTimelineShell.addEventListener("pointermove", (event) => {
+                    pointerX = event.clientX;
+                    startTimelineScroll();
+                });
+
+                aboutTimelineShell.addEventListener("pointerleave", () => {
+                    isPointerInside = false;
+                });
+
+                timelineEntries.forEach((entry) => {
+                    entry.querySelectorAll(".timeline-content, .timeline-image-placeholder").forEach((target) => {
+                        target.addEventListener("pointerenter", () => {
+                            scheduleTimelineEntryCenter(entry, target);
+                        });
+
+                        target.addEventListener("pointerleave", () => {
+                            cancelTimelineEntryCenter(target);
+                        });
+                    });
+                });
+            }
+
             const siteNav = document.querySelector(".site-nav");
             const navToggle = document.querySelector(".site-nav-toggle");
             const navLinks = document.querySelector(".site-nav-links");
