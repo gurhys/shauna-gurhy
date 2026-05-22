@@ -1,0 +1,2320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Witchy Things | Shauna Gurhy</title>
+    <link rel="stylesheet" href="./portfolio.css?v=20260420b" />
+    <link rel="stylesheet" href="./timeline.css?v=20260420c" />
+    <link rel="stylesheet" href="./IB_stylesheet.css" />
+    <link rel="stylesheet" href="./witchy_things.css" />
+    <script src="./site-transitions.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="resume-page simple-content-page timeline-page witchy-page">
+    <canvas class="witchy-starfield" aria-hidden="true"></canvas>
+    <header class="timeline-page-hero">
+      <div class="timeline-hero-image-placeholder">
+        <img
+          class="timeline-hero-image"
+          src="./forest.jpg"
+          alt="Sunlight through a green forest"
+        />
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="site-nav-brand" href="./index.html">Shauna Gurhy</a>
+          <button
+            class="site-nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav-links"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="site-nav-links" id="site-nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./education.html">Education</a>
+            <a href="./workexperience.html">Work Experience</a>
+            <a href="./adventure.html">Adventure</a>
+            <a href="./skills_abilities.html">Skills</a>
+            <a href="./creativity.html">Creativity</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./blog.html">Blog</a>
+          </div>
+        </nav>
+        <div class="timeline-hero-copy">
+          <p>
+            <span class="hero-greeting">Witchy Things</span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <nav class="witchy-section-nav" aria-label="Page sections">
+        <ul>
+          <li><a href="#celebrating-time">Celebrating the Passage of Time</a></li>
+          <li><a href="#myths-legends">Myths and Legends</a></li>
+          <li><a href="#tarot">Tarot</a></li>
+          <li><a href="#herbalism">Herbalism</a></li>
+          <li><a href="#rituals">Rituals</a></li>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#meditation">Meditation</a></li>
+          <li><a href="#celebrating-nature">Celebrating Nature</a></li>
+          <li><a href="#crafts">Crafts</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+      </nav>
+      <section class="section witchy-today-section" id="celebrating-time"
+        aria-labelledby="witchy-today-title">
+        <div class="section-header witchy-today-header">
+          <h1 id="witchy-today-title" class="section-title">Today</h1>
+        </div>
+
+        <div
+          class="witchy-today-grid"
+          aria-label="Current date and moon details"
+        >
+          <article class="witchy-today-card">
+            <span>Date</span>
+            <strong id="today-date">Loading</strong>
+          </article>
+          <article class="witchy-today-card">
+            <span>Season</span>
+            <strong id="today-season">Loading</strong>
+            <dl class="witchy-today-details">
+              <div>
+                <dt>Sunrise</dt>
+                <dd id="today-sunrise">Loading</dd>
+              </div>
+              <div>
+                <dt>Sunset</dt>
+                <dd id="today-sunset">Loading</dd>
+              </div>
+            </dl>
+          </article>
+
+
+          <article class="witchy-today-card">
+            <span>Moon Phase</span>
+
+            <div class="moon-display">
+              <div class="moon-icon">
+                <div class="moon-shadow" id="moon-shadow"></div>
+              </div>
+
+              <div class="moon-phase-text">
+                <strong id="today-moon-phase">Loading...</strong>
+                <small id="moon-illumination">Loading...</small>
+              </div>
+            </div>
+            <dl class="witchy-today-details">
+              <div>
+                <dt>Lunar Age</dt>
+                <dd id ="moon-age">--</dd>
+              </div>
+
+              <div>
+                <dt> Zodiac</dt>
+                <dd id="moon-zodiac">--</dd>
+              </div>
+
+              <div>
+                <dt>Energy</dt>
+                <dd id="moon-energy">--</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="witchy-today-card">
+            <span>Tides <small style="opacity:0.55;font-size:0.7em">approx</small></span>
+            <strong id="tide-location">Dublin Bay</strong>
+            <dl class="witchy-today-details">
+              <div>
+                <dt>High</dt>
+                <dd id="high-tides">—</dd>
+              </div>
+              <div>
+                <dt>Low</dt>
+                <dd id="low-tides">—</dd>
+              </div>
+            </dl>
+          </article>
+
+        </div>
+
+        <div class="witchy-year-progress" aria-label="Year progress">
+          <div class="witchy-year-progress-header">
+            <span>Year Progress</span>
+            <strong id="today-year-progress-text">Loading</strong>
+          </div>
+          <div
+            class="witchy-year-progress-track"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <span id="today-year-progress-bar"></span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section witchy-calendar-section"
+        aria-labelledby="witchy-calendar-title"
+      >
+        <div class="section-header witchy-calendar-header">
+          <p class="eyebrow">Wheel of the Year</p>
+          <h1 id="witchy-calendar-title" class="section-title">
+            The Cycle of the Year
+          </h1>
+        </div>
+
+        <div class="witchy-calendar-layout">
+          <div class="year-wheel" aria-label="Circular calendar for 2026">
+            <div class="year-wheel-month-colours" aria-hidden="true"></div>
+            <div class="year-wheel-sabbat-colours" aria-hidden="true"></div>
+            <div class="year-wheel-day-slices" aria-hidden="true"></div>
+            <div class="year-wheel-month-dividers" aria-hidden="true">
+              <span class="year-wheel-month-divider" data-month="0"></span>
+              <span class="year-wheel-month-divider" data-month="1"></span>
+              <span class="year-wheel-month-divider" data-month="2"></span>
+              <span class="year-wheel-month-divider" data-month="3"></span>
+              <span class="year-wheel-month-divider" data-month="4"></span>
+              <span class="year-wheel-month-divider" data-month="5"></span>
+              <span class="year-wheel-month-divider" data-month="6"></span>
+              <span class="year-wheel-month-divider" data-month="7"></span>
+              <span class="year-wheel-month-divider" data-month="8"></span>
+              <span class="year-wheel-month-divider" data-month="9"></span>
+              <span class="year-wheel-month-divider" data-month="10"></span>
+              <span class="year-wheel-month-divider" data-month="11"></span>
+            </div>
+            <div class="year-wheel-ring" aria-hidden="true"></div>
+            <div class="year-wheel-sabbat-dividers" aria-hidden="true">
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="1"
+                data-day="1"
+              ></span>
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="2"
+                data-day="20"
+              ></span>
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="4"
+                data-day="1"
+              ></span>
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="5"
+                data-day="21"
+              ></span>
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="7"
+                data-day="1"
+              ></span>
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="8"
+                data-day="22"
+              ></span>
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="9"
+                data-day="31"
+              ></span>
+              <span
+                class="year-wheel-sabbat-divider"
+                data-month="11"
+                data-day="21"
+              ></span>
+            </div>
+            <div class="year-wheel-today-marker" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="year-wheel-center">
+              <span id="year-wheel-year">2026</span>
+            </div>
+
+            <ol class="year-wheel-sabbats" aria-label="Wiccan holidays">
+              <li
+                class="year-wheel-sabbat"
+                data-month="1"
+                data-day="1"
+                data-range="February 1-2"
+              >
+                <a href="#imbolc">
+                  <span>Imbolc</span>
+                  <small>Feb 1-2</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-sabbat"
+                data-month="2"
+                data-day="20"
+                data-range="March 20"
+              >
+                <a href="#ostara">
+                  <span>Ostara</span>
+                  <small>Mar 20</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-sabbat"
+                data-month="4"
+                data-day="1"
+                data-range="May 1"
+              >
+                <a href="#beltane">
+                  <span>Beltane</span>
+                  <small>May 1</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-sabbat"
+                data-month="5"
+                data-day="21"
+                data-range="June 21"
+              >
+                <a href="#litha">
+                  <span>Litha</span>
+                  <small>Jun 21</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-sabbat"
+                data-month="7"
+                data-day="1"
+                data-range="August 1"
+              >
+                <a href="#lammas">
+                  <span>Lammas</span>
+                  <small>Aug 1</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-sabbat"
+                data-month="8"
+                data-day="22"
+                data-range="September 22-23"
+              >
+                <a href="#mabon">
+                  <span>Mabon</span>
+                  <small>Sep 22-23</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-sabbat"
+                data-month="9"
+                data-day="31"
+                data-range="October 31"
+              >
+                <a href="#samhain">
+                  <span>Samhain</span>
+                  <small>Oct 31</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-sabbat"
+                data-month="11"
+                data-day="21"
+                data-range="December 21"
+              >
+                <a href="#yule">
+                  <span>Yule</span>
+                  <small>Dec 21</small>
+                </a>
+              </li>
+            </ol>
+
+            <ol class="year-wheel-moons" aria-label="Full moons">
+              <li
+                class="year-wheel-moon"
+                data-month="0"
+                data-day="3"
+                data-name="Wolf Moon"
+                data-note="Supermoon"
+              >
+                <a href="#wolf-moon">
+                  <span>Wolf</span>
+                  <small>Jan 3</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="1"
+                data-day="1"
+                data-name="Snow Moon"
+              >
+                <a href="#snow-moon">
+                  <span>Snow</span>
+                  <small>Feb 1</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="2"
+                data-day="3"
+                data-name="Worm Moon"
+              >
+                <a href="#worm-moon">
+                  <span>Worm</span>
+                  <small>Mar 3</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="3"
+                data-day="2"
+                data-name="Pink Moon"
+              >
+                <a href="#pink-moon">
+                  <span>Pink</span>
+                  <small>Apr 2</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="4"
+                data-day="1"
+                data-name="Flower Moon"
+              >
+                <a href="#flower-moon">
+                  <span>Flower</span>
+                  <small>May 1</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="4"
+                data-day="31"
+                data-name="Blue Moon"
+                data-note="Second full moon in May"
+              >
+                <a href="#blue-moon">
+                  <span>Blue</span>
+                  <small>May 31</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="5"
+                data-day="30"
+                data-name="Strawberry Moon"
+              >
+                <a href="#strawberry-moon">
+                  <span>Strawberry</span>
+                  <small>Jun 30</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="6"
+                data-day="29"
+                data-name="Buck Moon"
+              >
+                <a href="#buck-moon">
+                  <span>Buck</span>
+                  <small>Jul 29</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="7"
+                data-day="28"
+                data-name="Sturgeon Moon"
+              >
+                <a href="#sturgeon-moon">
+                  <span>Sturgeon</span>
+                  <small>Aug 28</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="8"
+                data-day="26"
+                data-name="Harvest Moon"
+              >
+                <a href="#harvest-moon">
+                  <span>Harvest</span>
+                  <small>Sep 26</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="9"
+                data-day="26"
+                data-name="Hunter's Moon"
+              >
+                <a href="#hunters-moon">
+                  <span>Hunter's</span>
+                  <small>Oct 26</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="10"
+                data-day="24"
+                data-name="Beaver Moon"
+                data-note="Supermoon"
+              >
+                <a href="#beaver-moon">
+                  <span>Beaver</span>
+                  <small>Nov 24</small>
+                </a>
+              </li>
+              <li
+                class="year-wheel-moon"
+                data-month="11"
+                data-day="24"
+                data-name="Cold Moon"
+                data-note="Supermoon"
+              >
+                <a href="#cold-moon">
+                  <span>Cold</span>
+                  <small>Dec 24</small>
+                </a>
+              </li>
+            </ol>
+            <ol class="year-wheel-outer-months" aria-label="Months of the year">
+              <li class="year-wheel-outer-month" data-month="0">January</li>
+              <li class="year-wheel-outer-month" data-month="1">February</li>
+              <li class="year-wheel-outer-month" data-month="2">March</li>
+              <li class="year-wheel-outer-month" data-month="3">April</li>
+              <li class="year-wheel-outer-month" data-month="4">May</li>
+              <li class="year-wheel-outer-month" data-month="5">June</li>
+              <li class="year-wheel-outer-month" data-month="6">July</li>
+              <li class="year-wheel-outer-month" data-month="7">August</li>
+              <li class="year-wheel-outer-month" data-month="8">September</li>
+              <li class="year-wheel-outer-month" data-month="9">October</li>
+              <li class="year-wheel-outer-month" data-month="10">November</li>
+              <li class="year-wheel-outer-month" data-month="11">December</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section sabbat-detail-section"
+        aria-labelledby="sabbat-detail-title"
+      >
+        <div class="section-header sabbat-detail-header">
+          <p class="eyebrow">Wiccan Holidays</p>
+          <h2 id="sabbat-detail-title" class="section-title">
+            The Eight Sabbats
+          </h2>
+          <p>Seasonal notes for each point on the Wheel of the Year.</p>
+        </div>
+
+        <nav class="witchy-section-nav witchy-sabbat-nav" aria-label="Jump to sabbat">
+          <ul>
+            <li><a href="#imbolc">Imbolc</a></li>
+            <li><a href="#ostara">Ostara</a></li>
+            <li><a href="#beltane">Beltane</a></li>
+            <li><a href="#litha">Litha</a></li>
+            <li><a href="#lammas">Lammas</a></li>
+            <li><a href="#mabon">Mabon</a></li>
+            <li><a href="#samhain">Samhain</a></li>
+            <li><a href="#yule">Yule</a></li>
+          </ul>
+        </nav>
+
+        <div class="sabbat-detail-grid">
+          <article class="sabbat-detail-card" id="imbolc">
+            <p class="sabbat-detail-date">February 1-2</p>
+            <h3>Imbolc</h3>
+            <p>
+              A threshold festival for the first signs of spring, fresh starts,
+              hearth light, and quiet renewal.
+            </p>
+            <ul>
+              <li>Season: late winter</li>
+              <li>Themes: cleansing, inspiration, beginnings</li>
+              <li>Symbols: candles, snowdrops, milk, seeds</li>
+            </ul>
+          </article>
+
+          <article class="sabbat-detail-card" id="ostara">
+            <p class="sabbat-detail-date">March 20</p>
+            <h3>Ostara</h3>
+            <p>
+              The spring equinox, when day and night meet in balance and the
+              growing season begins to gather strength.
+            </p>
+            <ul>
+              <li>Season: spring</li>
+              <li>Themes: balance, growth, fertility</li>
+              <li>Symbols: eggs, blossoms, hares, green shoots</li>
+            </ul>
+          </article>
+
+          <article class="sabbat-detail-card" id="beltane">
+            <p class="sabbat-detail-date">May 1</p>
+            <h3>Beltane</h3>
+            <p>
+              A bright fire festival for abundance, creativity, protection,
+              pleasure, and the land coming fully alive.
+            </p>
+            <ul>
+              <li>Season: late spring</li>
+              <li>Themes: vitality, love, celebration</li>
+              <li>Symbols: bonfires, ribbons, hawthorn, flowers</li>
+            </ul>
+          </article>
+
+          <article class="sabbat-detail-card" id="litha">
+            <p class="sabbat-detail-date">June 21</p>
+            <h3 class="litha-heading">Litha</h3>
+            <p class="litha-subtitle">
+              The Summer Solstice Sabbat to celebrate and honour the sun.
+              The longest day and the shortest night of the year.
+            </p>
+            <div class="litha-activities-grid">
+              <div class="litha-activity">Harvest and Dry Herbs</div>
+              <div class="litha-activity">Celebrate the Sun and Watch the Sunset</div>
+              <div class="litha-activity">Make a Sunflower Wreath</div>
+              <div class="litha-activity">Decorate Your Altar</div>
+              <div class="litha-activity">Have a Bonfire Feast</div>
+              <div class="litha-activity">Bake a Summer Solstice Bread</div>
+            </div>
+            <details class="litha-read-more">
+              <summary>Read More</summary>
+              <div class="litha-read-more-content">
+                <p>
+                  Litha, also known as Midsummer, falls on the summer solstice
+                  around June 21 in the Northern Hemisphere — the longest day
+                  and shortest night of the year.
+                </p>
+                <p>
+                  Across Celtic, Germanic, and Norse traditions, Midsummer was
+                  one of the great fire festivals. Communities lit bonfires on
+                  hilltops and gathered to dance, feast, and give thanks for
+                  the warmth and abundance of the season. Leaping through the
+                  flames was said to bring luck, courage, and protection, and
+                  the ashes were scattered on fields to bless the coming
+                  harvest. Sun wheels of straw were set alight and rolled
+                  downhill as a symbolic acknowledgement that the sun's
+                  journey had reached its height.
+                </p>
+                <p>
+                  In Irish mythology, Litha is closely tied to the sun
+                  goddess Áine and the god Lugh, whose festival Lughnasadh
+                  follows six weeks later. It is also the time of the Oak
+                  King and the Holly King — twin figures representing the
+                  light and dark halves of the year, whose mythic battle at
+                  midsummer tips the balance toward the waning light. Litha
+                  is considered a liminal time when the boundary between the
+                  human world and the fairy realm grows thin.
+                </p>
+                <p>
+                  Herbs gathered at midsummer — especially St. John's Wort,
+                  lavender, and vervain — were believed to hold especially
+                  potent magic. They were hung above doorways, dried for
+                  winter medicine, and woven into wreaths and posies as
+                  offerings. Sacred wells were visited, hawthorn trees
+                  decorated, and gratitude expressed for everything that had
+                  grown and flourished through the long bright days.
+                </p>
+                <p>
+                  For modern pagans and witches, Litha is a time to harness
+                  the peak energy of summer — for spells of abundance,
+                  courage, and love. It is a moment of gratitude and joy,
+                  a celebration of light in full bloom, and a quiet
+                  acknowledgement that from here the days will shorten and
+                  the wheel will turn once more.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <article class="sabbat-detail-card" id="lammas">
+            <p class="sabbat-detail-date">August 1</p>
+            <h3>Lughnasadh / Lammas</h3>
+            <p>
+              The first harvest festival, marking ripening grain, practical
+              gratitude, craft, skill, and shared bread.
+            </p>
+            <ul>
+              <li>Season: first harvest</li>
+              <li>Themes: harvest, work, generosity</li>
+              <li>Symbols: bread, grain, corn, sunflowers</li>
+            </ul>
+          </article>
+
+          <article class="sabbat-detail-card" id="mabon">
+            <p class="sabbat-detail-date">September 22-23</p>
+            <h3>Mabon</h3>
+            <p>
+              The autumn equinox, a second point of balance and a moment to
+              gather, preserve, reflect, and give thanks.
+            </p>
+            <ul>
+              <li>Season: autumn</li>
+              <li>Themes: balance, gratitude, release</li>
+              <li>Symbols: apples, grapes, acorns, leaves</li>
+            </ul>
+          </article>
+
+          <article class="sabbat-detail-card" id="samhain">
+            <p class="sabbat-detail-date">October 31</p>
+            <h3>Samhain</h3>
+            <p>
+              A liminal festival for endings, remembrance, divination, ancestry,
+              and crossing into the darker half of the year.
+            </p>
+            <ul>
+              <li>Season: final harvest</li>
+              <li>Themes: ancestors, endings, intuition</li>
+              <li>Symbols: pumpkins, apples, veils, lanterns</li>
+            </ul>
+          </article>
+
+          <article class="sabbat-detail-card" id="yule">
+            <p class="sabbat-detail-date">December 21</p>
+            <h3>Yule</h3>
+            <p>
+              The winter solstice, the longest night of the year, celebrating
+              rest, return of light, hope, and deep winter magic.
+            </p>
+            <ul>
+              <li>Season: midwinter</li>
+              <li>Themes: rest, rebirth, warmth</li>
+              <li>Symbols: evergreens, candles, holly, logs</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section moon-detail-section"
+        aria-labelledby="moon-detail-title"
+      >
+        <div class="section-header moon-detail-header">
+          <p class="eyebrow">Full Moons</p>
+          <h2 id="moon-detail-title" class="section-title">
+            The Full Moon Cycle
+          </h2>
+          <p>Moon notes for each full moon marked on the calendar wheel.</p>
+        </div>
+
+        <nav class="witchy-section-nav witchy-moon-nav" aria-label="Jump to full moon">
+          <ul>
+            <li><a href="#wolf-moon">Wolf</a></li>
+            <li><a href="#snow-moon">Snow</a></li>
+            <li><a href="#worm-moon">Worm</a></li>
+            <li><a href="#pink-moon">Pink</a></li>
+            <li><a href="#flower-moon">Flower</a></li>
+            <li><a href="#blue-moon">Blue</a></li>
+            <li><a href="#strawberry-moon">Strawberry</a></li>
+            <li><a href="#buck-moon">Buck</a></li>
+            <li><a href="#sturgeon-moon">Sturgeon</a></li>
+            <li><a href="#harvest-moon">Harvest</a></li>
+            <li><a href="#hunters-moon">Hunter's</a></li>
+            <li><a href="#beaver-moon">Beaver</a></li>
+            <li><a href="#cold-moon">Cold</a></li>
+          </ul>
+        </nav>
+
+        <div class="moon-detail-grid">
+          <article class="moon-detail-card" id="wolf-moon">
+            <p class="moon-detail-date">January 3</p>
+            <h3>Wolf Moon</h3>
+            <p class="moon-detail-note">Supermoon</p>
+            <p>
+              A winter moon for instinct, protection, courage, and listening
+              closely to what the quiet season reveals.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="snow-moon">
+            <p class="moon-detail-date">February 1</p>
+            <h3>Snow Moon</h3>
+            <p>
+              A moon for stillness, endurance, rest, and tending the inner spark
+              before spring begins to stir.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="worm-moon">
+            <p class="moon-detail-date">March 3</p>
+            <h3>Worm Moon</h3>
+            <p>
+              A thawing moon for renewal, movement, softening old ground, and
+              preparing for visible growth.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="pink-moon">
+            <p class="moon-detail-date">April 2</p>
+            <h3>Pink Moon</h3>
+            <p>
+              A blossoming moon for hope, tenderness, friendship, and letting
+              new colour return to daily life.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="flower-moon">
+            <p class="moon-detail-date">May 1</p>
+            <h3>Flower Moon</h3>
+            <p>
+              A fertile, expressive moon for beauty, creativity, romance,
+              celebration, and saying yes to aliveness.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="blue-moon">
+            <p class="moon-detail-date">May 31</p>
+            <h3>Blue Moon</h3>
+            <p class="moon-detail-note">Second full moon in May</p>
+            <p>
+              A rare second full moon for reflection, course correction, and
+              noticing what deserves a second look.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="strawberry-moon">
+            <p class="moon-detail-date">June 30</p>
+            <h3>Strawberry Moon</h3>
+            <p>
+              A sweet early-summer moon for pleasure, ripening, gratitude, and
+              enjoying what is beginning to bear fruit.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="buck-moon">
+            <p class="moon-detail-date">July 29</p>
+            <h3>Buck Moon</h3>
+            <p>
+              A strong moon for confidence, growth, resilience, and stepping
+              into a fuller shape of yourself.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="sturgeon-moon">
+            <p class="moon-detail-date">August 28</p>
+            <h3>Sturgeon Moon</h3>
+            <p>
+              A late-summer moon for patience, depth, old wisdom, and receiving
+              what has taken time to surface.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="harvest-moon">
+            <p class="moon-detail-date">September 26</p>
+            <h3>Harvest Moon</h3>
+            <p>
+              A gathering moon for completion, gratitude, practical magic, and
+              honouring what your work has grown.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="hunters-moon">
+            <p class="moon-detail-date">October 26</p>
+            <h3>Hunter's Moon</h3>
+            <p>
+              A focused moon for discernment, preparation, protection, and
+              choosing what to carry into winter.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="beaver-moon">
+            <p class="moon-detail-date">November 24</p>
+            <h3>Beaver Moon</h3>
+            <p class="moon-detail-note">Supermoon</p>
+            <p>
+              A practical moon for shelter, boundaries, resourcefulness, and
+              making life warmer before deep winter.
+            </p>
+          </article>
+
+          <article class="moon-detail-card" id="cold-moon">
+            <p class="moon-detail-date">December 24</p>
+            <h3>Cold Moon</h3>
+            <p class="moon-detail-note">Supermoon</p>
+            <p>
+              A bright winter moon for clarity, rest, remembrance, and gentle
+              intentions for the turning year.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section month-detail-section"
+        aria-labelledby="month-detail-title"
+      >
+        <div class="section-header month-detail-header">
+          <p class="eyebrow">Months</p>
+          <h2 id="month-detail-title" class="section-title">
+            The Twelve Months
+          </h2>
+          <p>
+            Colour and seasonal notes for each month on the outer wheel band.
+          </p>
+        </div>
+
+        <nav class="witchy-section-nav witchy-month-nav" aria-label="Jump to month">
+          <ul>
+            <li><a href="#january-month">Jan</a></li>
+            <li><a href="#february-month">Feb</a></li>
+            <li><a href="#march-month">Mar</a></li>
+            <li><a href="#april-month">Apr</a></li>
+            <li><a href="#may-month">May</a></li>
+            <li><a href="#june-month">Jun</a></li>
+            <li><a href="#july-month">Jul</a></li>
+            <li><a href="#august-month">Aug</a></li>
+            <li><a href="#september-month">Sep</a></li>
+            <li><a href="#october-month">Oct</a></li>
+            <li><a href="#november-month">Nov</a></li>
+            <li><a href="#december-month">Dec</a></li>
+          </ul>
+        </nav>
+
+        <div class="month-detail-grid">
+          <article class="month-detail-card" id="january-month">
+            <p class="month-detail-colour">Silver</p>
+            <h3>January</h3>
+            <p>Snow, clarity, new beginnings.</p>
+          </article>
+          <article class="month-detail-card" id="february-month">
+            <p class="month-detail-colour">Purple</p>
+            <h3>February</h3>
+            <p>Love, warmth, intuition.</p>
+          </article>
+          <article class="month-detail-card" id="march-month">
+            <p class="month-detail-colour">Green</p>
+            <h3>March</h3>
+            <p>Growth and spring awakening.</p>
+          </article>
+          <article class="month-detail-card" id="april-month">
+            <p class="month-detail-colour">Yellow</p>
+            <h3>April</h3>
+            <p>Rain, sunlight, renewal.</p>
+          </article>
+          <article class="month-detail-card" id="may-month">
+            <p class="month-detail-colour">Pink</p>
+            <h3>May</h3>
+            <p>Blossoming and abundance.</p>
+          </article>
+          <article class="month-detail-card" id="june-month">
+            <p class="month-detail-colour">Lavender</p>
+            <h3>June</h3>
+            <p>Early summer, calm, light.</p>
+          </article>
+          <article class="month-detail-card" id="july-month">
+            <p class="month-detail-colour">Red</p>
+            <h3>July</h3>
+            <p>Sun, energy, passion.</p>
+          </article>
+          <article class="month-detail-card" id="august-month">
+            <p class="month-detail-colour">Gold</p>
+            <h3>August</h3>
+            <p>Harvest, heat, confidence.</p>
+          </article>
+          <article class="month-detail-card" id="september-month">
+            <p class="month-detail-colour">Burgundy</p>
+            <h3>September</h3>
+            <p>Earthiness and transition.</p>
+          </article>
+          <article class="month-detail-card" id="october-month">
+            <p class="month-detail-colour">Orange</p>
+            <h3>October</h3>
+            <p>Autumn, mystery, fire.</p>
+          </article>
+          <article class="month-detail-card" id="november-month">
+            <p class="month-detail-colour">Brown</p>
+            <h3>November</h3>
+            <p>Hearth, reflection, late harvest.</p>
+          </article>
+          <article class="month-detail-card" id="december-month">
+            <p class="month-detail-colour">Emerald</p>
+            <h3>December</h3>
+            <p>Winter, celebration, magic.</p>
+          </article>
+        </div>
+      </section>
+      <section class="section witchy-placeholder-section" id="myths-legends" aria-labelledby="myths-legends-title">
+        <div class="section-header">
+          <p class="eyebrow">Irish Mythology</p>
+          <h2 id="myths-legends-title" class="section-title">Myths and Legends</h2>
+        </div>
+        <nav class="witchy-section-nav witchy-myths-nav" aria-label="Myths and legends figures">
+          <ul>
+            <li><a href="#lugh">Lugh</a></li>
+            <li><a href="#aine">Áine</a></li>
+            <li><a href="#crom-dubh">Crom Dubh</a></li>
+            <li><a href="#the-dagda">The Dagda</a></li>
+            <li><a href="#the-puca">The Púca</a></li>
+            <li><a href="#aillen">Aillén Mac Midgna</a></li>
+            <li><a href="#the-sidhe">The Sídhe</a></li>
+            <li><a href="#the-cailleach">The Cailleach</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="section witchy-placeholder-section" id="tarot" aria-labelledby="tarot-title">
+        <div class="section-header">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 id="tarot-title" class="section-title">Tarot</h2>
+        </div>
+        <div class="tarot-fan" role="img" aria-label="A fanned deck of 78 tarot cards"></div>
+        <div class="tarot-reading" aria-live="polite">
+          <p class="tarot-reading-label">☽ Reading ☽</p>
+          <h3 class="tarot-reading-card-name"></h3>
+          <p class="tarot-reading-text"></p>
+        </div>
+      </section>
+
+      <section class="section witchy-placeholder-section" id="herbalism" aria-labelledby="herbalism-title">
+        <div class="section-header">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 id="herbalism-title" class="section-title">Herbalism</h2>
+          <p>This section is a work in progress — content coming soon.</p>
+        </div>
+      </section>
+
+      <section class="section witchy-placeholder-section" id="rituals" aria-labelledby="rituals-title">
+        <div class="section-header">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 id="rituals-title" class="section-title">Rituals</h2>
+          <p>This section is a work in progress — content coming soon.</p>
+        </div>
+      </section>
+
+      <section class="section" id="books" aria-labelledby="books-title">
+        <div class="section-header">
+          <p class="eyebrow">Reading List</p>
+          <h2 id="books-title" class="section-title">Books</h2>
+          <p class="section-copy">On my shelf at the moment...</p>
+        </div>
+        <div class="bookcase-wrap">
+          <div class="bookcase-shelf" role="list" aria-label="Bookcase">
+
+            <div class="book" role="listitem" style="--book-color:#2c4a3e;--book-width:28px;--book-height:198px" title="The Spiral Dance — Starhawk">
+              <div class="book-spine">
+                <span class="book-title">Throne of Glass</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#2d2456;--book-width:34px;--book-height:182px" title="Drawing Down the Moon — Margot Adler">
+              <div class="book-spine">
+                <span class="book-title">Crown of Midnight</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#1a3a1f;--book-width:26px;--book-height:190px" title="Wicca — Scott Cunningham">
+              <div class="book-spine">
+                <span class="book-title">Heir of Fire</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#4a1520;--book-width:24px;--book-height:174px" title="Celtic Magic — D.J. Conway">
+              <div class="book-spine">
+                <span class="book-title">Queen of Shadows</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#3b1f4a;--book-width:40px;--book-height:218px" title="The Mists of Avalon — Marion Zimmer Bradley">
+              <div class="book-spine">
+                <span class="book-title">Empire of Storms</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#8b2020;--book-width:36px;--book-height:206px" title="The Complete Book of Witchcraft — Raymond Buckland">
+              <div class="book-spine">
+                <span class="book-title">The Assasins Blade</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#1e3d2b;--book-width:30px;--book-height:184px" title="Irish Witchcraft from an Irish Witch — Lora O'Brien">
+              <div class="book-spine">
+                <span class="book-title">Tower of Dawn</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#1a2840;--book-width:32px;--book-height:194px" title="The Witches' Bible — Janet &amp; Stewart Farrar">
+              <div class="book-spine">
+                <span class="book-title">Kingdom of Ash</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#6b2c1a;--book-width:34px;--book-height:210px" title="Women Who Run With the Wolves — Clarissa Pinkola Estés">
+              <div class="book-spine">
+                <span class="book-title">A Court of Thorns and Roses</span>
+                <span class="book-author">Sarah J. Maas</span>
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#3d5a3e;--book-width:28px;--book-height:176px" title="Braiding Sweetgrass — Robin Wall Kimmerer">
+              <div class="book-spine">
+
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#4a3820;--book-width:30px;--book-height:196px" title="The White Goddess — Robert Graves">
+              <div class="book-spine">
+
+              </div>
+            </div>
+
+            <div class="book" role="listitem" style="--book-color:#2a4820;--book-width:26px;--book-height:172px" title="The Green Witch — Arin Murphy-Hiscock">
+              <div class="book-spine">
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section witchy-placeholder-section" id="meditation" aria-labelledby="meditation-title">
+        <div class="section-header">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 id="meditation-title" class="section-title">Meditation</h2>
+          <p>This section is a work in progress — content coming soon.</p>
+        </div>
+      </section>
+
+      <section class="section witchy-placeholder-section" id="celebrating-nature" aria-labelledby="celebrating-nature-title">
+        <div class="section-header">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 id="celebrating-nature-title" class="section-title">Celebrating Nature</h2>
+          <p>This section is a work in progress — content coming soon.</p>
+        </div>
+      </section>
+
+      <section class="section witchy-placeholder-section" id="crafts" aria-labelledby="crafts-title">
+        <div class="section-header">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 id="crafts-title" class="section-title">Crafts</h2>
+          <p>This section is a work in progress — content coming soon.</p>
+        </div>
+      </section>
+
+      <section class="section witchy-placeholder-section" id="community" aria-labelledby="community-title">
+        <div class="section-header">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 id="community-title" class="section-title">Community</h2>
+          <p>This section is a work in progress — content coming soon.</p>
+        </div>
+      </section>
+
+
+    </main>
+    <section
+      class="website-overview-nav"
+      aria-label="Website overview navigation"
+    >
+      <div class="website-overview-column website-overview-links">
+        <h2>Navigate</h2>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./education.html">Education</a></li>
+          <li><a href="./workexperience.html">Work Experience</a></li>
+          <li><a href="./adventure.html">Adventure</a></li>
+          <li><a href="./skills_abilities.html">Skills</a></li>
+          <li><a href="./creativity.html">Creativity</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="website-overview-column website-overview-brand">
+        <svg class="site-logo-svg" viewBox="0 0 80 80" width="80" height="80" aria-label="Shauna Gurhy monogram logo">
+          <circle cx="40" cy="40" r="36" fill="none" stroke="rgba(244,248,240,0.55)" stroke-width="1"/>
+          <text x="40" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="22" font-weight="600" fill="rgba(244,248,240,0.95)" letter-spacing="3">SG</text>
+        </svg>
+        <h2>Shauna Gurhy</h2>
+        <div class="social-links" aria-label="Social links">
+          <a
+            class="social-link social-link-instagram"
+            href="https://www.instagram.com/shaunagurhy/?hl=en"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+              <circle cx="12" cy="12" r="3.75"></circle>
+              <circle cx="17.2" cy="6.8" r="1"></circle>
+            </svg>
+          </a>
+          <a
+            class="social-link social-link-linkedin"
+            href="https://www.linkedin.com/in/shauna-gurhy-0735a4173/"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M6.5 8.4a1.4 1.4 0 1 1 0-2.8 1.4 1.4 0 0 1 0 2.8Zm-1.2 2h2.4v8.2H5.3Zm6 0h2.3v1.2h.1c.3-.6 1.1-1.4 2.6-1.4 2.7 0 3.2 1.8 3.2 4.2v4.2H17v-3.7c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2v3.8h-2.4Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="website-overview-column website-overview-news">
+        <h2>Current News</h2>
+        <p>Currently building a portfolio website to showcase my work — check back soon for updates!</p>
+      </div>
+    </section>
+
+    <script src="moon.js"></script>
+    <script src="tides.js"></script>
+    <script>
+      const siteNav = document.querySelector(".site-nav");
+      const navToggle = document.querySelector(".site-nav-toggle");
+      const navLinks = document.querySelector(".site-nav-links");
+
+      if (siteNav && navToggle && navLinks) {
+        function setNavState(isOpen) {
+          siteNav.classList.toggle("is-open", isOpen);
+          navToggle.setAttribute("aria-expanded", isOpen.toString());
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation",
+          );
+        }
+
+        navToggle.addEventListener("click", () => {
+          const isOpen = navToggle.getAttribute("aria-expanded") !== "true";
+          setNavState(isOpen);
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 900) {
+              setNavState(false);
+            }
+          });
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 900) {
+            setNavState(false);
+          }
+        });
+      }
+
+      const yearWheel = document.querySelector(".year-wheel");
+      const todaySection = document.querySelector(".witchy-today-section");
+      const todayMarker = document.querySelector(
+        ".year-wheel-today-marker span",
+      );
+      const yearText = document.querySelector("#year-wheel-year");
+      const todayDateText = document.querySelector("#today-date");
+      const todaySeasonText = document.querySelector("#today-season");
+      const todayMoonPhaseText = document.querySelector("#today-moon-phase");
+      const todaySunriseText = document.querySelector("#today-sunrise");
+      const todaySunsetText = document.querySelector("#today-sunset");
+      const todayYearProgressText = document.querySelector(
+        "#today-year-progress-text",
+      );
+      const todayYearProgressBar = document.querySelector(
+        "#today-year-progress-bar",
+      );
+      const todayYearProgressTrack = document.querySelector(
+        ".witchy-year-progress-track",
+      );
+      const monthColourLayer = document.querySelector(
+        ".year-wheel-month-colours",
+      );
+      const sabbatColourLayer = document.querySelector(
+        ".year-wheel-sabbat-colours",
+      );
+      const outerMonthLabels = document.querySelectorAll(
+        ".year-wheel-outer-month",
+      );
+      const monthDividers = document.querySelectorAll(
+        ".year-wheel-month-divider",
+      );
+      const sabbatLabels = document.querySelectorAll(".year-wheel-sabbat");
+      const sabbatDividers = document.querySelectorAll(
+        ".year-wheel-sabbat-divider",
+      );
+      const fullMoonLabels = document.querySelectorAll(".year-wheel-moon");
+
+      if (yearWheel && todayMarker && yearText) {
+        const today = new Date();
+        const wheelYear = today.getFullYear();
+        const month = today.getMonth();
+        const day = today.getDate();
+        const startOfYear = new Date(wheelYear, 0, 1);
+        const startOfNextYear = new Date(wheelYear + 1, 0, 1);
+        const yearLength = Math.round(
+          (startOfNextYear - startOfYear) / 86400000,
+        );
+        const dayOfYear = Math.floor((today - startOfYear) / 86400000) + 1;
+        const yearProgress = Math.min(
+          100,
+          Math.max(0, (dayOfYear / yearLength) * 100),
+        );
+        const dayAngle = ((dayOfYear - 0.5) / yearLength) * 360;
+        const monthStart = new Date(wheelYear, month, 1);
+        const nextMonthStart = new Date(wheelYear, month + 1, 1);
+        const monthStartDay = Math.floor((monthStart - startOfYear) / 86400000);
+        const nextMonthStartDay = Math.floor(
+          (nextMonthStart - startOfYear) / 86400000,
+        );
+        const monthStartAngle = (monthStartDay / yearLength) * 360;
+        const monthEndAngle = (nextMonthStartDay / yearLength) * 360;
+        const formattedToday = today.toLocaleDateString("en-GB", {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
+        const seasonsByMonth = [
+          "Winter",
+          "Spring",
+          "Spring",
+          "Spring",
+          "Summer",
+          "Summer",
+          "Summer",
+          "Autumn",
+          "Autumn",
+          "Autumn",
+          "Winter",
+          "Winter",
+        ];
+        const currentSeason = seasonsByMonth[month];
+        todaySection?.classList.toggle("is-summer", currentSeason === "Summer");
+        const getSunTime = (date, latitude, longitude, isSunrise) => {
+          const zenith = 90.833;
+          const start = new Date(date.getFullYear(), 0, 0);
+          const dayNumber = Math.floor((date - start) / 86400000);
+          const lngHour = longitude / 15;
+          const approximateTime =
+            dayNumber + ((isSunrise ? 6 : 18) - lngHour) / 24;
+          const meanAnomaly = 0.9856 * approximateTime - 3.289;
+          let trueLongitude =
+            meanAnomaly +
+            1.916 * Math.sin((Math.PI / 180) * meanAnomaly) +
+            0.02 * Math.sin((Math.PI / 180) * 2 * meanAnomaly) +
+            282.634;
+
+          trueLongitude = (trueLongitude + 360) % 360;
+
+          let rightAscension =
+            (180 / Math.PI) *
+            Math.atan(0.91764 * Math.tan((Math.PI / 180) * trueLongitude));
+
+          rightAscension = (rightAscension + 360) % 360;
+          rightAscension +=
+            Math.floor(trueLongitude / 90) * 90 -
+            Math.floor(rightAscension / 90) * 90;
+          rightAscension /= 15;
+
+          const sinDeclination =
+            0.39782 * Math.sin((Math.PI / 180) * trueLongitude);
+          const cosDeclination = Math.cos(Math.asin(sinDeclination));
+          const cosHour =
+            (Math.cos((Math.PI / 180) * zenith) -
+              sinDeclination * Math.sin((Math.PI / 180) * latitude)) /
+            (cosDeclination * Math.cos((Math.PI / 180) * latitude));
+
+          if (cosHour < -1 || cosHour > 1) {
+            return null;
+          }
+
+          let hourAngle = isSunrise
+            ? 360 - (180 / Math.PI) * Math.acos(cosHour)
+            : (180 / Math.PI) * Math.acos(cosHour);
+          hourAngle /= 15;
+
+          const localMeanTime =
+            hourAngle + rightAscension - 0.06571 * approximateTime - 6.622;
+          const utcHour = (localMeanTime - lngHour + 24) % 24;
+          const localDate = new Date(
+            Date.UTC(
+              date.getFullYear(),
+              date.getMonth(),
+              date.getDate(),
+              Math.floor(utcHour),
+              Math.round((utcHour % 1) * 60),
+            ),
+          );
+
+          return localDate.toLocaleTimeString("en-IE", {
+            hour: "2-digit",
+            minute: "2-digit",
+            timeZone: "Europe/Dublin",
+          });
+        };
+        const sunrise = getSunTime(today, 53.3498, -6.2603, true);
+        const sunset = getSunTime(today, 53.3498, -6.2603, false);
+        const moonCycleLength = 29.530588853;
+        const knownNewMoon = new Date(Date.UTC(2000, 0, 6, 18, 14));
+        const daysSinceKnownNewMoon =
+          (Date.UTC(wheelYear, month, day) - knownNewMoon) / 86400000;
+        const moonAge =
+          ((daysSinceKnownNewMoon % moonCycleLength) + moonCycleLength) %
+          moonCycleLength;
+        const moonPhases = [
+          { limit: 1.84566, name: "New Moon" },
+          { limit: 5.53699, name: "Waxing Crescent" },
+          { limit: 9.22831, name: "First Quarter" },
+          { limit: 12.91963, name: "Waxing Gibbous" },
+          { limit: 16.61096, name: "Full Moon" },
+          { limit: 20.30228, name: "Waning Gibbous" },
+          { limit: 23.99361, name: "Last Quarter" },
+          { limit: 27.68493, name: "Waning Crescent" },
+          { limit: moonCycleLength, name: "New Moon" },
+        ];
+        const currentMoonPhase =
+          moonPhases.find((phase) => moonAge < phase.limit)?.name || "New Moon";
+        const angleForDate = (date) => {
+          const dateDay = Math.floor((date - startOfYear) / 86400000);
+          return (dateDay / yearLength) * 360;
+        };
+        const sabbatCssNames = [
+          "imbolc",
+          "ostara",
+          "beltane",
+          "litha",
+          "lammas",
+          "mabon",
+          "samhain",
+          "yule",
+        ];
+        const monthBandColours = [
+          "#ECF1F7",
+          "#92B0DC",
+          "#8FACA1",
+          "#6C827D",
+          "#8DAF9B",
+          "#BED2BA",
+          "#D7CBB2",
+          "#C24B27",
+          "#DD8632",
+          "#E9AC78",
+          "#CADBE5",
+          "#DFE8ED",
+        ];
+        const sabbatBandColours = [
+          "rgba(255, 250, 244, 0.74)",
+          "rgba(154, 210, 132, 0.58)",
+          "rgba(207, 35, 35, 0.58)",
+          "rgba(221, 176, 64, 0.64)",
+          "rgba(206, 132, 42, 0.6)",
+          "rgba(214, 96, 35, 0.58)",
+          "rgba(25, 24, 26, 0.56)",
+          "rgba(32, 104, 72, 0.58)",
+        ];
+        const monthTargetIds = [
+          "january-month",
+          "february-month",
+          "march-month",
+          "april-month",
+          "may-month",
+          "june-month",
+          "july-month",
+          "august-month",
+          "september-month",
+          "october-month",
+          "november-month",
+          "december-month",
+        ];
+
+        function createBandGradient(colour, bandStart, bandEnd) {
+          return `radial-gradient(circle, transparent 0 ${bandStart}%, ${colour} ${bandStart}% ${bandEnd}%, transparent ${bandEnd}% 100%)`;
+        }
+
+        function addBandSegment(
+          layer,
+          className,
+          segmentStart,
+          segmentEnd,
+          background,
+        ) {
+          const band = document.createElement("span");
+
+          band.className = className;
+          band.style.setProperty("--segment-start-angle", `${segmentStart}deg`);
+          band.style.setProperty("--segment-end-angle", `${segmentEnd}deg`);
+          band.style.background = background;
+          layer?.appendChild(band);
+
+          return band;
+        }
+
+        monthColourLayer?.replaceChildren();
+        sabbatColourLayer?.replaceChildren();
+
+        const monthSegments = [];
+        Array.from({ length: 12 }, (_, paletteMonth) => paletteMonth).forEach(
+          (paletteMonth) => {
+            const segmentStart = angleForDate(
+              new Date(wheelYear, paletteMonth, 1),
+            );
+            const segmentEnd = angleForDate(
+              new Date(wheelYear, paletteMonth + 1, 1),
+            );
+            const monthSegment = addBandSegment(
+              monthColourLayer,
+              "year-wheel-band-colour year-wheel-month-colour",
+              segmentStart,
+              segmentEnd,
+              createBandGradient(
+                monthBandColours[paletteMonth],
+                18,
+                70,
+              ),
+            );
+
+            monthSegment.dataset.month = paletteMonth;
+            monthSegments.push({
+              element: monthSegment,
+              end: segmentEnd,
+              index: paletteMonth,
+              start: segmentStart,
+              target: monthTargetIds[paletteMonth],
+            });
+          },
+        );
+
+        const sabbatDates = sabbatLabels.length
+          ? Array.from(sabbatLabels).map(
+              (label) =>
+                new Date(
+                  wheelYear,
+                  Number(label.dataset.month),
+                  Number(label.dataset.day),
+                ),
+            )
+          : [];
+        sabbatDates.forEach((sabbatDate, index) => {
+          const nextDate =
+            index === sabbatDates.length - 1
+              ? new Date(
+                  wheelYear + 1,
+                  Number(sabbatLabels[0].dataset.month),
+                  Number(sabbatLabels[0].dataset.day),
+                )
+              : sabbatDates[index + 1];
+          const segmentStart = angleForDate(sabbatDate);
+          const rawSegmentEnd = angleForDate(nextDate);
+          const segmentEnd =
+            rawSegmentEnd <= segmentStart ? rawSegmentEnd + 360 : rawSegmentEnd;
+          const background = createBandGradient(
+            sabbatBandColours[index % sabbatBandColours.length],
+            36,
+            52,
+          );
+
+          if (segmentEnd > 360) {
+            addBandSegment(
+              sabbatColourLayer,
+              "year-wheel-band-colour year-wheel-sabbat-colour",
+              segmentStart,
+              360,
+              background,
+            );
+            addBandSegment(
+              sabbatColourLayer,
+              "year-wheel-band-colour year-wheel-sabbat-colour",
+              0,
+              segmentEnd - 360,
+              background,
+            );
+          } else {
+            addBandSegment(
+              sabbatColourLayer,
+              "year-wheel-band-colour year-wheel-sabbat-colour",
+              segmentStart,
+              segmentEnd,
+              background,
+            );
+          }
+        });
+
+        yearWheel.style.setProperty("--today-angle", `${dayAngle}deg`);
+        yearWheel.style.setProperty("--wheel-rotation", `${dayAngle * -1}deg`);
+        yearWheel.style.setProperty("--year-days", yearLength);
+        yearWheel.setAttribute(
+          "aria-label",
+          `Circular calendar for ${wheelYear}, highlighting ${formattedToday}`,
+        );
+        yearText.textContent = wheelYear;
+        todayMarker.textContent = day;
+        todayDateText.textContent = formattedToday;
+        todaySeasonText.textContent = currentSeason;
+        todaySunriseText.textContent = sunrise || "Unavailable";
+        todaySunsetText.textContent = sunset || "Unavailable";
+        todayMoonPhaseText.textContent = currentMoonPhase;
+        if (
+          todayYearProgressText &&
+          todayYearProgressBar &&
+          todayYearProgressTrack
+        ) {
+          todayYearProgressText.textContent = `Day ${dayOfYear} of ${yearLength}`;
+          todayYearProgressBar.style.width = `${yearProgress}%`;
+          todayYearProgressTrack.setAttribute("aria-valuenow", dayOfYear);
+        }
+
+        monthDividers.forEach((divider) => {
+          const dividerMonth = Number(divider.dataset.month);
+          const dividerDate = new Date(wheelYear, dividerMonth, 1);
+          divider.style.setProperty(
+            "--month-angle",
+            `${angleForDate(dividerDate)}deg`,
+          );
+        });
+
+        outerMonthLabels.forEach((label) => {
+          const labelMonth = Number(label.dataset.month);
+          const labelStart = new Date(wheelYear, labelMonth, 1);
+          const labelEnd = new Date(wheelYear, labelMonth + 1, 1);
+          const labelMidpoint = new Date(
+            (labelStart.getTime() + labelEnd.getTime()) / 2,
+          );
+
+          label.style.setProperty(
+            "--month-label-angle",
+            `${angleForDate(labelMidpoint)}deg`,
+          );
+        });
+
+        sabbatLabels.forEach((label, index) => {
+          const sabbatDate = new Date(
+            wheelYear,
+            Number(label.dataset.month),
+            Number(label.dataset.day),
+          );
+          const sabbatAngle = angleForDate(sabbatDate);
+
+          label.style.setProperty("--sabbat-angle", `${sabbatAngle}deg`);
+          yearWheel.style.setProperty(
+            `--sabbat-${sabbatCssNames[index]}`,
+            `${sabbatAngle}deg`,
+          );
+          label.setAttribute(
+            "aria-label",
+            `${label.querySelector("span").textContent}, ${label.dataset.range}`,
+          );
+        });
+
+        sabbatDividers.forEach((divider) => {
+          const sabbatDate = new Date(
+            wheelYear,
+            Number(divider.dataset.month),
+            Number(divider.dataset.day),
+          );
+          divider.style.setProperty(
+            "--sabbat-angle",
+            `${angleForDate(sabbatDate)}deg`,
+          );
+        });
+
+        fullMoonLabels.forEach((label) => {
+          const moonMonth = Number(label.dataset.month);
+          const moonDay = Number(label.dataset.day);
+          const moonDate = new Date(wheelYear, moonMonth, moonDay);
+          const moonAngle = angleForDate(moonDate);
+          const moonDateText = moonDate.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+          });
+          const note = label.dataset.note ? `, ${label.dataset.note}` : "";
+          const isTodayMoon = moonMonth === month && moonDay === day;
+
+          label.style.setProperty("--moon-angle", `${moonAngle}deg`);
+          label.classList.toggle("is-today-moon", isTodayMoon);
+          label.setAttribute(
+            "aria-label",
+            `${moonDateText}: ${label.dataset.name}${note}`,
+          );
+
+        });
+
+        function setActiveMonthSegment(activeSegment) {
+          monthSegments.forEach((segment) => {
+            segment.element.classList.toggle(
+              "is-active",
+              segment === activeSegment,
+            );
+          });
+          outerMonthLabels.forEach((label) => {
+            label.classList.toggle(
+              "is-active",
+              Boolean(activeSegment) &&
+                Number(label.dataset.month) === activeSegment.index,
+            );
+          });
+
+          yearWheel.classList.toggle(
+            "is-month-band-hover",
+            Boolean(activeSegment),
+          );
+        }
+
+        function getMonthSegmentFromPointer(event) {
+          const rect = yearWheel.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          const dx = event.clientX - centerX;
+          const dy = event.clientY - centerY;
+          const radiusRatio = Math.hypot(dx, dy) / rect.width;
+
+          if (radiusRatio < 0.38 || radiusRatio > 0.92) {
+            return null;
+          }
+
+          const angle = (Math.atan2(dx, -dy) * 180) / Math.PI;
+          const normalisedAngle = angle < 0 ? angle + 360 : angle;
+          const unrotatedAngle = (normalisedAngle + dayAngle) % 360;
+
+          return (
+            monthSegments.find(
+              (segment) =>
+                unrotatedAngle >= segment.start && unrotatedAngle < segment.end,
+            ) || monthSegments[11]
+          );
+        }
+
+        document.addEventListener("mousemove", (event) => {
+          setActiveMonthSegment(getMonthSegmentFromPointer(event));
+        });
+
+        document.addEventListener("click", (event) => {
+          const moonLink = event.target.closest(".year-wheel-moon a");
+          if (moonLink) {
+            event.preventDefault();
+            const id = moonLink.getAttribute("href").slice(1);
+            document.querySelectorAll(".moon-detail-card").forEach(c => { c.hidden = c.id !== id; });
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
+          }
+
+          if (event.target.closest(".year-wheel-sabbat a")) {
+            return;
+          }
+
+          const activeSegment = getMonthSegmentFromPointer(event);
+          if (activeSegment) {
+            document.querySelectorAll(".month-detail-card").forEach(c => { c.hidden = c.id !== activeSegment.target; });
+            document.getElementById(activeSegment.target)?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            history.pushState(null, "", `#${activeSegment.target}`);
+          }
+        });
+      }
+    </script>
+    <script>
+      (function () {
+        const canvas = document.querySelector('.witchy-starfield');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let stars = [];
+
+        const resize = () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        };
+
+        const mkStar = () => ({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.1 + 0.2,
+          drift: Math.random() * 0.06 + 0.01,
+          opacity: Math.random() * 0.55 + 0.25,
+          twinkle: Math.random() * 0.004 + 0.001,
+          phase: Math.random() * Math.PI * 2,
+          warm: Math.random() < 0.15,
+        });
+
+        const init = () => { stars = Array.from({ length: 180 }, mkStar); };
+
+        const draw = (t) => {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          for (const s of stars) {
+            ctx.globalAlpha = s.opacity * (0.75 + 0.25 * Math.sin(t * s.twinkle + s.phase));
+            ctx.fillStyle = s.warm ? '#f5e6c0' : '#f4f0ec';
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+            ctx.fill();
+            s.y += s.drift;
+            if (s.y > canvas.height + 2) Object.assign(s, mkStar(), { y: -2 });
+          }
+          ctx.globalAlpha = 1;
+          requestAnimationFrame(draw);
+        };
+
+        resize();
+        init();
+        window.addEventListener('resize', () => { resize(); init(); });
+        requestAnimationFrame(draw);
+      }());
+    </script>
+    <script>
+      (function () {
+        const today = new Date();
+        const year = today.getFullYear();
+        const todayStart = new Date(year, today.getMonth(), today.getDate());
+
+        const sabbats = [
+          { id: 'imbolc',  month: 1,  day: 1  },
+          { id: 'ostara',  month: 2,  day: 20 },
+          { id: 'beltane', month: 4,  day: 1  },
+          { id: 'litha',   month: 5,  day: 21 },
+          { id: 'lammas',  month: 7,  day: 1  },
+          { id: 'mabon',   month: 8,  day: 22 },
+          { id: 'samhain', month: 9,  day: 31 },
+          { id: 'yule',    month: 11, day: 21 },
+        ];
+
+        const nextSabbat = sabbats.find(s => new Date(year, s.month, s.day) >= todayStart)
+          ?? sabbats[0];
+
+        function showCard(selector, id) {
+          document.querySelectorAll(selector).forEach(card => {
+            card.hidden = card.id !== id;
+          });
+        }
+
+        showCard('.sabbat-detail-card', nextSabbat.id);
+
+        const nextSabbatCard = document.getElementById(nextSabbat.id);
+        if (nextSabbatCard) nextSabbatCard.classList.add('is-next-sabbat');
+
+        document.querySelectorAll('.witchy-sabbat-nav a, .year-wheel-sabbat a').forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            const id = link.getAttribute('href').slice(1);
+            showCard('.sabbat-detail-card', id);
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+
+        const moons = [
+          { id: 'wolf-moon',       month: 0,  day: 3  },
+          { id: 'snow-moon',       month: 1,  day: 1  },
+          { id: 'worm-moon',       month: 2,  day: 3  },
+          { id: 'pink-moon',       month: 3,  day: 2  },
+          { id: 'flower-moon',     month: 4,  day: 1  },
+          { id: 'blue-moon',       month: 4,  day: 31 },
+          { id: 'strawberry-moon', month: 5,  day: 30 },
+          { id: 'buck-moon',       month: 6,  day: 29 },
+          { id: 'sturgeon-moon',   month: 7,  day: 28 },
+          { id: 'harvest-moon',    month: 8,  day: 26 },
+          { id: 'hunters-moon',    month: 9,  day: 26 },
+          { id: 'beaver-moon',     month: 10, day: 24 },
+          { id: 'cold-moon',       month: 11, day: 24 },
+        ];
+
+        const nextMoon = moons.find(m => new Date(year, m.month, m.day) >= todayStart)
+          ?? moons[0];
+
+        showCard('.moon-detail-card', nextMoon.id);
+
+        const nextMoonCard = document.getElementById(nextMoon.id);
+        if (nextMoonCard) nextMoonCard.classList.add('is-next-moon');
+
+        document.querySelectorAll('.witchy-moon-nav a').forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            const id = link.getAttribute('href').slice(1);
+            showCard('.moon-detail-card', id);
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+
+        const monthNames = [
+          'january', 'february', 'march', 'april', 'may', 'june',
+          'july', 'august', 'september', 'october', 'november', 'december',
+        ];
+
+        showCard('.month-detail-card', monthNames[today.getMonth()] + '-month');
+
+        document.querySelectorAll('.witchy-month-nav a').forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            showCard('.month-detail-card', link.getAttribute('href').slice(1));
+          });
+        });
+      }());
+    </script>
+    <script>
+      (function () {
+        const SUITS = ['Wands', 'Cups', 'Swords', 'Pentacles'];
+        const SUIT_SYMBOLS = { Wands: '✦', Cups: '◯', Swords: '✕', Pentacles: '⊕' };
+        const RANKS = ['Ace','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Page','Knight','Queen','King'];
+        const MAJOR = [
+          ['0','The Fool'],['I','The Magician'],['II','The High Priestess'],
+          ['III','The Empress'],['IV','The Emperor'],['V','The Hierophant'],
+          ['VI','The Lovers'],['VII','The Chariot'],['VIII','Strength'],
+          ['IX','The Hermit'],['X','Wheel of Fortune'],['XI','Justice'],
+          ['XII','The Hanged Man'],['XIII','Death'],['XIV','Temperance'],
+          ['XV','The Devil'],['XVI','The Tower'],['XVII','The Star'],
+          ['XVIII','The Moon'],['XIX','The Sun'],['XX','Judgment'],['XXI','The World'],
+        ].map(([num, name]) => ({ num, name, suit: '' }));
+        const MINOR = SUITS.flatMap(suit =>
+          RANKS.map(rank => ({ num: rank, name: `${rank} of ${suit}`, suit: SUIT_SYMBOLS[suit] }))
+        );
+        const DECK = [...MAJOR, ...MINOR];
+
+        const fan = document.querySelector('.tarot-fan');
+        if (!fan) return;
+
+        const CARD_W = 155;
+        const STEP = 62;
+        const n = 78;
+        const totalWidth = (n - 1) * STEP + CARD_W;
+
+        const inner = document.createElement('div');
+        inner.className = 'tarot-fan-inner';
+        inner.style.width = totalWidth + 'px';
+        fan.appendChild(inner);
+
+        for (let i = 0; i < n; i++) {
+          const r = -25 + (i / (n - 1)) * 50;
+          const card = document.createElement('div');
+          card.className = 'tarot-card';
+          card.style.setProperty('--r', r.toFixed(2) + 'deg');
+          card.style.left = (i * STEP) + 'px';
+
+          const cardInner = document.createElement('div');
+          cardInner.className = 'tarot-card-inner';
+
+          const back = document.createElement('div');
+          back.className = 'tarot-card-back';
+
+          const face = document.createElement('div');
+          face.className = 'tarot-card-face';
+
+          cardInner.append(back, face);
+          card.appendChild(cardInner);
+          inner.appendChild(card);
+        }
+
+        const READINGS = {
+          'Page of Wands': {
+            upright: 'A sudden spark of creative inspiration and the thrill of a new idea. Exciting news, fresh projects, limitless potential, and an adventurous spirit. Lean into your curiosity — you don\'t need a five-year plan, just enthusiasm and a willingness to begin.',
+            reversed: 'Scattered focus, procrastination, or fear holding you back from starting. The spark is there but the direction is unclear. Pause, gather your energy, and commit to one path before diving in.',
+          },
+          'Ace of Swords': {
+            upright: 'A powerful breakthrough — the mental fog lifts and you see the situation with sudden, sharp clarity. This is your green light to act with logic and conviction. Speak your truth, cut through confusion, and trust the new idea or decision taking shape. Triumph comes through honesty and decisive action, not hesitation.',
+            reversed: 'Mental blocks and scattered energy are clouding your judgement. Communication may be breaking down, or an uncomfortable truth is being avoided. Step back, clear the noise, and resist the urge to force a decision before you truly understand what you are dealing with.',
+          },
+          'Two of Pentacles': {
+            upright: 'You are keeping multiple plates spinning — work, money, relationships, and personal life all demanding attention at once. The key is not perfection but rhythm. Go with the flow, stay flexible, and trust that you have the adaptability to manage it all. Just keep your eye on what matters most.',
+            reversed: 'The juggle is becoming a struggle. You have taken on too much and something is starting to slip. This is a gentle but firm reminder to cut back, set stronger boundaries, and focus on one thing at a time. Spreading yourself too thin helps no one — least of all you.',
+          },
+          'Knight of Swords': {
+            upright: 'Charge forward. You have the clarity, the drive, and the intellectual firepower to cut through any obstacle in your path. This is not the time for hesitation — speak boldly, move fast, and back your ideas with conviction. Just make sure your ambition is guided by purpose, not pure impulse.',
+            reversed: 'Speed without direction is just chaos. Words may be landing harder than intended, or reckless haste is creating problems that patience would have prevented. Slow down, check your tone, and ask whether you are truly driven by conviction — or just restless energy looking for an outlet.',
+          },
+          'Ten of Pentacles': {
+            upright: 'You have built something that lasts. This card speaks to the peak of material and emotional success — financial security, family harmony, and the satisfaction of knowing your efforts have created a foundation that will outlive the moment. Enjoy the fruits of your labour and the warmth of those around you. This is legacy.',
+            reversed: 'Something in the structure is cracking — whether that is financial instability, family conflict, or a quiet sense that chasing security has cost you something more meaningful. Examine where obligation has replaced joy, and where the traditional blueprint of success no longer fits the life you actually want to live.',
+          },
+          'Five of Cups': {
+            upright: 'Something has been lost, and it is okay to grieve it. This card gives you permission to feel the disappointment fully — but it also asks you to lift your gaze. Three cups have spilled, but two still stand. The pain is real, yet so is what remains. Acknowledge the loss, then slowly, gently, turn toward what has not been taken from you.',
+            reversed: 'The worst of the grief is beginning to pass. You are finding your way back — forgiving yourself, releasing the past, and allowing healing to take root. This is a turning point. What felt like an ending is slowly revealing itself as a clearing, making space for something new to grow.',
+          },
+          'Ace of Wands': {
+            upright: 'The spark has arrived — and it is a big one. This is the universe handing you a green light and saying go. Trust the idea, trust the impulse, trust the passion. Whether it is a new project, a bold move, or a creative vision that has been quietly building, now is the time to act. Stop overthinking and say yes.',
+            reversed: 'The fire is there but it is not quite catching. Delays, creative blocks, or sheer exhaustion may be dimming what should be a bright flame. Do not force it. Step back, rest, and let the energy rebuild naturally. The right moment is coming — but it is not quite now.',
+          },
+          'Three of Cups': {
+            upright: 'Raise a glass. This is a card of pure joy, friendship, and celebration — the kind that fills a room and lingers long after the night ends. Your people are your power right now. Lean into your community, honour shared milestones, and let yourself be held by the bonds that remind you why connection matters.',
+            reversed: 'The celebration has tipped into something less nourishing. Whether that is overindulgence, group drama, or a quiet feeling of being left out, something in your social world is off balance. It may be time to step back, find your own footing again, and decide which connections are truly feeding you.',
+          },
+          'The Lovers': {
+            upright: 'A significant choice stands before you — one rooted in the heart. This is not a decision to make lightly, because what you choose now will echo forward. Whether it concerns a relationship, a temptation, or two very different paths, the card asks you to act with full honesty about what you truly value. Choose with intention, not convenience.',
+            reversed: 'Something is out of alignment — a choice avoided, a relationship strained, or a decision made for the wrong reasons. The heart and the head are pulling in different directions. Before you can move forward, you need to get honest with yourself about what you actually want, and what you are willing to let go of to have it.',
+          },
+          'Strength': {
+            upright: 'You have more in you than you realise. Whatever battle you are facing — illness, injury, temptation, or a long and draining struggle — this card promises a triumphant conclusion through the quiet, steady power of your own character. Not brute force, but courage, patience, and resilience. You are going to get through this.',
+            reversed: 'Your inner resources feel depleted right now. Self-doubt, fear, or exhaustion may be making the challenge feel bigger than it is. Be gentle with yourself — strength does not have to roar. Rebuild slowly, lean on those around you, and trust that your resilience has not disappeared. It is simply resting.',
+          },
+          'Death': {
+            upright: 'Do not be afraid. This card rarely speaks of physical death — it speaks of endings, and the self-awareness that follows them. A relationship, a phase, a version of yourself that no longer serves you is coming to a close. Let it. What feels like loss is often transformation in disguise, and what comes after is almost always clearer and more authentically you.',
+            reversed: 'Something is ending but you are holding on too tightly. Resistance to change is keeping you stuck in a chapter that has already run its course. The longer you delay the inevitable, the heavier it becomes. Trust that letting go will not undo you — it will free you.',
+          },
+          'Queen of Wands': {
+            upright: 'She knows exactly who she is — and so do you, right now. This card is pure magnetism, confidence, and creative fire. Step into the room like you own it. Lead the project, say the bold thing, let your personality be the thing that opens doors. Your enthusiasm is not too much. It is precisely the point.',
+            reversed: 'The fire is flickering. Burnout, self-doubt, or a fear of judgement is quietly dimming the light you usually radiate so effortlessly. This is not the time to push harder — it is the time to rest, reconnect with what actually excites you, and stop performing confidence you are not currently feeling. The flame will return.',
+          },
+          'The Fool': {
+            upright: 'Step off the cliff. Not because you know what comes next — but because you trust that something will catch you. This is a card of pure beginnings, beginner\'s luck, and the kind of open-hearted faith that only comes before experience has taught you to be cautious. The universe is asking you to improvise, believe, and leap.',
+            reversed: 'Naivety is tipping into recklessness. The spontaneous energy of the Fool is a gift, but without any grounding it becomes impulsive risk-taking with little thought for consequence. Pause before you leap. A little planning does not have to kill the magic — it just makes sure you land somewhere worth going.',
+          },
+          'Justice': {
+            upright: 'The scales will balance. Whatever situation is unfolding around you, the fairest outcome is coming — not swayed by charm, appearances, or clever arguments, but by what is simply true and right. Trust the process, tell the truth, and act with integrity. The sword of Justice cuts cleanly and without favour.',
+            reversed: 'Something is not adding up. A decision may have been unfair, accountability is being dodged, or the truth is being obscured by bias or self-interest. If you have been avoiding consequences, this card is a warning. If you have been wronged, it is a reminder not to take justice entirely into your own hands.',
+          },
+          'Six of Pentacles': {
+            upright: 'Abundance flows best when it moves. Whether you are the one giving or the one receiving right now, this card asks you to do it with grace and without keeping score. Accept help when it is offered — that is not weakness, it is wisdom. Generosity given freely and received openly creates a cycle that benefits everyone.',
+            reversed: 'The balance has tipped. Someone in your life — or perhaps you yourself — is giving too much, taking too much, or quietly keeping score. Examine the power dynamics at play in your relationships and finances. Generosity should never come with strings attached, and dependence should never be mistaken for connection.',
+          },
+          'The Hanged Man': {
+            upright: 'Stop pushing. This is a card of deliberate pause — a voluntary suspension where the most powerful thing you can do is surrender control and wait. Something cannot be forced right now, and trying will only exhaust you. Let go, shift your perspective, and trust that this stillness has a purpose. The view from here may be exactly what you needed.',
+            reversed: 'You are resisting the pause that is being asked of you, or you have been suspended so long that the waiting has become an excuse. Martyrdom and stalling are not the same as surrender. If something is truly holding you back, name it — then decide whether it deserves that much of your time.',
+          },
+          'The Devil': {
+            upright: 'Something has a hold on you — and part of you likes it. This card speaks to the seductive pull of pleasure, luxury, and material comfort that slowly becomes a cage. Fear, domination, and unhealthy attachments thrive in the shadows here. Tread carefully in personal and business matters, and be honest with yourself about what you are truly chained to.',
+            reversed: 'The chains are loosening. You are beginning to see the cage for what it is, and the first step toward freedom is already underway. Breaking free from an addiction, an unhealthy relationship, or a suffocating pattern is rarely easy — but this card is a sign that you have the awareness and the will to do it.',
+          },
+          // Major Arcana
+          'The Magician': {
+            upright: 'You already have everything you need. The tools, the talent, the resources — they are all right in front of you. This card is a call to stop waiting for permission and start using what you have with intention and full commitment. You are more capable than you are currently acting.',
+            reversed: 'The potential is there but it is being wasted or misdirected. Overconfidence, manipulation, or an unwillingness to do the actual work is getting in the way. Check your motives and sharpen your focus before the window of opportunity quietly closes.',
+          },
+          'The High Priestess': {
+            upright: 'The answer you are looking for is not outside you — it never was. This card asks you to trust the quiet knowing beneath the noise and logic. Sit with the stillness. What does your intuition say when you stop second-guessing it?',
+            reversed: 'You are not listening to yourself, or something is being deliberately hidden from you. Inner wisdom is being drowned out by other voices, or a secret is distorting the picture. Get quiet, get honest, and stop ignoring what you already know.',
+          },
+          'The Empress': {
+            upright: 'Abundance, beauty, and creative energy are flowing freely. This is a time to nurture what matters — relationships, projects, your own body and inner life. Let things grow at their own pace. Not everything needs to be forced into being.',
+            reversed: 'Creative energy has stalled, and it may be tied to how you are treating yourself. Dependence, self-neglect, or a creative block is cutting off the flow. Return to something nourishing rather than draining and let the abundance find its way back.',
+          },
+          'The Emperor': {
+            upright: 'Structure, authority, and stability are called for here. This is a time to lead clearly, set firm boundaries, and build something that lasts. Discipline is not the enemy of creativity — it is what gives it somewhere to live.',
+            reversed: 'Control has tipped into rigidity, or authority is being abused. Whether that is external domination or your own inner tyrant running the show, something is too tightly held. Loosen the grip before the structure becomes a prison.',
+          },
+          'The Hierophant': {
+            upright: 'Tradition and shared wisdom are offering you grounding right now. Whether that is a mentor, a spiritual practice, or a structured path, there is value in following an established route rather than reinventing the wheel. Seek guidance from those who have walked this before.',
+            reversed: 'The traditional path no longer fits, and you know it. This card invites you to question the rules you have been following out of habit or obligation, and to find a belief system that is truly your own rather than inherited.',
+          },
+          'The Chariot': {
+            upright: 'You are in the driver\'s seat. Victory is within reach, but it requires discipline, focus, and the willpower to hold opposing forces in balance as you move forward. Do not let doubt slow you down — you have come too far to take your hands off the wheel.',
+            reversed: 'Direction has been lost or conflicting desires are pulling you too many ways to make meaningful progress. The energy is there but it is scattered. Reestablish your focus and decide what you are actually driving toward before you burn out going nowhere.',
+          },
+          'The Hermit': {
+            upright: 'The answers you need cannot be found in noise or company right now. This is a sacred invitation to withdraw, reflect, and listen to your own inner wisdom. A period of solitude is not loneliness — it is how you find your light again.',
+            reversed: 'Isolation has curdled into withdrawal, or you are avoiding the inner work that solitude was meant to prompt. Are you truly reflecting — or just hiding? When you are ready, the lantern is still lit.',
+          },
+          'Wheel of Fortune': {
+            upright: 'Change is coming, and it is working in your favour. Life moves in cycles, and right now the wheel is turning upward. What has felt stagnant is beginning to shift. Embrace the momentum and trust that what is unfolding is part of a much larger pattern.',
+            reversed: 'The wheel is still turning — it always is — but right now the cycle feels like it is working against you. Resistance to change is making it worse. Accepting the ebb as part of the flow, and releasing the need to control outcomes, is the only way through.',
+          },
+          'Temperance': {
+            upright: 'Everything in moderation — including urgency. This card asks for patience, balance, and a willingness to blend opposites rather than force a resolution. The middle path is not the boring one. It is often the most sustainable and quietly powerful.',
+            reversed: 'Excess has replaced equilibrium. Something is out of proportion — too much of one thing, not enough of another. Small adjustments now prevent larger collapses later. Recalibrate before the imbalance costs you something significant.',
+          },
+          'The Tower': {
+            upright: 'Something is about to come down — and it probably needs to. The Tower is not punishment; it is revelation. Structures built on shaky foundations cannot stand forever, and the upheaval clearing your path right now is making way for something far more solid. Let it fall.',
+            reversed: 'Disaster is being narrowly avoided, or the collapse is happening slowly rather than all at once. You may be resisting a necessary transformation out of fear. The Tower finds a way through regardless — it is always less painful to work with change than against it.',
+          },
+          'The Star': {
+            upright: 'After the storm, this. The Star is quiet, steady hope — the kind that does not shout but simply continues to shine. You are being renewed. Trust the healing, reconnect with what gives your life meaning, and know that the universe is not finished with you yet.',
+            reversed: 'Hope has dimmed and faith in the future feels fragile. Cynicism or exhaustion is making it hard to believe things can improve. This is not the truth — it is a temporary cloudcover. Find one small thing to trust, and let that be enough for today.',
+          },
+          'The Moon': {
+            upright: 'Not everything is as it appears. The Moon rules illusion, fear, and the unconscious, and right now something is distorting your perception. Pay attention to your instincts over appearances, and resist making major decisions until the picture becomes clearer.',
+            reversed: 'Confusion is beginning to lift and buried fears are surfacing to finally be dealt with. What was lurking in the shadows is coming into the light. This can feel uncomfortable — but clarity, even when it reveals difficult truths, is always better than living in the fog.',
+          },
+          'The Sun': {
+            upright: 'Pure, uncomplicated joy. This is one of the most positive cards in the deck — a burst of warmth, vitality, and well-earned optimism. The conditions are good and the energy is with you. Let yourself be happy about it without waiting for the other shoe to drop.',
+            reversed: 'The joy is real but something is muting it. Overshadowing a moment that deserves to be celebrated, or making optimism feel forced. Return to simplicity. The light is still there — you may just need to step out from under what is blocking it.',
+          },
+          'Judgment': {
+            upright: 'Something within you is awakening — a calling, a purpose, a clearer sense of who you are and what you are here to do. This is a moment of honest self-reckoning that changes everything. Answer the call. It has been waiting long enough.',
+            reversed: 'You are being too hard on yourself, or ignoring something your soul has been trying to tell you for a long time. Self-doubt and an overly critical inner voice are keeping you from the transformation that is waiting. The calling does not go away — it just gets quieter and more insistent.',
+          },
+          'The World': {
+            upright: 'You did it. A long cycle is completing, and this card marks the wholeness that only comes from having truly seen something through. Celebrate this. Then turn your gaze toward the horizon — because completion is always also a beginning.',
+            reversed: 'Something is almost finished but not quite. A loose end, an avoided conclusion, or a sense that closure is being rushed before it is truly ready. Do not cut corners on endings. Taking the time to complete things fully is what allows the next chapter to start on solid ground.',
+          },
+          // Wands
+          'Two of Wands': {
+            upright: 'You have done the groundwork — now comes the part where you actually decide. The world is larger than your comfort zone, and something is calling you beyond the familiar horizon. Make a plan, commit to a direction, and take the first real step toward what you have been imagining.',
+            reversed: 'Hesitation is keeping you rooted when you should be moving. Fear of the unknown or a lack of planning is creating a holding pattern. Get clear on what you actually want, because vague ambitions do not build lives.',
+          },
+          'Three of Wands': {
+            upright: 'The ships are already sailing. What you set in motion is out in the world, expanding and gaining momentum. This is a time of foresight and progress — stay open to opportunities arriving from unexpected directions, and trust the voyage you set in motion.',
+            reversed: 'Plans are stalling, or early optimism is running up against practical obstacles. Delays are frustrating but informative — use the pause to reassess the route rather than abandon the destination entirely.',
+          },
+          'Four of Wands': {
+            upright: 'This is a homecoming — in every sense of the word. Celebration, harmony, and a moment of genuine rest after effort well spent. Gather your people, mark the milestone, and let yourself enjoy the warmth of what you have built. You earned this.',
+            reversed: 'Something is preventing the full celebration. Tension beneath the surface, an unsettled foundation, or a milestone that feels hollow despite appearances. Look at what is off before papering over it with festivities.',
+          },
+          'Five of Wands': {
+            upright: 'Everybody is talking at once and nobody is listening. Competition, clashing egos, and the friction that comes when strong personalities collide. Not all conflict is destructive — but right now it needs to be channelled productively or it will just drain everyone involved.',
+            reversed: 'The noise is dying down. Conflict is resolving or you are finally finding a way to step out of the fray. Avoiding unnecessary battles is wisdom, not cowardice. Choose which fights are genuinely worth your energy.',
+          },
+          'Six of Wands': {
+            upright: 'Recognition is coming — deserved, hard-earned, and yours to receive without apology. You have worked for this and the world is beginning to see it. Let the victory be visible. This is not arrogance; it is the natural reward for sustained effort and conviction.',
+            reversed: 'A setback to confidence or a win that went unacknowledged has left you doubting yourself. Do not let the absence of external validation convince you the work was not worth doing. The recognition you need most right now may have to come from within.',
+          },
+          'Seven of Wands': {
+            upright: 'You are worth defending. Hold your ground against opposition, competition, or pressure to conform. You have earned your position — now protect it with the same energy you used to get there. The challenge is real, but so is your ability to meet it.',
+            reversed: 'Exhaustion from constantly defending yourself is setting in. Ask honestly whether every battle you are fighting is necessary, or whether some of them are with people who do not even know they are in a contest with you.',
+          },
+          'Eight of Wands': {
+            upright: 'Everything is moving very fast. News is arriving, opportunities are accelerating, and the pace of life has picked up dramatically. Act swiftly, lean in, and enjoy the momentum — this is not the time to overthink. Ride the current while it is running strong.',
+            reversed: 'Things that should be moving are stuck, or energy is scattered in too many directions to gain traction. Identify the bottleneck and clear it rather than pushing harder against a closed door.',
+          },
+          'Nine of Wands': {
+            upright: 'You are tired — and still standing. This card acknowledges how much you have already endured, and asks for one more round of courage. You are closer to the finish line than it feels right now. Rest if you must, but do not give up.',
+            reversed: 'Defensiveness and paranoia from past wounds are making it hard to trust the present. You are braced for a fight that may not be coming. Lower your guard enough to let the right people in — not everyone approaching you means harm.',
+          },
+          'Ten of Wands': {
+            upright: 'The load has become too heavy. You took on this responsibility willingly, and it has cost more than you anticipated. This card is an invitation to put some of it down. Delegation, boundaries, and knowing your limits are not failures of ambition.',
+            reversed: 'The burden is still there but the end is finally in sight. Push through, knowing that what you are carrying will not always be this heavy. Just make sure you learn something about overcommitting before the next cycle begins.',
+          },
+          'Knight of Wands': {
+            upright: 'Full throttle. Restless, infectious energy — an impulse toward adventure, bold action, and moves taken at speed. You are inspired and unstoppable right now. Just make sure the passion has a clear direction, or all that fire will burn bright and fast and leave nothing behind.',
+            reversed: 'Impulsivity has taken over from inspiration. Reckless action or an inability to follow through is undermining your efforts. Slow down just enough to make sure the energy you are throwing at this situation is actually landing somewhere useful.',
+          },
+          'King of Wands': {
+            upright: 'You are the vision and the force to execute it. Natural leadership, creative authority, and the bold, inspiring presence that gets things done through sheer conviction. Trust your instincts at the helm — people are watching and they are ready to follow.',
+            reversed: 'The leadership edge has become domineering, or big ideas are not being backed by the follow-through they require. Great leaders listen as well as lead. Check whether your confidence is inspiring others or simply steamrolling them.',
+          },
+          // Cups
+          'Ace of Cups': {
+            upright: 'Something is opening in your emotional life — new love, deep compassion, a creative outpouring, or a sense of spiritual renewal flooding in where there was dryness before. Receive it. Your heart is ready for this, even if the rest of you has not quite caught up.',
+            reversed: 'Emotional energy is blocked or being suppressed. A feeling that deserves to be expressed — love, grief, creativity — is being held back out of fear or habit. What would happen if you simply let it flow?',
+          },
+          'Two of Cups': {
+            upright: 'A genuine, equal connection is forming or deepening. This is the card of mutual recognition — the moment when two people truly see each other and choose to build something together. Whether romantic, creative, or professional, this partnership has real foundation.',
+            reversed: 'An imbalance has entered the connection. One person is giving more than the other, or unspoken tension is quietly eroding what was once harmonious. An honest conversation — however uncomfortable — is what this relationship needs right now.',
+          },
+          'Four of Cups': {
+            upright: 'You are so focused on what is missing that you are failing to see what is right in front of you. A new opportunity is being offered — but you will only see it if you look up from the brooding long enough to notice. Dissatisfaction is not the same as discernment.',
+            reversed: 'A period of introspection is ending and you are ready to re-engage with the world. Apathy is lifting and appetite for life is returning. Say yes to what is being offered — the contemplation has served its purpose.',
+          },
+          'Six of Cups': {
+            upright: 'Nostalgia, innocence, and the warmth of the past are visiting you. Old friendships, familiar places, simpler times. Let it be comforting without letting it keep you from the present. Some things are worth revisiting — just not worth living in permanently.',
+            reversed: 'Living too deeply in the past is preventing you from engaging with the life in front of you. Nostalgia has become an escape rather than a comfort. The past deserves to be honoured — not permanently inhabited.',
+          },
+          'Seven of Cups': {
+            upright: 'Too many options, not enough clarity. Daydreams are multiplying faster than any of them can be turned into reality. Discernment is needed — not everything glittering in your imagination deserves your actual time and energy. Choose one thing and make it real.',
+            reversed: 'The fog of wishful thinking is clearing. You are becoming more realistic about what is actually achievable and what was always just a distraction. Focus is returning — use it well before it slips away again.',
+          },
+          'Eight of Cups': {
+            upright: 'Something that once meant everything no longer does — and walking away from it is the most honest thing you can do. This is not failure; it is the quiet courage of someone who knows when a chapter is over. Leave what no longer feeds you, even when it still feels familiar.',
+            reversed: 'You are staying somewhere you know you should leave, or you have already left but the emotional weight of it is still very much with you. Grief for what could have been is natural. It does not mean the decision was wrong.',
+          },
+          'Nine of Cups': {
+            upright: 'The wish card. Satisfaction, contentment, and the deep pleasure of having arrived somewhere you actually wanted to be. Enjoy this without guilt. Not every moment of happiness needs to be interrogated for what might go wrong — sometimes it is simply good.',
+            reversed: 'Contentment has tipped into complacency, or the wish was granted but did not deliver what you expected. Satisfaction cannot come entirely from outside yourself. Look inward for the source of fulfilment rather than expecting circumstances to provide it.',
+          },
+          'Ten of Cups': {
+            upright: 'This is what it all was for. Emotional fulfilment, deep belonging, and the kind of love and harmony that fills a life rather than just a moment. You are exactly where you are meant to be, with exactly the right people around you. Let yourself believe it.',
+            reversed: 'The picture of happiness looks right from the outside, but something underneath is strained. A relationship or family dynamic that appears harmonious is hiding unspoken tensions. Tending to the roots — even when the surface looks beautiful — is what keeps the whole thing alive.',
+          },
+          'Page of Cups': {
+            upright: 'A tender, unexpected message from the heart — an intuitive nudge, a creative spark, an invitation to approach life with more openness and wonder. Be softer, more curious, and less guarded. Something beautiful is trying to reach you.',
+            reversed: 'Emotional immaturity or an unwillingness to look at your own feelings is getting in the way. Creative blocks, moodiness, or escapism may be the form it is taking. The heart has something to say — when you are ready to listen, it will still be there.',
+          },
+          'Knight of Cups': {
+            upright: 'Romance, imagination, and the pursuit of beauty in all its forms are calling to you. This card arrives on a wave of charm and idealism, inviting you to follow what moves you — creatively, romantically, or spiritually. Just make sure the dream has at least one foot in reality.',
+            reversed: 'Romanticism has curdled into moodiness, or charm is being used as a mask for avoidance. Big feelings are not being channelled anywhere constructive. Get honest about what you are actually feeling before it leaks out sideways.',
+          },
+          'Queen of Cups': {
+            upright: 'Your emotional intelligence is your greatest strength right now. Lead with empathy, trust your intuition, and create the kind of safe, nurturing space where real connection can happen. You understand what people need — even when they cannot articulate it themselves.',
+            reversed: 'Absorbing everyone else\'s emotions has left your own world murky and overwhelming. Boundaries are needed — not because you care less, but because you cannot pour from an empty vessel. Tend to yourself before you tend to everyone else.',
+          },
+          'King of Cups': {
+            upright: 'Emotional maturity, calm authority, and the wisdom to navigate turbulent feelings without being swept away by them. Compassionate leadership that holds space for others without losing itself. You are steady, and that steadiness is exactly what is needed right now.',
+            reversed: 'Emotional repression or volatility beneath a composed exterior is causing harm. Feelings that are never expressed have a way of leaking out sideways. Find a safe outlet for what is being held beneath the surface before it finds one for itself.',
+          },
+          // Swords
+          'Two of Swords': {
+            upright: 'A decision is being avoided, and the avoidance is costing more than the choice would. Both options feel uncomfortable, but the stalemate cannot hold forever. Gather the information you need, then trust yourself to decide — even imperfect action is better than indefinite paralysis.',
+            reversed: 'The blindfold is coming off. Information that was hidden or ignored is surfacing, and a decision that felt impossible is becoming clearer. Act on what you now know — the time for deliberation has passed.',
+          },
+          'Three of Swords': {
+            upright: 'This is a card of heartbreak, grief, and the particular pain that comes when betrayal or loss cuts clean through something you trusted. You do not have to pretend it does not hurt. Let yourself feel it fully — that is the only honest path through.',
+            reversed: 'The acute pain is easing. Healing is not linear, and grief has a way of returning unexpectedly, but the worst is behind you. Allow yourself to slowly, carefully, begin again.',
+          },
+          'Four of Swords': {
+            upright: 'Rest is not laziness — it is maintenance. Your mind and body need time to recover from the battles you have been fighting. Withdraw, be still, and recuperate properly. The world will still be there when you return, and you will handle it far better for having paused.',
+            reversed: 'Rest has gone on long enough. Stagnation dressed up as recuperation is keeping you from re-engaging with your life. The recovery period has served its purpose — it is time to pick up the sword again.',
+          },
+          'Five of Swords': {
+            upright: 'Winning at all costs is not always winning. A conflict may be resolving in your favour while leaving behind resentment, damaged trust, and a hollow kind of victory. Ask yourself whether what you gained was worth what it cost the people around you.',
+            reversed: 'A damaging conflict is coming to an end. Whether through defeat, withdrawal, or hard-won peace, the fighting is stopping. Use the quiet that follows to honestly assess what the battle was really about — and whether it ever needed to happen.',
+          },
+          'Six of Swords': {
+            upright: 'You are moving away from turbulence and toward calmer waters. The transition may feel slow or bittersweet, but the direction is right. You are leaving behind what was damaging, even if you are not yet sure what lies ahead. The passage is part of the healing.',
+            reversed: 'You know you need to move on but resistance is keeping you anchored to something painful. What is holding you here? The calmer waters exist — but they require you to actually sail toward them.',
+          },
+          'Seven of Swords': {
+            upright: 'Something is not being done above board. Deception — either from someone around you or from your own willingness to cut corners — is in play. Examine where the shortcuts are being taken, and whether the risk to trust and integrity is worth it.',
+            reversed: 'A deception is coming to light, or the weight of keeping secrets is becoming unsustainable. Things done in shadow rarely stay there forever. Coming clean — to yourself if no one else — is the beginning of getting straight.',
+          },
+          'Eight of Swords': {
+            upright: 'You feel trapped, but the trap is largely of your own making. Fear and limiting beliefs are keeping you smaller than you need to be. The blindfold, the bonds — they are real in your experience, but the path out exists. What would you do if you decided you were not stuck?',
+            reversed: 'The mental prison is beginning to dissolve. Self-imposed restrictions are loosening and the story you have been telling yourself about what is possible is starting to shift. Freedom is not being granted to you — you are reclaiming it for yourself.',
+          },
+          'Nine of Swords': {
+            upright: 'The fear is real, but the catastrophe it is predicting almost certainly is not. Anxiety and sleepless dread are amplifying what is difficult into what feels unbearable. Talk to someone — the worry loses some of its power when it has to exist in daylight.',
+            reversed: 'The darkest point has passed. Perspective is slowly returning, and what felt impossible to survive is beginning to feel survivable. Be patient with yourself through the recovery — you have been through something real, and healing takes time.',
+          },
+          'Ten of Swords': {
+            upright: 'A painful, definitive ending. Something has been dealt a final blow and there is no reviving it. As brutal as this feels, the Ten of Swords carries a hidden mercy: you cannot fall any lower than this. The only direction available now is up. Dawn follows the darkest point.',
+            reversed: 'You are slowly beginning to rise from a crisis that flattened you. Do not dramatise the aftermath, and do not minimise it either. Accept what happened, release the story, and begin the long climb back.',
+          },
+          'Page of Swords': {
+            upright: 'A sharp, curious mind is one of your greatest gifts right now. New ideas, fresh perspectives, and the courage to ask difficult questions are all available to you. Use this mental agility wisely — and check that the impulse to speak is matched by the wisdom to know when and how.',
+            reversed: 'An excess of talk without substance to back it up, or a sharp tongue cutting without purpose. Intelligence without direction becomes noise. Slow down, think before you speak, and make sure the ideas you are championing can actually stand up to scrutiny.',
+          },
+          'Queen of Swords': {
+            upright: 'You have earned the right to be direct. Clear-eyed perception, firm boundaries, and the kind of honest communication that cuts through pretence without cruelty. Your mind is your greatest asset — use it with the confidence of someone who knows the difference between truth and performance.',
+            reversed: 'Sharpness has hardened into cold detachment, or past pain is making you pre-emptively defensive with people who have not yet given you reason to be. Clarity is a virtue; cruelty is not. Check whether the walls are protecting you or simply keeping everyone at arm\'s length.',
+          },
+          'King of Swords': {
+            upright: 'Think clearly, speak plainly, decide with authority. The King of Swords cuts through sentiment to reach what is actually true, and right now that intellectual clarity is exactly what the situation requires. Lead with your mind, hold your ethical line, and do not be swayed by flattery.',
+            reversed: 'Mental rigidity, abuse of authority, or intellectual arrogance is distorting your judgement. Being the smartest person in the room means very little if you have stopped listening to everyone else. Revisit the facts with fresh eyes and a little more humility.',
+          },
+          // Pentacles
+          'Ace of Pentacles': {
+            upright: 'A genuine opportunity for material growth is being placed in your hands. A new job, a financial opening, a practical idea with real legs — something tangible is beginning. Plant this seed with care and give it the consistent attention it needs to grow into something lasting.',
+            reversed: 'A promising opportunity is being missed, or practical concerns are blocking progress before it has started. Fear around money, a lack of planning, or unrealistic expectations about timelines may be getting in the way. Get grounded before you try to get going.',
+          },
+          'Three of Pentacles': {
+            upright: 'Great things are built by people who know how to work together. Your individual skills matter, but right now it is the collaboration creating something none of you could have built alone. Show up fully, contribute generously, and value what the others around you bring to the table.',
+            reversed: 'Ego, miscommunication, or a failure to respect other people\'s contributions is undermining the work. A project that should be flourishing is stalling because someone — possibly you — is not playing well with the team. Get honest about where the friction is coming from.',
+          },
+          'Four of Pentacles': {
+            upright: 'Security feels important right now, and that instinct is not wrong — but watch that it does not tip into hoarding or a fear-based grip on everything you have. Protecting resources is sensible; clinging to them at the expense of generosity and genuine connection is a different matter.',
+            reversed: 'The grip is loosening — either voluntarily or through loss. Either way, this card asks what you were actually protecting, and whether it was worth the cost of holding on so tightly.',
+          },
+          'Five of Pentacles': {
+            upright: 'Financial hardship, scarcity, or a profound sense of being left out in the cold is weighing on you. This card does not minimise what you are going through. But help is closer than it appears. Do not let pride or shame prevent you from accepting it.',
+            reversed: 'The most difficult stretch of hardship is beginning to ease. Recovery is underway — slowly, perhaps, but steadily. What this period taught you about resilience and what actually matters is knowledge you will carry forward.',
+          },
+          'Seven of Pentacles': {
+            upright: 'This is the long game, and you are playing it well. Progress is happening — but not on the timeline your impatience would prefer. Step back, assess what is growing, and trust that consistent, patient investment delivers results that shortcuts never could. The harvest is coming.',
+            reversed: 'Effort is being poured into something that is not returning what it should. Before you invest any more, ask honestly whether this path is still the right one — or whether you are continuing out of sunk cost rather than genuine belief.',
+          },
+          'Eight of Pentacles': {
+            upright: 'Head down, work it out. This is a card of dedicated craft — the repetitive, unglamorous, deeply satisfying work of getting genuinely good at something. Mastery is built one focused hour at a time. Show up for the practice and trust the compound effect.',
+            reversed: 'The work has become mechanical — repetitive without being progressive. You are going through the motions without real engagement or growth. Are you still actually learning, or has the comfort of routine replaced the discomfort of improvement?',
+          },
+          'Nine of Pentacles': {
+            upright: 'You have built this yourself and it is worth savouring. Independence, abundance, and the quiet pleasure of enjoying what your own efforts have created. This card is permission to indulge, to rest, and to feel genuinely proud of how far you have come under your own power.',
+            reversed: 'Material comfort has come at the cost of something else — freedom, authenticity, or genuine connection. Success that requires you to constantly perform or compromise who you are is not the kind worth keeping. Ask what you have traded for the security you now have.',
+          },
+          'Page of Pentacles': {
+            upright: 'A practical opportunity rewards the person willing to approach it with focus, curiosity, and a genuine willingness to learn. This is not a moment for grand gestures — it is a moment for showing up consistently and doing the foundational work that everything else will eventually be built on.',
+            reversed: 'Daydreaming about goals without taking practical steps, or a resistance to the boring but necessary work, is keeping opportunity at arm\'s length. The idea is good. What it needs now is execution, not more planning.',
+          },
+          'Knight of Pentacles': {
+            upright: 'Slow, steady, and utterly reliable. This card does not promise overnight success — it promises the kind of solid, methodical progress that actually gets things done. Commit to the routine, honour your responsibilities, and trust that persistence takes you further than brilliance without it.',
+            reversed: 'Routine has become a rut. Methodical has become stubborn. The same approach is being applied to a situation asking for flexibility and fresh thinking. Know when the reliable path needs to be temporarily abandoned for something more adaptive.',
+          },
+          'Queen of Pentacles': {
+            upright: 'Warmth, practicality, and a deep, grounded care for the people and places you call home. You create abundance through the daily, attentive tending of what you love. Your gift right now is making people feel safe, provided for, and genuinely welcome.',
+            reversed: 'Nurturing others has come at the expense of nurturing yourself. Or practicality has become a way of avoiding emotional depth — keeping busy so there is no space to feel. Come home to yourself for a while. You cannot care for everything around you if you have stopped caring for what is within.',
+          },
+          'King of Pentacles': {
+            upright: 'You have worked hard and built wisely — now it is time to enjoy the fruits of that discipline with generosity and confidence. Earned authority, material mastery, and the quiet satisfaction of someone who knows their own worth and does not need to prove it to anyone.',
+            reversed: 'Materialism without meaning, or the grinding pursuit of security at the expense of everything that makes security worth having. Success looks impressive from the outside but feels hollow on the inside. Ask what you are actually building all of this for, and whether the answer still satisfies you.',
+          },
+          // Add more readings here as they come in
+        };
+
+        const readingEl = document.querySelector('.tarot-reading');
+        const readingLabel = readingEl && readingEl.querySelector('.tarot-reading-label');
+        const readingName = readingEl && readingEl.querySelector('.tarot-reading-card-name');
+        const readingText = readingEl && readingEl.querySelector('.tarot-reading-text');
+
+        function showReading(drawn, isReversed) {
+          if (!readingEl) return;
+          const orientation = isReversed ? 'Reversed' : 'Upright';
+          readingLabel.textContent = `☽ Reading — ${orientation} ☽`;
+          readingName.textContent = drawn.name;
+          const meaning = READINGS[drawn.name];
+          readingText.textContent = meaning
+            ? (isReversed ? meaning.reversed : meaning.upright) || "I don't know that one yet."
+            : "I don't know that one yet.";
+          readingEl.classList.add('is-visible');
+        }
+
+        function hideReading() {
+          if (!readingEl) return;
+          readingEl.classList.remove('is-visible');
+        }
+
+        const LIFT_MS = 440;
+        const FLIP_MS = 560;
+        let activeCard = null;
+
+        function snapBack(card) {
+          card.classList.remove('is-revealed', 'is-selected', 'is-reversed');
+          delete card.dataset.busy;
+          hideReading();
+        }
+
+        function dismiss(card, onDone) {
+          card.dataset.busy = 'true';
+          hideReading();
+          card.classList.remove('is-revealed');
+          setTimeout(() => {
+            card.classList.remove('is-selected', 'is-reversed');
+            setTimeout(() => {
+              delete card.dataset.busy;
+              if (onDone) onDone();
+            }, 440);
+          }, FLIP_MS);
+        }
+
+        inner.addEventListener('click', e => {
+          const card = e.target.closest('.tarot-card');
+          if (!card || card.dataset.busy) return;
+
+          if (card === activeCard) {
+            dismiss(card, () => { activeCard = null; });
+            return;
+          }
+
+          if (activeCard) {
+            snapBack(activeCard);
+            activeCard = null;
+          }
+
+          activeCard = card;
+          card.dataset.busy = 'true';
+          card.classList.add('is-selected');
+
+          setTimeout(() => {
+            if (!card.classList.contains('is-selected')) return;
+            const drawn = DECK[Math.floor(Math.random() * DECK.length)];
+            const isReversed = Math.random() < 0.5;
+            if (isReversed) card.classList.add('is-reversed');
+            const face = card.querySelector('.tarot-card-face');
+            face.innerHTML = `<div class="tarot-card-face-content">` +
+              (drawn.suit ? `<span class="tarot-card-suit">${drawn.suit}</span>` : '') +
+              `<span class="tarot-card-num">${drawn.num}</span>` +
+              `<span class="tarot-card-name">${drawn.name}</span>` +
+              `</div>`;
+            card.classList.add('is-revealed');
+            setTimeout(() => {
+              delete card.dataset.busy;
+              showReading(drawn, isReversed);
+            }, FLIP_MS);
+          }, LIFT_MS);
+        });
+      }());
+    </script>
+  </body>
+</html>

@@ -566,7 +566,7 @@
   transform: scale(1.045);
 }
 
-.work-page .work-image-placeholder-section {
+.work-page .work-dream-job-section {
   position: absolute;
   z-index: 2;
   width: 50%;
@@ -580,25 +580,35 @@
   pointer-events: none;
 }
 
-.work-page .work-image-placeholder {
+.work-page .work-dream-job-card {
   width: min(100%, 24rem);
-  aspect-ratio: 1 / 1;
   min-height: 0;
   display: grid;
-  place-items: center;
-  border: 2px dashed rgba(47, 40, 35, 0.28);
-  background: rgba(255, 252, 247, 0.76);
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border: 2px solid rgba(47, 40, 35, 0.18);
+  background: rgba(255, 252, 247, 0.78);
+  color: rgba(47, 40, 35, 0.88);
+  box-shadow: 0 24px 48px rgba(47, 40, 35, 0.14);
+  pointer-events: auto;
+}
+
+.work-page .work-dream-job-kicker {
+  margin: 0;
   color: rgba(47, 40, 35, 0.62);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  box-shadow: 0 24px 48px rgba(47, 40, 35, 0.14);
-  pointer-events: auto;
+}
+
+.work-page .work-dream-job-card h2,
+.work-page .work-dream-job-card p {
+  margin: 0;
 }
 
 @media (max-width: 900px) {
-  .work-page .work-image-placeholder-section {
+  .work-page .work-dream-job-section {
     position: relative;
     top: auto;
     left: auto;

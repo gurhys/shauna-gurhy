@@ -1,0 +1,1491 @@
+.witchy-page {
+  --witchy-ink: #20291f;
+  --witchy-moss: #40553e;
+  --witchy-sage: #87916e;
+  --witchy-gold: #c59f53;
+  --witchy-berry: #6f3f4d;
+  --witchy-mist: #eef0e7;
+  background: #0c1410;
+}
+
+/* Starfield canvas — fixed behind all content */
+.witchy-starfield {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Lift content layers above the canvas */
+.witchy-page .timeline-page-hero,
+.witchy-page .page-shell,
+.witchy-page .website-overview-nav,
+.witchy-page footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Eyebrow text — override the dark-brown default so it reads on dark bg */
+.witchy-page .eyebrow {
+  color: var(--witchy-gold);
+}
+
+/* Section description paragraphs — lighten the dark-green tones */
+.witchy-calendar-header p:last-child,
+.sabbat-detail-header p:last-child,
+.moon-detail-header p:last-child,
+.month-detail-header p:last-child {
+  color: rgba(238, 240, 231, 0.58);
+}
+
+/* Section dividers — crescent mark between sections */
+.witchy-page .section + .section::before {
+  content: "☽";
+  display: block;
+  text-align: center;
+  font-size: 1.15rem;
+  color: rgba(197, 159, 83, 0.45);
+  padding: 1rem 0 0;
+  letter-spacing: 0;
+}
+
+.witchy-section-nav {
+  margin: 2.5rem auto 0;
+  padding: 0.5rem 0;
+}
+
+.witchy-sabbat-nav,
+.witchy-moon-nav,
+.witchy-month-nav,
+.witchy-myths-nav {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.witchy-section-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 2.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.witchy-section-nav a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    color 220ms ease,
+    text-shadow 220ms ease;
+}
+
+.witchy-section-nav a:hover,
+.witchy-section-nav a:focus-visible {
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(197, 159, 83, 0.6);
+}
+
+.witchy-today-section {
+  margin: 2rem auto 0;
+  padding: 4.5rem 0 2rem;
+  border: 1px solid rgba(106, 122, 90, 0.16);
+  border-radius: 1.8rem;
+  background:
+    linear-gradient(135deg, rgba(190, 210, 186, 0.34), rgba(215, 203, 178, 0.2)),
+    linear-gradient(180deg, rgba(170, 196, 188, 0.16), rgba(141, 175, 155, 0.1));
+  box-shadow: 0 1.2rem 2.4rem rgba(106, 122, 90, 0.1);
+  overflow: hidden;
+}
+
+.witchy-today-section.is-summer {
+  background:
+    linear-gradient(135deg, rgba(247, 250, 244, 0.78), rgba(215, 203, 178, 0.34)),
+    linear-gradient(180deg, rgba(170, 196, 188, 0.18), rgba(141, 175, 155, 0.16)),
+    url("pink_flowers.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #f7faf4;
+}
+
+.witchy-today-header {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.witchy-today-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.witchy-today-card {
+  display: grid;
+  align-content: start;
+  gap: 0.45rem;
+  min-height: 8rem;
+  padding: 1.2rem;
+  color: #36412f;
+}
+
+.witchy-today-card-wide {
+  grid-column: span 2;
+}
+
+.witchy-today-card span {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-bottom: 0.75rem;
+}
+
+.witchy-today-card strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.witchy-today-details {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0;
+  color: rgba(54, 65, 47, 0.82);
+  font-size: 0.82rem;
+}
+
+.witchy-today-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.witchy-today-details dt,
+.witchy-today-details dd {
+  margin: 0;
+}
+
+.witchy-today-details dt {
+  color: #6a7a5a;
+  font-weight: 800;
+}
+
+.witchy-today-details dd {
+  text-align: right;
+}
+
+.witchy-year-progress {
+  margin-top: 1.2rem;
+  padding: 1rem 1.1rem 1.15rem;
+  border: 1px solid rgba(106, 122, 90, 0.18);
+  border-radius: 1.2rem;
+  background: rgba(247, 250, 244, 0.48);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.36);
+}
+
+.witchy-year-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  color: #36412f;
+}
+
+.witchy-year-progress-header span {
+  color: #6a7a5a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.witchy-year-progress-header strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  line-height: 1;
+}
+
+.witchy-year-progress-track {
+  height: 0.9rem;
+  overflow: hidden;
+  border: 1px solid rgba(106, 122, 90, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 250, 244, 0.76);
+}
+
+.witchy-year-progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8daf9b, #bed2ba, #aac4bc, #6a7a5a);
+  transition: width 600ms ease;
+}
+
+.witchy-calendar-section {
+  padding: 5rem 0 clamp(10rem, 16vw, 14rem);
+}
+
+.witchy-calendar-header {
+  max-width: 46rem;
+  margin: 0 auto clamp(8rem, 15vw, 12rem);
+  text-align: center;
+}
+
+.witchy-calendar-header p:last-child {
+  margin: 0.75rem auto 0;
+  max-width: 34rem;
+  color: rgba(32, 41, 31, 0.72);
+}
+
+.witchy-calendar-layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: clamp(4rem, 8vw, 6rem);
+  padding-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+.year-wheel {
+  --wheel-size: min(68vw, 39.5rem);
+  --year-days: 365;
+  --wheel-rotation: 0deg;
+  --label-angle: calc(var(--i) * 30deg);
+  --today-angle: 0deg;
+  --sabbat-imbolc: 31deg;
+  --sabbat-ostara: 78deg;
+  --sabbat-beltane: 119deg;
+  --sabbat-litha: 171deg;
+  --sabbat-lammas: 212deg;
+  --sabbat-mabon: 264deg;
+  --sabbat-samhain: 303deg;
+  --sabbat-yule: 354deg;
+  position: relative;
+  isolation: isolate;
+  width: var(--wheel-size);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 242, 236, 0.94) 0 26%, transparent 27%);
+  box-shadow: 0 2.2rem 4.5rem rgba(47, 40, 35, 0.18);
+}
+
+.year-wheel::before {
+  position: absolute;
+  inset: -45%;
+  border-radius: 50%;
+  content: "";
+  border: 1px solid rgba(32, 41, 31, 0.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.year-wheel-month-colours,
+.year-wheel-sabbat-colours {
+  position: absolute;
+  inset: -45%;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: rotate(var(--wheel-rotation));
+  z-index: 0;
+}
+
+.year-wheel-band-colour {
+  --segment-start-angle: 0deg;
+  --segment-end-angle: 30deg;
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  mask:
+    conic-gradient(
+      transparent 0deg var(--segment-start-angle),
+      #000 var(--segment-start-angle) var(--segment-end-angle),
+      transparent var(--segment-end-angle) 360deg
+    );
+  -webkit-mask:
+    conic-gradient(
+      transparent 0deg var(--segment-start-angle),
+      #000 var(--segment-start-angle) var(--segment-end-angle),
+      transparent var(--segment-end-angle) 360deg
+    );
+  transition:
+    filter 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+  transform-origin: center;
+}
+
+.year-wheel-month-colour.is-active {
+  filter: brightness(1.28) saturate(1.28) drop-shadow(0 1rem 1.1rem rgba(32, 41, 31, 0.22));
+  opacity: 0.98;
+  transform: scale(1.085);
+}
+
+.year-wheel-month-colour[data-month="0"],
+.year-wheel-month-colour[data-month="0"].is-active,
+.year-wheel-month-colour[data-month="1"],
+.year-wheel-month-colour[data-month="1"].is-active,
+.year-wheel-month-colour[data-month="2"],
+.year-wheel-month-colour[data-month="2"].is-active,
+.year-wheel-month-colour[data-month="3"],
+.year-wheel-month-colour[data-month="3"].is-active,
+.year-wheel-month-colour[data-month="4"],
+.year-wheel-month-colour[data-month="4"].is-active,
+.year-wheel-month-colour[data-month="5"],
+.year-wheel-month-colour[data-month="5"].is-active,
+.year-wheel-month-colour[data-month="6"],
+.year-wheel-month-colour[data-month="6"].is-active,
+.year-wheel-month-colour[data-month="7"],
+.year-wheel-month-colour[data-month="7"].is-active,
+.year-wheel-month-colour[data-month="8"],
+.year-wheel-month-colour[data-month="8"].is-active,
+.year-wheel-month-colour[data-month="9"],
+.year-wheel-month-colour[data-month="9"].is-active,
+.year-wheel-month-colour[data-month="10"],
+.year-wheel-month-colour[data-month="10"].is-active,
+.year-wheel-month-colour[data-month="11"],
+.year-wheel-month-colour[data-month="11"].is-active {
+  opacity: 0.56;
+}
+
+.year-wheel.is-month-band-hover {
+  cursor: pointer;
+}
+
+.year-wheel-day-slices {
+  display: none;
+  position: absolute;
+  inset: -45%;
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(
+      rgba(247, 242, 236, 0.42) 0deg,
+      rgba(247, 242, 236, 0.42) 0.18deg,
+      transparent 0.18deg,
+      transparent calc(360deg / var(--year-days))
+    );
+  mask: radial-gradient(circle, transparent 0 18%, #000 19% 70%, transparent 71%);
+  -webkit-mask: radial-gradient(circle, transparent 0 18%, #000 19% 70%, transparent 71%);
+  pointer-events: none;
+  transform: rotate(var(--wheel-rotation));
+  z-index: 1;
+}
+
+.year-wheel-month-dividers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: rotate(var(--wheel-rotation));
+  z-index: 2;
+}
+
+.year-wheel-month-divider {
+  --month-angle: 0deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 45%;
+  background: linear-gradient(to bottom, rgba(32, 41, 31, 0.34), rgba(32, 41, 31, 0.06));
+  transform:
+    translate(-50%, -100%)
+    rotate(var(--month-angle));
+  transform-origin: 50% 100%;
+}
+
+.year-wheel::after,
+.year-wheel-ring {
+  position: absolute;
+  inset: 7%;
+  border: 1px solid rgba(32, 41, 31, 0.18);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.year-wheel::after {
+  inset: 24%;
+  border-color: rgba(32, 41, 31, 0.14);
+}
+
+.year-wheel-ring {
+  inset: 14%;
+  border-color: rgba(247, 242, 236, 0.7);
+  z-index: 1;
+}
+
+.year-wheel-center {
+  position: absolute;
+  inset: 36%;
+  display: grid;
+  place-content: center;
+  gap: 0.25rem;
+  border: 1px solid rgba(32, 41, 31, 0.18);
+  border-radius: 50%;
+  background: rgba(247, 242, 236, 0.88);
+  color: var(--witchy-ink);
+  text-align: center;
+  z-index: 4;
+}
+
+.year-wheel-center span {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.year-wheel-center strong {
+  font-size: clamp(0.68rem, 1.5vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.year-wheel-sabbats,
+.year-wheel-sabbat-dividers,
+.year-wheel-moons,
+.year-wheel-outer-months {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: rotate(var(--wheel-rotation));
+}
+
+.year-wheel-outer-month {
+  --month-label-angle: 0deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(5.4rem, 10vw, 7.4rem);
+  padding: 0.2rem 0.35rem;
+  border-radius: 999px;
+  background: rgba(32, 41, 31, 0.58);
+  color: #fffaf4;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(20, 24, 20, 0.45);
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--month-label-angle))
+    translateY(calc(var(--wheel-size) * -0.84))
+    rotate(calc((var(--month-label-angle) + var(--wheel-rotation)) * -1));
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+  z-index: 6;
+}
+
+.year-wheel-outer-month.is-active {
+  background: rgba(32, 41, 31, 0.82);
+  box-shadow: 0 0.7rem 1.2rem rgba(32, 41, 31, 0.22);
+  color: #ffffff;
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--month-label-angle))
+    translateY(calc(var(--wheel-size) * -0.9))
+    rotate(calc((var(--month-label-angle) + var(--wheel-rotation)) * -1))
+    scale(1.12);
+}
+
+.year-wheel-sabbat-divider {
+  --sabbat-angle: 0deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 43%;
+  background: linear-gradient(to bottom, rgba(247, 242, 236, 0.95), rgba(247, 242, 236, 0.12));
+  transform:
+    translate(-50%, -100%)
+    rotate(var(--sabbat-angle));
+  transform-origin: 50% 100%;
+  z-index: 2;
+}
+
+.year-wheel-sabbat {
+  --sabbat-angle: 0deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: clamp(5.1rem, 12vw, 6.5rem);
+  min-height: clamp(3rem, 7vw, 3.8rem);
+  padding: 0.4rem;
+  border: 1px solid rgba(247, 242, 236, 0.72);
+  border-radius: 50%;
+  background: #20291f;
+  color: #fffaf4;
+  text-align: center;
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--sabbat-angle))
+    translateY(calc(var(--wheel-size) * -0.60))
+    rotate(calc((var(--sabbat-angle) + var(--wheel-rotation)) * -1));
+  box-shadow: 0 0.8rem 1.5rem rgba(47, 40, 35, 0.18);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease,
+    transform 180ms ease;
+  z-index: 5;
+}
+
+.year-wheel-sabbat a {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.year-wheel-sabbat a:hover,
+.year-wheel-sabbat a:focus-visible {
+  color: #fffaf4;
+}
+
+.year-wheel-sabbat:focus-within {
+  border-color: rgba(247, 242, 236, 0.98);
+  box-shadow: 0 0 0 3px rgba(197, 159, 83, 0.32), 0 0.8rem 1.5rem rgba(47, 40, 35, 0.2);
+}
+
+.year-wheel-sabbat:hover,
+.year-wheel-sabbat:focus-within {
+  border-color: rgba(247, 242, 236, 0.98);
+  filter: brightness(1.12) saturate(1.1);
+  box-shadow: 0 1rem 1.6rem rgba(47, 40, 35, 0.24);
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--sabbat-angle))
+    translateY(calc(var(--wheel-size) * -0.62))
+    rotate(calc((var(--sabbat-angle) + var(--wheel-rotation)) * -1))
+    scale(1.16);
+  z-index: 9;
+}
+
+.year-wheel-sabbat span {
+  font-family: var(--font-display);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.year-wheel-sabbat small {
+  margin-top: 0.18rem;
+  color: rgba(255, 250, 244, 0.78);
+  font-size: clamp(0.58rem, 1.4vw, 0.68rem);
+  line-height: 1.1;
+}
+
+.year-wheel-moon {
+  --moon-angle: 0deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: clamp(3.9rem, 8vw, 5.1rem);
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  border: 1px solid rgba(32, 41, 31, 0.2);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 30%, #fffaf4 0 16%, transparent 17%),
+    #e9e0cf;
+  color: var(--witchy-ink);
+  text-align: center;
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--moon-angle))
+    translateY(calc(var(--wheel-size) * -0.35))
+    rotate(calc((var(--moon-angle) + var(--wheel-rotation)) * -1));
+  box-shadow: 0 0.55rem 1.1rem rgba(47, 40, 35, 0.16);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease,
+    transform 180ms ease;
+  z-index: 4;
+}
+
+.year-wheel-moon a {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.12rem;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.year-wheel-moon a:hover,
+.year-wheel-moon a:focus-visible {
+  color: var(--witchy-ink);
+}
+
+.year-wheel-moon:focus-within {
+  border-color: rgba(111, 63, 77, 0.8);
+  box-shadow: 0 0 0 3px rgba(111, 63, 77, 0.2), 0 0.55rem 1.1rem rgba(47, 40, 35, 0.18);
+}
+
+.year-wheel-moon:hover,
+.year-wheel-moon:focus-within {
+  border-color: rgba(111, 63, 77, 0.82);
+  filter: brightness(1.08) saturate(1.12);
+  box-shadow: 0 0.95rem 1.45rem rgba(47, 40, 35, 0.22);
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--moon-angle))
+    translateY(calc(var(--wheel-size) * -0.40))
+    rotate(calc((var(--moon-angle) + var(--wheel-rotation)) * -1))
+    scale(1.2);
+  z-index: 8;
+}
+
+.year-wheel-moon span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: clamp(0.58rem, 1.25vw, 0.76rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.year-wheel-moon small {
+  color: rgba(32, 41, 31, 0.7);
+  font-size: clamp(0.48rem, 1.05vw, 0.62rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.year-wheel-moon.is-today-moon {
+  border-color: rgba(111, 63, 77, 0.8);
+  background:
+    radial-gradient(circle at 34% 30%, #fffaf4 0 16%, transparent 17%),
+    #f3d9d4;
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--moon-angle))
+    translateY(calc(var(--wheel-size) * -0.6))
+    rotate(calc((var(--moon-angle) + var(--wheel-rotation)) * -1))
+    scale(1.14);
+}
+
+.year-wheel-moon.is-today-moon:hover,
+.year-wheel-moon.is-today-moon:focus-within {
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--moon-angle))
+    translateY(calc(var(--wheel-size) * -0.64))
+    rotate(calc((var(--moon-angle) + var(--wheel-rotation)) * -1))
+    scale(1.26);
+}
+
+.moon-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.moon-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background: #f5f3ff;
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.25),
+    0 0 40px rgba(180,160,255,0.2);
+  animation: moonGlow 4s ease-in-out infinite;
+}
+
+.moon-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #0f0d17;
+  transition: all 1s ease;
+}
+
+.year-wheel-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(4.8rem, 13vw, 6.2rem);
+  color: rgba(32, 41, 31, 0.72);
+  font-size: clamp(0.66rem, 1.5vw, 0.76rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+@keyframes moonGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 20px rgba(255,255,255,0.25),
+      0 0 40px rgba(180,160,255,0.2);
+  }
+
+  50% {
+    transform: scale(1.04);
+    box-shadow:
+      0 0 35px rgba(255,255,255,0.4),
+      0 0 70px rgba(180,160,255,0.35);
+  }
+}
+
+.moon-phase-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.moon-phase-text strong {
+  font-size: 1.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.moon-phase-text small {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+
+.year-wheel-marker span {
+  display: block;
+}
+
+.year-wheel-marker-spring {
+  transform: translate(-50%, -50%) rotate(60deg) translateY(calc(var(--wheel-size) * -0.47)) rotate(-60deg);
+}
+
+.year-wheel-marker-summer {
+  transform: translate(-50%, -50%) rotate(150deg) translateY(calc(var(--wheel-size) * -0.47)) rotate(-150deg);
+}
+
+.year-wheel-marker-autumn {
+  transform: translate(-50%, -50%) rotate(240deg) translateY(calc(var(--wheel-size) * -0.47)) rotate(-240deg);
+}
+
+.year-wheel-marker-winter {
+  transform: translate(-50%, -50%) rotate(330deg) translateY(calc(var(--wheel-size) * -0.47)) rotate(-330deg);
+}
+
+.year-wheel-today-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: clamp(0.18rem, 0.4vw, 0.28rem);
+  height: 70%;
+  border: none;
+  border-radius: 999px;
+  background: rgba(31, 125, 216, 0.55);
+  color: #ffffff;
+  font-size: clamp(0.72rem, 1.8vw, 0.9rem);
+  font-weight: 800;
+  box-shadow: 0 0.3rem 0.6rem rgba(31, 125, 216, 0.18);
+  transform:
+    translate(-50%, -100%)
+    translateY(calc(var(--wheel-size) * -0.02));
+  transform-origin: 50% 100%;
+  z-index: 10;
+}
+
+.year-wheel-today-marker span {
+  position: absolute;
+  top: -1.9rem;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #1f7dd8;
+  box-shadow: 0 0.45rem 0.85rem rgba(31, 125, 216, 0.3);
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.sabbat-detail-section,
+.moon-detail-section,
+.month-detail-section {
+  padding: 1rem 0 5rem;
+}
+
+.sabbat-detail-header,
+.moon-detail-header,
+.month-detail-header {
+  max-width: 46rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.sabbat-detail-header p:last-child,
+.moon-detail-header p:last-child,
+.month-detail-header p:last-child {
+  margin: 0.75rem auto 0;
+  color: rgba(32, 41, 31, 0.72);
+}
+
+.sabbat-detail-grid,
+.moon-detail-grid,
+.month-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.sabbat-detail-card,
+.moon-detail-card,
+.month-detail-card {
+  position: relative;
+  scroll-margin-top: 2rem;
+  padding: clamp(1.1rem, 2.4vw, 1.5rem);
+  border: 1px solid rgba(32, 41, 31, 0.14);
+  border-radius: 0.45rem;
+  background: rgba(238, 240, 231, 0.72);
+  color: var(--witchy-ink);
+}
+
+.sabbat-detail-card.is-next-sabbat::before {
+  content: 'The next upcoming sabbat';
+  position: absolute;
+  top: 0.8rem;
+  left: clamp(1.1rem, 2.4vw, 1.5rem);
+  font-family: "Cinzel", serif;
+  font-size: 0.54rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.moon-detail-card.is-next-moon::before {
+  content: 'The next upcoming full moon';
+  position: absolute;
+  top: 0.8rem;
+  left: clamp(1.1rem, 2.4vw, 1.5rem);
+  font-family: "Cinzel", serif;
+  font-size: 0.54rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.sabbat-detail-card:not([hidden]),
+.moon-detail-card:not([hidden]),
+.month-detail-card:not([hidden]) {
+  grid-column: 1 / -1;
+}
+
+.sabbat-detail-card:target,
+.moon-detail-card:target,
+.month-detail-card:target {
+  border-color: rgba(111, 63, 77, 0.45);
+  box-shadow: 0 1rem 2rem rgba(47, 40, 35, 0.14);
+}
+
+.sabbat-detail-date,
+.moon-detail-date,
+.moon-detail-note,
+.month-detail-colour {
+  margin: 0 0 0.45rem;
+  color: var(--witchy-berry);
+  font-weight: 700;
+}
+
+.moon-detail-note {
+  color: var(--witchy-gold);
+}
+
+.sabbat-detail-card h3,
+.moon-detail-card h3,
+.month-detail-card h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1;
+}
+
+.sabbat-detail-card p,
+.moon-detail-card p,
+.month-detail-card p {
+  margin: 0 0 1rem;
+}
+
+.moon-detail-card p:last-child,
+.month-detail-card p:last-child {
+  margin-bottom: 0;
+}
+
+#blue-moon {
+  background-image: linear-gradient(rgba(10, 15, 35, 0.62), rgba(10, 15, 35, 0.62)), url('./blue_moon.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #e8eef8;
+}
+
+#blue-moon .moon-detail-date,
+#blue-moon .moon-detail-note {
+  color: rgba(180, 200, 240, 0.8);
+}
+
+#may-month {
+  background-image: linear-gradient(rgba(20, 25, 30, 0.45), rgba(20, 25, 30, 0.45)), url('./clouds.JPG');
+  background-size: cover;
+  background-position: center;
+}
+
+.sabbat-detail-card ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+#litha {
+  background: #D0783B;
+  border-color: rgba(197, 159, 83, 0.3);
+  color: #EECE7B;
+}
+
+#litha p,
+#litha .litha-activity {
+  color: #EECE7B;
+}
+
+/* ── Bookcase ─────────────────────────────────────────── */
+
+.bookcase-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 2rem 0 1rem;
+  padding-bottom: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(197, 159, 83, 0.3) transparent;
+}
+
+.bookcase-wrap::-webkit-scrollbar { height: 6px; }
+.bookcase-wrap::-webkit-scrollbar-thumb { background: rgba(197, 159, 83, 0.3); border-radius: 3px; }
+
+.bookcase-shelf {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 3px;
+  padding: 2.5rem 2rem 0;
+  min-width: max-content;
+  position: relative;
+}
+
+.bookcase-shelf::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -8px;
+  right: -8px;
+  height: 20px;
+  background: linear-gradient(to bottom, #8b5e3c 0%, #6b3f1e 55%, #4a2c10 100%);
+  border-radius: 2px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.55);
+}
+
+.book {
+  width: var(--book-width, 32px);
+  height: var(--book-height, 180px);
+  background: var(--book-color, #6b3a2a);
+  border-radius: 1px 3px 3px 1px;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 220ms cubic-bezier(0.34, 1.08, 0.64, 1);
+  box-shadow:
+    -2px 0 0 rgba(0, 0, 0, 0.28),
+    inset -5px 0 10px rgba(0, 0, 0, 0.18),
+    inset 1px 0 2px rgba(255, 255, 255, 0.06);
+}
+
+.book:hover { transform: translateY(-16px); }
+
+.book-spine {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding: 0.6rem 0.2rem;
+  overflow: hidden;
+}
+
+.book-title {
+  font-family: "Cinzel", serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.92);
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.book-author {
+  font-size: 0.42rem;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1;
+  font-style: italic;
+}
+
+/* ── end Bookcase ─────────────────────────────────────── */
+
+.litha-heading {
+  font-family: "Cinzel", serif !important;
+  text-align: center;
+}
+
+.litha-subtitle {
+  text-align: center;
+  font-style: italic;
+  color: rgba(238, 240, 231, 0.68);
+  margin: 0 0 1.5rem;
+  line-height: 1.65;
+}
+
+.litha-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.litha-activity {
+  background: rgba(197, 159, 83, 0.07);
+  border: 1px solid rgba(197, 159, 83, 0.22);
+  border-radius: 0.6rem;
+  padding: 0.9rem 1rem;
+  font-family: "Cinzel", serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: rgba(238, 240, 231, 0.88);
+  line-height: 1.45;
+}
+
+.litha-read-more {
+  border-top: 1px solid rgba(197, 159, 83, 0.2);
+  padding-top: 1.1rem;
+}
+
+.litha-read-more summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Cinzel", serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--witchy-gold);
+  list-style: none;
+  user-select: none;
+}
+
+.litha-read-more summary::-webkit-details-marker { display: none; }
+
+.litha-read-more summary::after {
+  content: '↓';
+  font-size: 0.75rem;
+  transition: transform 280ms ease;
+  display: inline-block;
+}
+
+.litha-read-more[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.litha-read-more-content {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.litha-read-more-content p {
+  font-size: 0.9rem;
+  color: rgba(238, 240, 231, 0.72);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.tarot-fan {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 2.5rem 0 1.5rem;
+  padding-bottom: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(197, 159, 83, 0.35) transparent;
+}
+
+.tarot-fan::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tarot-fan::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tarot-fan::-webkit-scrollbar-thumb {
+  background: rgba(197, 159, 83, 0.35);
+  border-radius: 3px;
+}
+
+.tarot-fan-inner {
+  position: relative;
+  height: 420px;
+}
+
+.tarot-card {
+  position: absolute;
+  bottom: 0;
+  width: 155px;
+  height: 255px;
+  border-radius: 12px;
+  transform-origin: bottom center;
+  transform: rotate(var(--r, 0deg));
+  transition: transform 420ms cubic-bezier(0.34, 1.08, 0.64, 1), filter 240ms ease;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.tarot-card.is-selected {
+  z-index: 200;
+  transform: rotate(0deg) translateY(-100px) scale(1.08);
+}
+
+.tarot-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tarot-card.is-revealed .tarot-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tarot-card-back,
+.tarot-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.tarot-card-back {
+  background: linear-gradient(160deg, #19291a 0%, #0d1a0e 100%);
+  border: 1.5px solid rgba(197, 159, 83, 0.52);
+  box-shadow:
+    inset 0 0 0 8px rgba(197, 159, 83, 0.08),
+    0 10px 32px rgba(0, 0, 0, 0.65);
+}
+
+.tarot-card-back::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(197, 159, 83, 0.28);
+  border-radius: 6px;
+  background: radial-gradient(ellipse at center, rgba(197, 159, 83, 0.06) 0%, transparent 68%);
+}
+
+.tarot-card-back::after {
+  content: '☽';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.2rem;
+  color: rgba(197, 159, 83, 0.38);
+}
+
+.tarot-card-face {
+  transform: rotateY(180deg);
+  background: linear-gradient(160deg, #f8f0e4 0%, #ede0c8 100%);
+  border: 1.5px solid rgba(197, 159, 83, 0.65);
+  box-shadow: inset 0 0 0 7px rgba(197, 159, 83, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 0.6rem;
+  text-align: center;
+}
+
+.tarot-card-face-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  transition: transform 380ms ease;
+}
+
+.tarot-card.is-reversed .tarot-card-face-content {
+  transform: rotate(180deg);
+}
+
+.tarot-card-face::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(197, 159, 83, 0.36);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.tarot-card-suit {
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0.55;
+}
+
+.tarot-card-num {
+  font-family: var(--font-display);
+  font-size: 0.56rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(120, 88, 38, 0.68);
+  line-height: 1;
+}
+
+.tarot-card-name {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #3b200a;
+  letter-spacing: 0.02em;
+}
+
+.tarot-card:hover {
+  filter: brightness(1.5) drop-shadow(0 0 10px rgba(197, 159, 83, 0.45));
+}
+
+.tarot-reading {
+  max-width: 42rem;
+  margin: 2rem auto 0;
+  padding: 1.8rem 2.2rem;
+  border: 1px solid rgba(197, 159, 83, 0.28);
+  border-radius: 1rem;
+  background: rgba(12, 20, 16, 0.82);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  pointer-events: none;
+}
+
+.tarot-reading.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.tarot-reading-label {
+  margin: 0 0 0.9rem;
+  color: rgba(197, 159, 83, 0.6);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.tarot-reading-card-name {
+  margin: 0 0 1rem;
+  color: var(--witchy-gold);
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.8vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.tarot-reading-text {
+  margin: 0;
+  color: rgba(238, 240, 231, 0.78);
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .year-wheel {
+    --wheel-size: min(66vw, 29.5rem);
+  }
+
+  .witchy-today-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .witchy-section-nav ul {
+    gap: 0.2rem 1.4rem;
+  }
+
+  .witchy-section-nav a {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .witchy-today-section {
+    padding-top: 3rem;
+  }
+
+  .witchy-today-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .witchy-today-card-wide {
+    grid-column: auto;
+  }
+
+  .witchy-calendar-section {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+  }
+
+  .witchy-calendar-header {
+    margin-bottom: 6.5rem;
+  }
+
+  .witchy-calendar-layout {
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .year-wheel {
+    --wheel-size: min(60vw, 18.5rem);
+  }
+
+  .year-wheel-marker {
+    display: none;
+  }
+
+  .year-wheel-sabbat {
+    width: 3.8rem;
+    min-height: 2.55rem;
+    padding: 0.3rem;
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--sabbat-angle))
+      translateY(calc(var(--wheel-size) * -0.58))
+      rotate(calc((var(--sabbat-angle) + var(--wheel-rotation)) * -1));
+  }
+
+  .year-wheel-sabbat:hover,
+  .year-wheel-sabbat:focus-within {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--sabbat-angle))
+      translateY(calc(var(--wheel-size) * -0.65))
+      rotate(calc((var(--sabbat-angle) + var(--wheel-rotation)) * -1))
+      scale(1.12);
+  }
+
+  .year-wheel-sabbat span {
+    font-size: 0.72rem;
+  }
+
+  .year-wheel-sabbat small {
+    display: none;
+  }
+
+  .year-wheel-moon {
+    width: 2.15rem;
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--moon-angle))
+      translateY(calc(var(--wheel-size) * -0.62))
+      rotate(calc((var(--moon-angle) + var(--wheel-rotation)) * -1));
+  }
+
+  .year-wheel-moon:hover,
+  .year-wheel-moon:focus-within {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--moon-angle))
+      translateY(calc(var(--wheel-size) * -0.66))
+      rotate(calc((var(--moon-angle) + var(--wheel-rotation)) * -1))
+      scale(1.18);
+  }
+
+  .year-wheel-outer-month {
+    width: 4.4rem;
+    font-size: 0.72rem;
+    padding: 0.16rem 0.24rem;
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--month-label-angle))
+      translateY(calc(var(--wheel-size) * -0.9))
+      rotate(calc((var(--month-label-angle) + var(--wheel-rotation)) * -1));
+  }
+
+  .year-wheel-outer-month.is-active {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--month-label-angle))
+      translateY(calc(var(--wheel-size) * -0.98))
+      rotate(calc((var(--month-label-angle) + var(--wheel-rotation)) * -1))
+      scale(1.08);
+  }
+
+  .year-wheel-moon span {
+    font-size: 0;
+  }
+
+  .year-wheel-moon small {
+    display: none;
+  }
+
+  .year-wheel-moon span::before {
+    content: "";
+    display: block;
+    width: 0.48rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .sabbat-detail-grid,
+  .moon-detail-grid,
+  .month-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

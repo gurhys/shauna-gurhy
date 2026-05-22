@@ -89,6 +89,10 @@ body.is-page-leaving {
   background: #e7c3b6;
 }
 
+.work-page {
+  background: #9ac0ce;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -552,7 +556,7 @@ a {
   gap: 0.5rem;
   padding: 1.25rem;
   border: 1px solid rgba(72, 58, 47, 0.1);
-  background: rgba(255, 252, 247, 0.92);
+  background: rgba(255, 207, 149, 0.82);
   box-shadow: 0 24px 48px rgba(47, 40, 35, 0.14);
 }
 
@@ -580,6 +584,132 @@ a {
 
 .work-page .work-detail-section {
   scroll-margin-top: 2rem;
+}
+
+.work-page .work-detail-section-featured {
+  padding: 2rem;
+  background:
+    linear-gradient(180deg, rgba(25, 28, 30, 0.3), rgba(25, 28, 30, 0.5)),
+    url("./night_ski_sunset.jpeg") center / cover no-repeat;
+  border-radius: var(--radius-xl);
+}
+
+.work-page .work-detail-section-featured .section-header {
+  margin-bottom: 2rem;
+}
+
+.work-page .work-detail-section-featured .eyebrow,
+.work-page .work-detail-section-featured .section-title,
+.work-page .work-detail-section-featured .section-copy {
+  color: #fdf8f2;
+  text-shadow: 0 10px 28px rgba(25, 28, 30, 0.35);
+}
+
+.work-page .work-detail-section-sport-ireland {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  background:
+    linear-gradient(180deg, rgba(21, 28, 34, 0.36), rgba(21, 28, 34, 0.54)),
+    url("./portugal_polo.JPG") center / cover no-repeat;
+  border-radius: var(--radius-xl);
+}
+
+.work-page .work-detail-section-sport-ireland .section-header {
+  margin-bottom: 2rem;
+}
+
+.work-page .work-detail-section-sport-ireland .eyebrow,
+.work-page .work-detail-section-sport-ireland .section-title,
+.work-page .work-detail-section-sport-ireland .section-copy {
+  color: #fdf8f2;
+  text-shadow: 0 10px 28px rgba(21, 28, 34, 0.38);
+}
+
+.work-page .work-detail-section-truma,
+.work-page .work-detail-section-intel,
+.work-page .work-detail-section-coolmine {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+}
+
+.work-page .work-detail-section-truma {
+  background:
+    linear-gradient(180deg, rgba(21, 28, 34, 0.34), rgba(21, 28, 34, 0.54)),
+    url("./workexperience/truma.jpg") center / cover no-repeat;
+}
+
+.work-page .work-detail-section-intel {
+  background:
+    linear-gradient(180deg, rgba(21, 28, 34, 0.34), rgba(21, 28, 34, 0.54)),
+    url("./Intel_WIT_Scholarship.jpg") center / cover no-repeat;
+}
+
+.work-page .work-detail-section-coolmine {
+  background:
+    linear-gradient(180deg, rgba(21, 28, 34, 0.34), rgba(21, 28, 34, 0.54)),
+    url("./sea_kayaking.jpg.JPG") center / cover no-repeat;
+}
+
+.work-page .work-detail-section-truma .section-header,
+.work-page .work-detail-section-intel .section-header,
+.work-page .work-detail-section-coolmine .section-header {
+  margin-bottom: 2rem;
+}
+
+.work-page .work-detail-section-truma .eyebrow,
+.work-page .work-detail-section-truma .section-title,
+.work-page .work-detail-section-truma .section-copy,
+.work-page .work-detail-section-intel .eyebrow,
+.work-page .work-detail-section-intel .section-title,
+.work-page .work-detail-section-intel .section-copy,
+.work-page .work-detail-section-coolmine .eyebrow,
+.work-page .work-detail-section-coolmine .section-title,
+.work-page .work-detail-section-coolmine .section-copy {
+  color: #fdf8f2;
+  text-shadow: 0 10px 28px rgba(21, 28, 34, 0.38);
+}
+
+.work-page .nzski-feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.work-page .work-detail-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.work-page .work-detail-photo {
+  width: min(100%, 32rem);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.work-page .work-detail-photo-nzski {
+  box-shadow: 0 24px 48px rgba(25, 28, 30, 0.22);
+}
+
+.work-page .work-subject-card {
+  min-height: 100%;
+  background: rgba(143, 170, 200, 0.82);
+}
+
+.work-page .work-subject-card-center {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  min-height: clamp(22rem, 40vw, 32rem);
+  background: rgba(192, 167, 186, 0.84);
+  box-shadow: 0 24px 48px rgba(25, 28, 30, 0.18);
+}
+
+.work-page .work-subject-card-center p {
+  margin: 0;
 }
 
 .work-page .work-detail-layout {
@@ -1273,6 +1403,7 @@ a {
     width: 100%;
   }
 
+  .work-page .nzski-feature-row,
   .work-page .work-detail-layout,
   .work-page .work-topic-grid {
     grid-template-columns: 1fr;

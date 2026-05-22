@@ -162,6 +162,7 @@
           class="story-preview-video"
           autoplay
           muted
+          loop
           playsinline
           preload="metadata"
         >
@@ -222,7 +223,10 @@
       </div>
 
       <div class="website-overview-column website-overview-brand">
-        <div class="logo-placeholder" aria-hidden="true">Logo</div>
+        <svg class="site-logo-svg" viewBox="0 0 80 80" width="80" height="80" aria-label="Shauna Gurhy monogram logo">
+          <circle cx="40" cy="40" r="36" fill="none" stroke="rgba(244,248,240,0.55)" stroke-width="1"/>
+          <text x="40" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="22" font-weight="600" fill="rgba(244,248,240,0.95)" letter-spacing="3">SG</text>
+        </svg>
         <h2>Shauna Gurhy</h2>
         <div class="social-links" aria-label="Social links">
           <a
@@ -252,6 +256,7 @@
 
       <div class="website-overview-column website-overview-news">
         <h2>Current News</h2>
+        <p>Currently building a portfolio website to showcase my work — check back soon for updates!</p>
       </div>
     </section>
 
@@ -259,8 +264,6 @@
       const siteNav = document.querySelector(".site-nav");
       const navToggle = document.querySelector(".site-nav-toggle");
       const navLinks = document.querySelector(".site-nav-links");
-      const storyPreviewVideo = document.querySelector(".story-preview-video");
-
       if (siteNav && navToggle && navLinks) {
         function setNavState(isOpen) {
           siteNav.classList.toggle("is-open", isOpen);
@@ -291,21 +294,6 @@
         });
       }
 
-      if (storyPreviewVideo) {
-        const previewEnd = 4;
-
-        storyPreviewVideo.addEventListener("loadedmetadata", () => {
-          storyPreviewVideo.currentTime = 0;
-          storyPreviewVideo.play().catch(() => {});
-        });
-
-        storyPreviewVideo.addEventListener("timeupdate", () => {
-          if (storyPreviewVideo.currentTime >= previewEnd) {
-            storyPreviewVideo.currentTime = 0;
-            storyPreviewVideo.play().catch(() => {});
-          }
-        });
-      }
     </script>
     <footer>
       <p>© 2026 Shauna Gurhy</p>

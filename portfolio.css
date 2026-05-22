@@ -1054,6 +1054,10 @@ a {
   color: rgba(244, 248, 240, 0.95);
 }
 
+.resume-home .website-overview-news p {
+  color: rgba(244, 248, 240, 0.95);
+}
+
 .resume-home .education_container,
 .resume-home .work_container {
   display: grid;
@@ -2075,3 +2079,4 @@ a {
     padding-inline: 0.85rem;
   }
 }
+
