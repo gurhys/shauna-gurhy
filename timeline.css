@@ -1633,3 +1633,118 @@
   font-weight: 400;
   line-height: 0.95;
 }
+
+.portfolio-page .portfolio-projects-section {
+  padding: 1rem 0 2rem;
+  width: min(100%, 62rem);
+  margin-inline: auto;
+}
+
+.portfolio-page .portfolio-project-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.portfolio-page .portfolio-projects-heading {
+  margin: 0 0 1.5rem;
+  color: rgba(244, 248, 240, 0.7);
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portfolio-page .portfolio-project-card {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 2px solid rgba(244, 248, 240, 0.36);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--cream);
+  box-shadow: 0 22px 44px rgba(20, 30, 29, 0.14);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+  text-decoration: none;
+}
+
+.portfolio-page .portfolio-project-card:hover,
+.portfolio-page .portfolio-project-card:focus-visible {
+  border-color: rgba(244, 248, 240, 0.9);
+  box-shadow: 0 28px 52px rgba(20, 30, 29, 0.22);
+  transform: translateY(-0.25rem);
+}
+
+.portfolio-page .portfolio-project-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-page .portfolio-project-kicker {
+  color: rgba(244, 248, 240, 0.86);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.portfolio-page .portfolio-project-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(166, 210, 140, 0.45);
+  border-radius: 999px;
+  background: rgba(120, 180, 90, 0.18);
+  color: rgba(200, 235, 175, 0.95);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portfolio-page .portfolio-project-title {
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 0.94;
+}
+
+.portfolio-page .portfolio-project-description {
+  margin: 0;
+  color: rgba(244, 248, 240, 0.82);
+  font-size: 1.02rem;
+  max-width: 56ch;
+  line-height: 1.65;
+}
+
+.portfolio-page .portfolio-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.portfolio-page .portfolio-project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(244, 248, 240, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(244, 248, 240, 0.8);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-page .portfolio-project-github-link {
+  color: rgba(244, 248, 240, 0.86);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
