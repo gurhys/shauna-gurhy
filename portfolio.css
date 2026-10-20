@@ -947,6 +947,12 @@ a {
   object-fit: cover;
 }
 
+/* Still images stand in for the videos on phones */
+.resume-home .hero-video-still,
+.resume-home .story-preview-still {
+  display: none;
+}
+
 .resume-home .website-overview-nav {
   margin-top: 4rem;
   margin-bottom: 2.5rem;
@@ -1556,7 +1562,17 @@ a {
   }
 
   .resume-home .story-video-band {
+    height: auto;
+  }
+
+  .resume-home video.hero-video,
+  .resume-home video.story-preview-video {
     display: none;
+  }
+
+  .resume-home .hero-video-still,
+  .resume-home .story-preview-still {
+    display: block;
   }
 
   .resume-home .story-preview-video {
@@ -1794,6 +1810,11 @@ a {
 .website-overview-news {
   min-height: 100%;
   justify-items: center;
+}
+
+.website-overview-nav .social-link,
+.website-overview-news p {
+  color: rgba(244, 248, 240, 0.92);
 }
 
 .skills-page {

@@ -625,12 +625,21 @@ a {
   text-shadow: 0 10px 28px rgba(21, 28, 34, 0.38);
 }
 
+.work-page .work-detail-section-cbre,
 .work-page .work-detail-section-truma,
 .work-page .work-detail-section-intel,
 .work-page .work-detail-section-coolmine {
   margin-top: 1.5rem;
   padding: 2rem;
   border-radius: var(--radius-xl);
+}
+
+.work-page .work-detail-section-cbre + .work-detail-section-featured {
+  margin-top: 1.5rem;
+}
+
+.work-page .work-detail-section-cbre {
+  background: linear-gradient(160deg, #29464d, #1f2e35);
 }
 
 .work-page .work-detail-section-truma {
@@ -651,12 +660,16 @@ a {
     url("./sea_kayaking.jpg.JPG") center / cover no-repeat;
 }
 
+.work-page .work-detail-section-cbre .section-header,
 .work-page .work-detail-section-truma .section-header,
 .work-page .work-detail-section-intel .section-header,
 .work-page .work-detail-section-coolmine .section-header {
   margin-bottom: 2rem;
 }
 
+.work-page .work-detail-section-cbre .eyebrow,
+.work-page .work-detail-section-cbre .section-title,
+.work-page .work-detail-section-cbre .section-copy,
 .work-page .work-detail-section-truma .eyebrow,
 .work-page .work-detail-section-truma .section-title,
 .work-page .work-detail-section-truma .section-copy,
@@ -1319,6 +1332,11 @@ a {
 .social-link-linkedin svg {
   fill: currentColor;
   stroke: none;
+}
+
+.website-overview-nav .social-link,
+.website-overview-news p {
+  color: rgba(244, 248, 240, 0.92);
 }
 
 @media (max-width: 900px) {

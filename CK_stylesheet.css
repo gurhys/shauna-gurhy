@@ -472,6 +472,11 @@ a {
   stroke: none;
 }
 
+.website-overview-nav .social-link,
+.website-overview-news p {
+  color: rgba(244, 248, 240, 0.92);
+}
+
 @media (max-width: 900px) {
   .hero-grid,
   .split,
